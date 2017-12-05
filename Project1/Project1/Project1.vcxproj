@@ -113,29 +113,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="D:\Akira_Ikeda\Game_Development\test\PUG\PUG\GameL\GameL_Main.cpp" />
     <ClCompile Include="Kyoten.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="D:\Akira_Ikeda\Game_Development\Teach01(STG)\２Ｄライブラリ\GameHead.h" />
-    <ClInclude Include="D:\Akira_Ikeda\Game_Development\Teach01(STG)\２Ｄライブラリ\main.h" />
-    <ClInclude Include="D:\Akira_Ikeda\Game_Development\test\PUG\PUG\GameL\Audio.h" />
-    <ClInclude Include="D:\Akira_Ikeda\Game_Development\test\PUG\PUG\GameL\DirectXDevice.h" />
-    <ClInclude Include="D:\Akira_Ikeda\Game_Development\test\PUG\PUG\GameL\DrawFont.h" />
-    <ClInclude Include="D:\Akira_Ikeda\Game_Development\test\PUG\PUG\GameL\DrawTexture.h" />
-    <ClInclude Include="D:\Akira_Ikeda\Game_Development\test\PUG\PUG\GameL\HitBoxManager.h" />
-    <ClInclude Include="D:\Akira_Ikeda\Game_Development\test\PUG\PUG\GameL\MultiThread.h" />
-    <ClInclude Include="D:\Akira_Ikeda\Game_Development\test\PUG\PUG\GameL\SceneManager.h" />
-    <ClInclude Include="D:\Akira_Ikeda\Game_Development\test\PUG\PUG\GameL\SceneObjManager.h" />
-    <ClInclude Include="D:\Akira_Ikeda\Game_Development\test\PUG\PUG\GameL\SetWindow.h" />
-    <ClInclude Include="D:\Akira_Ikeda\Game_Development\test\PUG\PUG\GameL\UserData.h" />
-    <ClInclude Include="D:\Akira_Ikeda\Game_Development\test\PUG\PUG\GameL\WinInputs.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="D:\Akira_Ikeda\Game_Development\test\PUG\PUG\GameL\Draw2DTex.hlsl" />
-  </ItemGroup>
-  <ItemGroup>
-    <Library Include="D:\Akira_Ikeda\Game_Development\test\PUG\PUG\GameL\LiblaryR.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

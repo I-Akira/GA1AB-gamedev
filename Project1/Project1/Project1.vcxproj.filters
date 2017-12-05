@@ -13,67 +13,10 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="リソース ファイル\GameL">
-      <UniqueIdentifier>{8ebb7694-df00-4fe7-8225-e5d2974f3f3d}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Kyoten.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Akira_Ikeda\Game_Development\test\PUG\PUG\GameL\GameL_Main.cpp">
-      <Filter>リソース ファイル\GameL</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="D:\Akira_Ikeda\Game_Development\test\PUG\PUG\GameL\Audio.h">
-      <Filter>リソース ファイル\GameL</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Akira_Ikeda\Game_Development\test\PUG\PUG\GameL\DirectXDevice.h">
-      <Filter>リソース ファイル\GameL</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Akira_Ikeda\Game_Development\test\PUG\PUG\GameL\DrawFont.h">
-      <Filter>リソース ファイル\GameL</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Akira_Ikeda\Game_Development\test\PUG\PUG\GameL\DrawTexture.h">
-      <Filter>リソース ファイル\GameL</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Akira_Ikeda\Game_Development\test\PUG\PUG\GameL\HitBoxManager.h">
-      <Filter>リソース ファイル\GameL</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Akira_Ikeda\Game_Development\test\PUG\PUG\GameL\MultiThread.h">
-      <Filter>リソース ファイル\GameL</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Akira_Ikeda\Game_Development\test\PUG\PUG\GameL\SceneManager.h">
-      <Filter>リソース ファイル\GameL</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Akira_Ikeda\Game_Development\test\PUG\PUG\GameL\SceneObjManager.h">
-      <Filter>リソース ファイル\GameL</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Akira_Ikeda\Game_Development\test\PUG\PUG\GameL\SetWindow.h">
-      <Filter>リソース ファイル\GameL</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Akira_Ikeda\Game_Development\test\PUG\PUG\GameL\UserData.h">
-      <Filter>リソース ファイル\GameL</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Akira_Ikeda\Game_Development\test\PUG\PUG\GameL\WinInputs.h">
-      <Filter>リソース ファイル\GameL</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Akira_Ikeda\Game_Development\Teach01(STG)\２Ｄライブラリ\GameHead.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Akira_Ikeda\Game_Development\Teach01(STG)\２Ｄライブラリ\main.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="D:\Akira_Ikeda\Game_Development\test\PUG\PUG\GameL\Draw2DTex.hlsl">
-      <Filter>リソース ファイル\GameL</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Library Include="D:\Akira_Ikeda\Game_Development\test\PUG\PUG\GameL\LiblaryR.lib">
-      <Filter>リソース ファイル\GameL</Filter>
-    </Library>
   </ItemGroup>
 </Project>
