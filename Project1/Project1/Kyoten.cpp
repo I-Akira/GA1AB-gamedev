@@ -20,3 +20,4 @@ char g_ColonyAddress[7][7] =
 //::::
 //プッシュテスト
 //プッシュテスト３
+//sinnsii
