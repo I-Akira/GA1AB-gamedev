@@ -121,6 +121,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Batoru.cpp" />
     <ClCompile Include="GameL\Audio.cpp" />
     <ClCompile Include="GameL\DirectXDevice.cpp" />
     <ClCompile Include="GameL\DrawFont.cpp" />
@@ -136,6 +137,7 @@
     <ClCompile Include="MatStore.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Batoru.h" />
     <ClInclude Include="GameHead.h" />
     <ClInclude Include="GameL\Audio.h" />
     <ClInclude Include="GameL\DirectXDevice.h" />

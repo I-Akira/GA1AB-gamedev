@@ -63,6 +63,9 @@
     <ClCompile Include="MatStore.cpp">
       <Filter>ソース ファイル\MatStore</Filter>
     </ClCompile>
+    <ClCompile Include="Batoru.cpp">
+      <Filter>ソース ファイル\Battle</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameL\Audio.h">
@@ -109,6 +112,9 @@
     </ClInclude>
     <ClInclude Include="Struct.h">
       <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Batoru.h">
+      <Filter>ソース ファイル\Battle</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

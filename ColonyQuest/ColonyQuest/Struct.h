@@ -21,7 +21,7 @@ struct Material
 	//アイテムの説明
 	char Itemdesc[256];
 	//金額（これを用いて売却値段も設定。売却値段は購入金額の半分）
-	unsigned int Money;
+	unsigned int Mon;
 };
 
 //キャラクター構造体
