@@ -14,7 +14,7 @@ struct XX
 
 //アイテム構造体
 //アイテムの名前と説明文、購入金額を管理
-struct Material
+struct sItem
 {
 	//アイテム名
 	char Itemname[256];
@@ -26,7 +26,7 @@ struct Material
 
 //キャラクター構造体
 //キャラクター名、攻撃力、防御力、体力などのステータスを管理
-struct CharStats
+struct sCharStats
 {
 	//キャラクター名
 	char Charname[256];

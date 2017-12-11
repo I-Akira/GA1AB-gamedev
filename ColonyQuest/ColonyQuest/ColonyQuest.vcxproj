@@ -135,6 +135,7 @@
     <ClCompile Include="GameL\UserData.cpp" />
     <ClCompile Include="GameL\WinInputs.cpp" />
     <ClCompile Include="MatStore.cpp" />
+    <ClCompile Include="Item.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Batoru.h" />
@@ -150,6 +151,7 @@
     <ClInclude Include="GameL\SetWindow.h" />
     <ClInclude Include="GameL\UserData.h" />
     <ClInclude Include="GameL\WinInputs.h" />
+    <ClInclude Include="Item.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="MatStore.h" />
     <ClInclude Include="Struct.h" />
