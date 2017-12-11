@@ -1,5 +1,6 @@
 #include "Item.h"
-
+//アイテムの管理をするクラス
+//ここでアイテムの管理をする。
 
 void Item::ItemCreate()
 {
@@ -17,3 +18,10 @@ void Item::ItemCreate()
 }
 
 
+//武器防具のアイテム生成関数
+void Item::EquipCreate()
+{
+	EquipItem eItem[256];//武器装備の構造体管理
+	//eItem[1] = {2,1,0 };//構造体エラーで少し調整中
+	
+}
