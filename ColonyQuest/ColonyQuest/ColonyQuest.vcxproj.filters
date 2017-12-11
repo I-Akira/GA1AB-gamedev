@@ -107,6 +107,9 @@
     <ClInclude Include="MatStore.h">
       <Filter>ソース ファイル\MatStore</Filter>
     </ClInclude>
+    <ClInclude Include="Struct.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="GameL\Draw2DTex.hlsl">
