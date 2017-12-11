@@ -16,6 +16,12 @@
     <Filter Include="リソース ファイル\GameL">
       <UniqueIdentifier>{67da6c9c-32ed-48da-9d4b-bf1704b12b88}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Battle">
+      <UniqueIdentifier>{06626f3f-748d-4ef6-ab21-325134e6b91a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\MatStore">
+      <UniqueIdentifier>{888970bc-dc09-4ce8-a7fc-626c19e04652}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameL\Audio.cpp">
@@ -53,6 +59,9 @@
     </ClCompile>
     <ClCompile Include="GameL\WinInputs.cpp">
       <Filter>リソース ファイル\GameL</Filter>
+    </ClCompile>
+    <ClCompile Include="MatStore.cpp">
+      <Filter>ソース ファイル\MatStore</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -93,6 +102,12 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="main.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="MatStore.h">
+      <Filter>ソース ファイル\MatStore</Filter>
+    </ClInclude>
+    <ClInclude Include="Struct.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>

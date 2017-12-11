@@ -133,6 +133,7 @@
     <ClCompile Include="GameL\SetWindow.cpp" />
     <ClCompile Include="GameL\UserData.cpp" />
     <ClCompile Include="GameL\WinInputs.cpp" />
+    <ClCompile Include="MatStore.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameHead.h" />
@@ -148,6 +149,8 @@
     <ClInclude Include="GameL\UserData.h" />
     <ClInclude Include="GameL\WinInputs.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="MatStore.h" />
+    <ClInclude Include="Struct.h" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="GameL\Draw2DTex.hlsl" />
