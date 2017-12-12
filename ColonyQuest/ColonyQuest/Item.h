@@ -20,4 +20,8 @@ typedef class Item
 		void ItemCreate();
 		void ItemSet();
 		void EquipCreate();
+		void GetItem(int t);
+	private:
+		int ItemNum;
+		int ItemSet;
 }Itm;
