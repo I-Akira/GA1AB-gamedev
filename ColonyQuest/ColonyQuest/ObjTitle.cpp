@@ -86,12 +86,12 @@ void CObjTitle::Draw()
 
 	//タイトル
 	Font::StrDraw(L"コロクエ！", TITLE_POS_X+80, TITLE_POS_Y, TITLE_FONT_SIZE, c);
-	Font::StrDraw(L"～Colony Quest～", TITLE_POS_X, TITLE_POS_Y+TITLE_FONT_SIZE, TITLE_FONT_SIZE, c);
+	Font::StrDraw(L"～Colony Quest～", TITLE_POS_X+10, TITLE_POS_Y+TITLE_FONT_SIZE, TITLE_FONT_SIZE, c);
 
 
 	//クリックする場所
 	//ゲームに移行するクリック場所
-	Font::StrDraw(L"◆ClickStart", CLICK_START_POS_X-15, CLICK_START_POS_Y, CLICK_START_FONT_SIZE, c);
+	Font::StrDraw(L"スタート", CLICK_START_POS_X+20, CLICK_START_POS_Y, CLICK_START_FONT_SIZE, c);
 
 
 

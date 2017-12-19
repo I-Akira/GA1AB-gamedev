@@ -6,7 +6,7 @@ using namespace GameL;
 
 //定数
 //マウスクリックのメイン遷移（遷移）
-#define MOU_MAIN_HIT_X			(300)
+#define MOU_MAIN_HIT_X			(325)
 #define MOU_MAIN_HIT_W			(450)
 #define MOU_MAIN_HIT_Y			(400)
 #define MOU_MAIN_HIT_H			(430)
