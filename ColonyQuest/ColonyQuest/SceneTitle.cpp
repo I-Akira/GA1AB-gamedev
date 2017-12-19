@@ -3,7 +3,7 @@
 #define _HAS_ITERATOR_DEBUGGING (0)
 
 //GameLÉwÉbÉ_Å[
-#include "GameL\DrawFont.h"
+#include "GameL\Drawtexture.h"
 #include "GameL\WinInputs.h"
 
 #include "SceneTitle.h"
@@ -22,6 +22,7 @@ CSceneTitle::~CSceneTitle()
 
 void CSceneTitle::InitScene()
 {
+	Draw::LoadImageW(L"Title.png",0, TEX_SIZE_1024);
 	CObjTitle* p = new CObjTitle();
 	Objs::InsertObj(p, OBJ_TITLE, 1);
 }

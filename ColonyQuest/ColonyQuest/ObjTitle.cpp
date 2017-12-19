@@ -19,6 +19,7 @@ void CObjTitle::Init()
 	m_mou_y = 0.0f;
 	m_mou_r = false;
 	m_mou_l = false;
+	m_deb_mn = false;
 
 	//ゲームを実行して1回のみ
 	static bool init_point = false;
@@ -48,8 +49,11 @@ void CObjTitle::Action()
 	{
 		if (m_mou_r == true || m_mou_l == true)
 		{
-			float c[4] = { 1,1,1,1 };
-			Font::StrDraw(L"デバッグ：メイン画面移行スイッチ", 20, 520, 32, c);
+			m_deb_mn = true;
+		}
+		else
+		{
+			m_deb_mn = false;
 		}
 	}
 
@@ -63,36 +67,51 @@ void CObjTitle::Action()
 //ドロー
 void CObjTitle::Draw()
 {
-	float c[4] = { 1,1,1,1 };
+	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
+	float b[4] = { 1.0f,0.5f,0.3f,1.0f };
 
+	RECT_F src;
+	RECT_F dst;
 	
+	//背景設定
+	src.m_top = 0.0f;
+	src.m_bottom = 768.0f;
+	src.m_left = 0.0f;
+	src.m_right = 1024.0f;
+
+	dst.m_top = 0.0f;
+	dst.m_bottom = 768.0f;
+	dst.m_left = 0.0f;
+	dst.m_right = 1024.0f;
+
+	Draw::Draw(0, &src, &dst, c, 0.0f);
+
+	//タイトル
+	Font::StrDraw(L"コロクエ！", TITLE_POS_X+80, TITLE_POS_Y, TITLE_FONT_SIZE, b);
+	Font::StrDraw(L"～Colony Quest～", TITLE_POS_X+10, TITLE_POS_Y+TITLE_FONT_SIZE, TITLE_FONT_SIZE, b);
+
+
+	//クリックする場所
+	//ゲームに移行するクリック場所
+	Font::StrDraw(L"スタート", CLICK_START_POS_X+20, CLICK_START_POS_Y, CLICK_START_FONT_SIZE, b);
+
+
+
 	//仮マウス位置表示
 	wchar_t str[256];
 	swprintf_s(str, L"x=%f,y=%f", m_mou_x, m_mou_y);
 	Font::StrDraw(str, 20, 20, 12, c);
 	//仮マウスボタン状態
 	if (m_mou_r == true)
-	Font::StrDraw(L"R=押してる", 20, 30, 12, c);
+		Font::StrDraw(L"R=押してる", 20, 30, 12, c);
 	else
-	Font::StrDraw(L"R=押してない", 20, 30, 12, c);
-	if(m_mou_l==true)
-	Font::StrDraw(L"L=押してる", 20, 40, 12, c);
+		Font::StrDraw(L"R=押してない", 20, 30, 12, c);
+	if (m_mou_l == true)
+		Font::StrDraw(L"L=押してる", 20, 40, 12, c);
 	else
-	Font::StrDraw(L"L=押してない", 20, 40, 12, c);
-	
+		Font::StrDraw(L"L=押してない", 20, 40, 12, c);
 
-
-
-
-	//タイトル
-	Font::StrDraw(L"コロクエ！", TITLE_POS_X+80, TITLE_POS_Y, TITLE_FONT_SIZE, c);
-	Font::StrDraw(L"～Colony Quest～", TITLE_POS_X+10, TITLE_POS_Y+TITLE_FONT_SIZE, TITLE_FONT_SIZE, c);
-
-
-	//クリックする場所
-	//ゲームに移行するクリック場所
-	Font::StrDraw(L"スタート", CLICK_START_POS_X+20, CLICK_START_POS_Y, CLICK_START_FONT_SIZE, c);
-
-
+	if(m_deb_mn==true)
+		Font::StrDraw(L"デバッグ：メイン画面移行スイッチ", 20, 620, 32, b);
 
 }
