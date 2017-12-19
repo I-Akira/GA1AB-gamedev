@@ -68,7 +68,7 @@ void CObjTitle::Action()
 void CObjTitle::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
-	float b[4] = { 1.0f,0.5f,0.3f,1.0f };
+	float b[4] = { 0.1f,0.1f,0.1f,1.0f };
 
 	RECT_F src;
 	RECT_F dst;
