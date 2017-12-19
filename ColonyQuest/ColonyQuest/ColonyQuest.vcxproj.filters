@@ -25,6 +25,9 @@
     <Filter Include="ソース ファイル\MatStore\Item">
       <UniqueIdentifier>{8eb5070a-01fb-462b-9000-d84961be84eb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Title">
+      <UniqueIdentifier>{87a6c5b7-d294-4822-b4e0-3db6a81d8b2d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameL\Audio.cpp">
@@ -71,6 +74,12 @@
     </ClCompile>
     <ClCompile Include="Item.cpp">
       <Filter>ソース ファイル\MatStore\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjTitle.cpp">
+      <Filter>ソース ファイル\Title</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneTitle.cpp">
+      <Filter>ソース ファイル\Title</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -124,6 +133,12 @@
     </ClInclude>
     <ClInclude Include="Item.h">
       <Filter>ソース ファイル\MatStore\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjTitle.h">
+      <Filter>ソース ファイル\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneTitle.h">
+      <Filter>ソース ファイル\Title</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
