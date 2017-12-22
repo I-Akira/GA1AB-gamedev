@@ -133,7 +133,13 @@
     <ClCompile Include="ObjTime.cpp" />
     <ClCompile Include="ObjTitle.cpp" />
     <ClCompile Include="SceneBattle.cpp" />
+    <ClCompile Include="SceneItem.cpp" />
+    <ClCompile Include="SceneItem2.cpp" />
+    <ClCompile Include="SceneMain.cpp" />
+    <ClCompile Include="SceneMap.cpp" />
     <ClCompile Include="SceneTitle.cpp" />
+    <ClCompile Include="ShopSoubi.cpp" />
+    <ClCompile Include="ShopSoubi2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameHead.h" />
@@ -157,7 +163,13 @@
     <ClInclude Include="ObjTime.h" />
     <ClInclude Include="ObjTitle.h" />
     <ClInclude Include="SceneBattle.h" />
+    <ClInclude Include="SceneItem.h" />
+    <ClInclude Include="SceneItem2.h" />
+    <ClInclude Include="SceneMain.h" />
+    <ClInclude Include="SceneMap.h" />
     <ClInclude Include="SceneTitle.h" />
+    <ClInclude Include="ShopSoubi.h" />
+    <ClInclude Include="ShopSoubi2.h" />
     <ClInclude Include="Struct.h" />
   </ItemGroup>
   <ItemGroup>

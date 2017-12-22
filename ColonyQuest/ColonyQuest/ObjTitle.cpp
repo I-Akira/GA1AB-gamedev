@@ -46,7 +46,7 @@ void CObjTitle::Action()
 	{
 		if (m_mou_r == true || m_mou_l == true)
 		{
-			m_deb_mn = true;
+			Scene::SetScene(new CSceneMap());
 		}
 		else
 		{
