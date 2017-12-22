@@ -66,12 +66,6 @@
     <ClCompile Include="GameL\WinInputs.cpp">
       <Filter>リソース ファイル\GameL</Filter>
     </ClCompile>
-    <ClCompile Include="MatStore.cpp">
-      <Filter>ソース ファイル\MatStore</Filter>
-    </ClCompile>
-    <ClCompile Include="Batoru.cpp">
-      <Filter>ソース ファイル\Battle</Filter>
-    </ClCompile>
     <ClCompile Include="Item.cpp">
       <Filter>ソース ファイル\MatStore\Item</Filter>
     </ClCompile>
@@ -82,22 +76,22 @@
       <Filter>ソース ファイル\Title</Filter>
     </ClCompile>
     <ClCompile Include="ObjBatoru.cpp">
-      <Filter>ソース ファイル\Battle</Filter>
+      <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="ObjBlock.cpp">
-      <Filter>ソース ファイル\Battle</Filter>
+      <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="ObjEnemy.cpp">
-      <Filter>ソース ファイル\Battle</Filter>
+      <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="ObjHero.cpp">
-      <Filter>ソース ファイル\Battle</Filter>
+      <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="ObjTime.cpp">
-      <Filter>ソース ファイル\Battle</Filter>
+      <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="SceneBattle.cpp">
-      <Filter>ソース ファイル\Battle</Filter>
+      <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -153,22 +147,22 @@
       <Filter>ソース ファイル\Title</Filter>
     </ClInclude>
     <ClInclude Include="ObjBatoru.h">
-      <Filter>ソース ファイル\Battle</Filter>
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="ObjBlock.h">
-      <Filter>ソース ファイル\Battle</Filter>
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="ObjEnemy.h">
-      <Filter>ソース ファイル\Battle</Filter>
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="ObjHero.h">
-      <Filter>ソース ファイル\Battle</Filter>
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="ObjTime.h">
-      <Filter>ソース ファイル\Battle</Filter>
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="SceneBattle.h">
-      <Filter>ソース ファイル\Battle</Filter>
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
