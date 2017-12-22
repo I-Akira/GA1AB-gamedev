@@ -68,6 +68,14 @@ void CSceneMap::Action()
 			Scene::SetScene(new CSceneItem());
 		}
 	}
+	//道具屋に移動
+	if (m_mou_x <= 1010 && m_mou_x >= 800 && m_mou_y >= 568 && m_mou_y <= 768)
+	{
+		if (m_mou_l == true)
+		{
+			Scene::SetScene(new CSceneBattle());
+		}
+	}
 	
 
 
@@ -114,7 +122,7 @@ void CSceneMap::Draw()
     //文字表示---------------------------------------
 	Font::StrDraw(L" ★MAP★", 50, 45, 50, c);	
 	Font::StrDraw(L"未完（ 画像ない ）左上クリック or 右上クリック",90,125,35,c);
-
+	Font::StrDraw(L"右下クリック", 90, 160, 35, c);
 
 	//仮マウスの位置表示----------------------------------------
 	wchar_t str[256];
