@@ -113,7 +113,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Batoru.cpp" />
     <ClCompile Include="GameL\Audio.cpp" />
     <ClCompile Include="GameL\DirectXDevice.cpp" />
     <ClCompile Include="GameL\DrawFont.cpp" />
@@ -126,12 +125,18 @@
     <ClCompile Include="GameL\SetWindow.cpp" />
     <ClCompile Include="GameL\UserData.cpp" />
     <ClCompile Include="GameL\WinInputs.cpp" />
+    <ClCompile Include="MatStore.cpp" />
     <ClCompile Include="Item.cpp" />
+    <ClCompile Include="ObjBatoru.cpp" />
+    <ClCompile Include="ObjBlock.cpp" />
+    <ClCompile Include="ObjEnemy.cpp" />
+    <ClCompile Include="ObjHero.cpp" />
+    <ClCompile Include="ObjTime.cpp" />
     <ClCompile Include="ObjTitle.cpp" />
+    <ClCompile Include="SceneBattle.cpp" />
     <ClCompile Include="SceneTitle.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Batoru.h" />
     <ClInclude Include="GameHead.h" />
     <ClInclude Include="GameL\Audio.h" />
     <ClInclude Include="GameL\DirectXDevice.h" />
@@ -146,7 +151,14 @@
     <ClInclude Include="GameL\WinInputs.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="MatStore.h" />
+    <ClInclude Include="ObjBatoru.h" />
+    <ClInclude Include="ObjBlock.h" />
+    <ClInclude Include="ObjEnemy.h" />
+    <ClInclude Include="ObjHero.h" />
+    <ClInclude Include="ObjTime.h" />
     <ClInclude Include="ObjTitle.h" />
+    <ClInclude Include="SceneBattle.h" />
     <ClInclude Include="SceneTitle.h" />
     <ClInclude Include="Struct.h" />
   </ItemGroup>
