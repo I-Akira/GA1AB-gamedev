@@ -66,9 +66,6 @@
     <ClCompile Include="GameL\WinInputs.cpp">
       <Filter>リソース ファイル\GameL</Filter>
     </ClCompile>
-    <ClCompile Include="MatStore.cpp">
-      <Filter>ソース ファイル\MatStore</Filter>
-    </ClCompile>
     <ClCompile Include="Batoru.cpp">
       <Filter>ソース ファイル\Battle</Filter>
     </ClCompile>
@@ -121,9 +118,6 @@
     </ClInclude>
     <ClInclude Include="main.h">
       <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="MatStore.h">
-      <Filter>ソース ファイル\MatStore</Filter>
     </ClInclude>
     <ClInclude Include="Struct.h">
       <Filter>ヘッダー ファイル</Filter>

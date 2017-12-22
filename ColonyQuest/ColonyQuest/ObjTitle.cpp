@@ -25,9 +25,6 @@ void CObjTitle::Init()
 	static bool init_point = false;
 
 
-
-
-	//ゲーム実行して一回のみ以外はランキングを自動セーブ
 	if (init_point == true)
 		Save::Seve();//UserDataの情報を同フォルダ「UserData」を作成する。
 }
@@ -56,7 +53,10 @@ void CObjTitle::Action()
 			m_deb_mn = false;
 		}
 	}
-
+	else
+	{
+		m_deb_mn = false;
+	}
 
 
 
@@ -89,7 +89,7 @@ void CObjTitle::Draw()
 	//タイトル
 	Font::StrDraw(L"コロクエ！", TITLE_POS_X+80, TITLE_POS_Y, TITLE_FONT_SIZE, b);
 	Font::StrDraw(L"～Colony Quest～", TITLE_POS_X+10, TITLE_POS_Y+TITLE_FONT_SIZE, TITLE_FONT_SIZE, b);
-
+	Font::StrDraw(L"α版", TITLE_POS_X + 500, TITLE_POS_Y + TITLE_FONT_SIZE*2, CLICK_START_FONT_SIZE, b);
 
 	//クリックする場所
 	//ゲームに移行するクリック場所
@@ -111,7 +111,7 @@ void CObjTitle::Draw()
 	else
 		Font::StrDraw(L"L=押してない", 20, 40, 12, c);
 
-	if(m_deb_mn==true)
+	/*if(m_deb_mn==true)
 		Font::StrDraw(L"デバッグ：メイン画面移行スイッチ", 20, 620, 32, b);
-
+		*/ //デバッグ用：メイン画面移行できるか確認
 }

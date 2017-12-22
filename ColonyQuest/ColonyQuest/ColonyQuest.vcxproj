@@ -126,7 +126,6 @@
     <ClCompile Include="GameL\SetWindow.cpp" />
     <ClCompile Include="GameL\UserData.cpp" />
     <ClCompile Include="GameL\WinInputs.cpp" />
-    <ClCompile Include="MatStore.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="ObjTitle.cpp" />
     <ClCompile Include="SceneTitle.cpp" />
@@ -147,7 +146,6 @@
     <ClInclude Include="GameL\WinInputs.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="main.h" />
-    <ClInclude Include="MatStore.h" />
     <ClInclude Include="ObjTitle.h" />
     <ClInclude Include="SceneTitle.h" />
     <ClInclude Include="Struct.h" />
