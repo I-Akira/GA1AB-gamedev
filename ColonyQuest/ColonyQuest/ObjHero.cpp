@@ -42,6 +42,15 @@ void CObjHero::Init()
 //アクション
 void CObjHero::Action()
 {
+	if (Input::GetVKey('E') == true)
+	{
+		Scene::SetScene(new CSceneMap());
+	}
+
+
+
+
+
 	//落下によるゲームオーバー&リスタート
 	if (m_py > 1000.0f)
 	{
