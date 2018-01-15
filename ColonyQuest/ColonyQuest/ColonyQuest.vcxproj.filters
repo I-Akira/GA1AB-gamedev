@@ -117,6 +117,9 @@
     <ClCompile Include="ShopSoubi2.cpp">
       <Filter>ソース ファイル\Item</Filter>
     </ClCompile>
+    <ClCompile Include="CObjHeroAttack.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameL\Audio.h">
@@ -205,6 +208,9 @@
     </ClInclude>
     <ClInclude Include="ShopSoubi.h">
       <Filter>ソース ファイル\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="CObjheroattack.h">
+      <Filter>ソース ファイル</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
