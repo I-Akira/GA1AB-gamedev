@@ -1,8 +1,12 @@
+//使用するヘッダーファイル
+#include "GameL\WinInputs.h"
 #include "GameL\DrawTexture.h"
-#include "GameHead.h"
-#include "GameL\Audio.h"
-#include "CObjheroAttack.h"
 #include "GameL\HitBoxManager.h"
+#include "GameHead.h"
+
+#include "CObjheroAttack.h"
+#include "ObjHero.h"
+#include "ObjEnemy.h"
 //ネームスペース
 using namespace GameL;
 //コンストラクタ
@@ -15,7 +19,7 @@ CObjHeroAttack::CObjHeroAttack(float x, float y)
 void CObjHeroAttack::Init()
 {
 	//当たり判定hitBoxを作成
-	Hits::SetHitBox(this, m_x, m_y, 64, 64, ELEMENT_PLAYER, OBJ_HEROATTACK, 1);
+	Hits::SetHitBox(this, m_x, m_y, -32, 64, ELEMENT_PLAYER, OBJ_HEROATTACK, 1);
 
 }
 //アクション
@@ -30,6 +34,12 @@ void CObjHeroAttack::Action()
 		this->SetStatus(false);
 		Hits::DeleteHitBox(this);
 
+	}
+	//'D'キーに入力がない場合攻撃HitBoxを削除
+	if (Input::GetVKey('D') == false)
+	{
+		this->SetStatus(false);
+		Hits::DeleteHitBox(this);
 	}
 	
 }
