@@ -32,6 +32,8 @@ public:
 	void SetRight(bool b) { m_hit_right = b; }
 	
 public:
+	float m_x;		//攻撃展開位置
+	float m_y;
 	float m_px;		//位置
 	float m_py;
 	float m_vx;		//移動ベクトル

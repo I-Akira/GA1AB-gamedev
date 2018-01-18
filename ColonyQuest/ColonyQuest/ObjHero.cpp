@@ -8,6 +8,7 @@
 
 #include "GameHead.h"
 #include "ObjHero.h"
+#include "CObjheroattack.h"
 
 //使用するネームスペース
 using namespace GameL;
@@ -73,6 +74,14 @@ void CObjHero::Action()
 				m_ani_max_time = 2;
 			
 	}
+		//主人公の攻撃※未完成
+		if (Input::GetVKey('D') == true)
+		{
+				//弾丸オブジェクト作成
+			CObjHeroAttack*obj_b = new CObjHeroAttack(m_x+40.0f , m_y);//弾丸オブジェクト作成
+				Objs::InsertObj(obj_b, OBJ_HEROATTACK, 100);//作った弾丸オブジェクトをオブジェクトマネージャーに登録
+		}
+
 	else
 	{
 		//通常速度
@@ -229,7 +238,7 @@ void CObjHero::Draw()
 {
 	//自身のHitBoxを持ってくる
 	CHitBox*hit = Hits::GetHitBox(this);
-	
+
 	int AniData[4] =
 	{
 		1,0,2,0,
