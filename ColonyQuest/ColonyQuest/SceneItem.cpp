@@ -1,3 +1,4 @@
+//シーン：アイテム屋（入り口）
 //STLデバッグ機能をＯＦＦに
 #define _SECURE_SCL	(0)
 #define _HAS_ITERATOR_DEBUGGING (0)

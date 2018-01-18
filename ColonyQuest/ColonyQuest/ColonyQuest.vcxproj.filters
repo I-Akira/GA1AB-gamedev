@@ -34,6 +34,12 @@
     <Filter Include="ソース ファイル\Item">
       <UniqueIdentifier>{127107b9-90b0-4533-a361-b37d5042fa7e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Battle\Hero">
+      <UniqueIdentifier>{bad4b3ce-a328-4eb8-8653-d4b4125035cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Battle\BattleScene">
+      <UniqueIdentifier>{903de3d9-a511-444a-bf3f-b65a4d93f7f1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameL\Audio.cpp">
@@ -81,28 +87,7 @@
     <ClCompile Include="SceneTitle.cpp">
       <Filter>ソース ファイル\Title</Filter>
     </ClCompile>
-    <ClCompile Include="ObjBatoru.cpp">
-      <Filter>ソース ファイル\Battle</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjBlock.cpp">
-      <Filter>ソース ファイル\Battle</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjEnemy.cpp">
-      <Filter>ソース ファイル\Battle</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjHero.cpp">
-      <Filter>ソース ファイル\Battle</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjTime.cpp">
-      <Filter>ソース ファイル\Battle</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneBattle.cpp">
-      <Filter>ソース ファイル\Battle</Filter>
-    </ClCompile>
     <ClCompile Include="SceneMap.cpp">
-      <Filter>ソース ファイル\Map</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneMain.cpp">
       <Filter>ソース ファイル\Map</Filter>
     </ClCompile>
     <ClCompile Include="SceneItem2.cpp">
@@ -118,7 +103,25 @@
       <Filter>ソース ファイル\Item</Filter>
     </ClCompile>
     <ClCompile Include="CObjHeroAttack.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\Battle\Hero</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjBatoru.cpp">
+      <Filter>ソース ファイル\Battle\BattleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjBlock.cpp">
+      <Filter>ソース ファイル\Battle\BattleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjEnemy.cpp">
+      <Filter>ソース ファイル\Battle\BattleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjTime.cpp">
+      <Filter>ソース ファイル\Battle\BattleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneBattle.cpp">
+      <Filter>ソース ファイル\Battle\BattleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjHero.cpp">
+      <Filter>ソース ファイル\Battle</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -173,27 +176,6 @@
     <ClInclude Include="SceneTitle.h">
       <Filter>ソース ファイル\Title</Filter>
     </ClInclude>
-    <ClInclude Include="SceneBattle.h">
-      <Filter>ソース ファイル\Battle</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjBatoru.h">
-      <Filter>ソース ファイル\Battle</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjBlock.h">
-      <Filter>ソース ファイル\Battle</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjEnemy.h">
-      <Filter>ソース ファイル\Battle</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjHero.h">
-      <Filter>ソース ファイル\Battle</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjTime.h">
-      <Filter>ソース ファイル\Battle</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneMain.h">
-      <Filter>ソース ファイル\Map</Filter>
-    </ClInclude>
     <ClInclude Include="SceneMap.h">
       <Filter>ソース ファイル\Map</Filter>
     </ClInclude>
@@ -210,7 +192,25 @@
       <Filter>ソース ファイル\Item</Filter>
     </ClInclude>
     <ClInclude Include="CObjheroattack.h">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\Battle\Hero</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjBatoru.h">
+      <Filter>ソース ファイル\Battle\BattleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjBlock.h">
+      <Filter>ソース ファイル\Battle\BattleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneBattle.h">
+      <Filter>ソース ファイル\Battle\BattleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjEnemy.h">
+      <Filter>ソース ファイル\Battle\BattleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjTime.h">
+      <Filter>ソース ファイル\Battle\BattleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjHero.h">
+      <Filter>ソース ファイル\Battle</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

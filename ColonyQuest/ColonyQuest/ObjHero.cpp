@@ -66,9 +66,9 @@ void CObjHero::Action()
 			m_vy =- 17;
 		}
 	}
-		//Aキー入力で速度アップ
-		if (Input::GetVKey('A') == true)
-		{
+	//Aキー入力で速度アップ
+	if (Input::GetVKey('A') == true)
+	{
 				//ダッシュ時の速度
 				m_speed_power = 2.0f;
 				m_ani_max_time = 2;

@@ -136,7 +136,6 @@
     <ClCompile Include="SceneBattle.cpp" />
     <ClCompile Include="SceneItem.cpp" />
     <ClCompile Include="SceneItem2.cpp" />
-    <ClCompile Include="SceneMain.cpp" />
     <ClCompile Include="SceneMap.cpp" />
     <ClCompile Include="SceneTitle.cpp" />
     <ClCompile Include="ShopSoubi.cpp" />
@@ -167,7 +166,6 @@
     <ClInclude Include="SceneBattle.h" />
     <ClInclude Include="SceneItem.h" />
     <ClInclude Include="SceneItem2.h" />
-    <ClInclude Include="SceneMain.h" />
     <ClInclude Include="SceneMap.h" />
     <ClInclude Include="SceneTitle.h" />
     <ClInclude Include="ShopSoubi.h" />
