@@ -102,9 +102,6 @@
     <ClCompile Include="SceneMap.cpp">
       <Filter>ソース ファイル\Map</Filter>
     </ClCompile>
-    <ClCompile Include="SceneMain.cpp">
-      <Filter>ソース ファイル\Map</Filter>
-    </ClCompile>
     <ClCompile Include="SceneItem2.cpp">
       <Filter>ソース ファイル\Item</Filter>
     </ClCompile>
@@ -187,9 +184,6 @@
     </ClInclude>
     <ClInclude Include="ObjTime.h">
       <Filter>ソース ファイル\Battle</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneMain.h">
-      <Filter>ソース ファイル\Map</Filter>
     </ClInclude>
     <ClInclude Include="SceneMap.h">
       <Filter>ソース ファイル\Map</Filter>

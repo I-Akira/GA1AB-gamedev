@@ -73,7 +73,6 @@ struct UserData
 #include "SceneBattle.h"
 #include "SceneItem.h"
 #include "SceneItem2.h"
-#include "SceneMain.h"
 #include "SceneMap.h"
 #include "ShopSoubi.h"
 #include "ShopSoubi2.h"

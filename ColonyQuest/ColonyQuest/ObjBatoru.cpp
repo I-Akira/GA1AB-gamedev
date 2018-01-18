@@ -43,7 +43,7 @@ void CObjBatoru::Draw()
 	RECT_F src;//描画元切り取り位置
 	RECT_F dst;//描画先表示位置
 
-	Draw::LoadImageW(L"sougen.png", 1, TEX_SIZE_512);
+	Draw::LoadImageW(L"sougen.png", 1, TEX_SIZE_1024);
 	//背景表示
 	src.m_top = 320.0f;
 	src.m_left = 0.0f;
