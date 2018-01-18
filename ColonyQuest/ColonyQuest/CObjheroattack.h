@@ -12,6 +12,7 @@ public:
 	void Action();	//アクション
 	void Draw();	//ドロー
 private:
-	float m_x;//X方向の位置用変数
-	float m_y;//Y方向の位置用変数
+	float m_px;//X方向の位置用変数
+	float m_py;//Y方向の位置用変数
+	float  m_atk_time;
 };

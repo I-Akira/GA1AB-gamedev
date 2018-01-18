@@ -84,11 +84,11 @@ void CObjHero::Action()
 		m_vx += m_speed_power;
 		m_posture = 1.0f;
 		m_ani_time += 1;
-	//主人公の攻撃※未完成
+	//主人公の攻撃
 		if (Input::GetVKey('D') == true)
-		{
-				//攻撃オブジェクト作成
-			CObjHeroAttack*obj_b = new CObjHeroAttack(m_x+25.0f , m_y);//攻撃オブジェクト作成
+		{		
+//攻撃オブジェクト作成
+				CObjHeroAttack*obj_b = new CObjHeroAttack(m_px + 75.0f, m_py);//攻撃オブジェクト作成
 				Objs::InsertObj(obj_b, OBJ_HEROATTACK, 2);//作った攻撃オブジェクトをオブジェクトマネージャーに登録
 		}
 	
@@ -182,7 +182,7 @@ void CObjHero::Action()
 			if (r > 135 && r < 225)
 			{//右
 				//バトルシーン移行
-				//Scene::SetScene(new CSceneBattle);
+				Scene::SetScene(new CSceneBattle);
 			
 			}
 			if (r >= 225 && r < 315)
