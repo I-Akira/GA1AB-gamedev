@@ -54,7 +54,7 @@ void CObjHero::Action()
 	{
 		if (m_hit_down == true)
 		{
-			m_vy = -10;
+			m_vy = -13;
 		}
 	}
 	//Aキー入力で速度アップ
@@ -210,6 +210,8 @@ void CObjHero::Action()
 					//また、地面に当たってる判定にする
 					m_vy = 0.0f;
 					m_hit_down = true;
+					//リスタート
+					Scene::SetScene(new CSceneBattle);
 				}
 			}
 		}
