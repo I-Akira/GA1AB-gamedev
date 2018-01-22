@@ -1,6 +1,5 @@
 #pragma once
 #include "GameL\SceneObjManager.h"
-#include "GameL\DrawTexture.h"
 //使用するネームスペース
 using namespace GameL;
 //オブジェクト：攻撃
@@ -13,6 +12,7 @@ public:
 	void Action();	//アクション
 	void Draw();	//ドロー
 private:
-	float m_x;//X方向の位置用変数
-	float m_y;//Y方向の位置用変数
+	float m_px;//X方向の位置用変数
+	float m_py;//Y方向の位置用変数
+	float  m_atk_time;
 };

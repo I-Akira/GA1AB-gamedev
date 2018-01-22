@@ -71,28 +71,9 @@ void CObjHero::Action()
 		m_ani_max_time = 4;
 	}
 	// 右進行
-	m_vx += m_speed_power;
-	m_posture = 1.0f;
-	m_ani_time += 1;
-
-
-
-
-	//落下によるゲームオーバー&リスタート
-	if (m_py > 1000.0f)
-	{
-		//場外に出たらリスタート。
-		Scene::SetScene(new CSceneBattle());
-	}
-	//Sキー入力でジャンプ
-	if (Input::GetVKey('S') == true)
-	{
-		if (m_hit_down == true)
-		{
-			m_vy =- 17;
-		}
-	}
-	
+		m_vx += m_speed_power;
+		m_posture = 1.0f;
+		m_ani_time += 1;
 	
 	
 
@@ -178,14 +159,14 @@ void CObjHero::Action()
 			//敵の左右に当たったら
 			float r = hit_data[i]->r;
 			if ((r < 45 && r >= 0) || r > 315)
-			{//左
+			/*{//左
 			/* //バトルシーン移行
-				Scene::SetScene(new CSceneMain());*/
-			}
+				Scene::SetScene(new CSceneMain());
+			}*/
 			if (r > 135 && r < 225)
 			{//右
-			/*	//バトルシーン移行
-				Scene::SetScene(new CSceneMain());*/
+				//バトルシーン移行
+				Scene::SetScene(new CSceneMain());
 			
 			}
 			if (r >= 225 && r < 315)
@@ -218,8 +199,6 @@ void CObjHero::Action()
 					//また、地面に当たってる判定にする
 					m_vy = 0.0f;
 					m_hit_down = true;
-				/*	//バトルシーン移行a
-					Scene::SetScene(new CSceneMain());*/
 				}
 			}
 		}
@@ -236,21 +215,21 @@ void CObjHero::Action()
 
 //ドロー
 void CObjHero::Draw()
-{
+{/*
 	//自身のHitBoxを持ってくる
 	CHitBox*hit = Hits::GetHitBox(this);
-
+	*/
 	int AniData[4] =
 	{
 		1,0,2,0,
 	};
 	//描画カラー情報
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
-
+	/*
 	if (hit->CheckObjNameHit(OBJ_ENEMY) != nullptr)
 	{
-		Font::StrDraw(L"敵を撃破しました！", 230, 250, 32, c);
-	}
+		Font::StrDraw(L"敵に撃破されました！", 230, 250, 32, c);
+	}*/
 
 	RECT_F src;//描画元切り取り位置
 	RECT_F dst;//描画先表示位置
