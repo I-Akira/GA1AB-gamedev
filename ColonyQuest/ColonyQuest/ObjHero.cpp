@@ -56,7 +56,7 @@ void CObjHero::Action()
 
 	if (Input::GetVKey('E') == true)
 	{
-		Scene::SetScene(new CSceneMap());//マップに戻る
+		Scene::SetScene(new CSceneMap);//マップに戻る
 	}
 	//Sキー入力でジャンプ
 	if (Input::GetVKey('S') == true)
@@ -186,7 +186,7 @@ void CObjHero::Action()
 			if ((r < 45 && r >= 0) || r > 315)
 			{//右
 				//バトルシーン移行
-				Scene::SetScene(new CSceneMain());
+				Scene::SetScene(new CSceneBattle);
 			
 			}
 			if (r >= 225 && r < 315)
