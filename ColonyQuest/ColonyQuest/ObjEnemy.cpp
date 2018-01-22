@@ -80,7 +80,7 @@ void CObjEnemy::Action()
 	CHitBox*hit = Hits::GetHitBox(this);
 	hit->SetPos(m_px+block->GetScroll(), m_py);
 
-	if (hit->CheckObjNameHit(ELEMENT_PLAYER,OBJ_HEROATTACK) != nullptr)
+	if (hit->CheckObjNameHit(OBJ_HEROATTACK) != nullptr)
 	{
 		this->SetStatus(false);
 		Hits::DeleteHitBox(this);
