@@ -184,7 +184,7 @@ void CObjHero::Action()
 			if (r > 135 && r < 225)
 			{//右
 				//バトルシーン移行
-				Scene::SetScene(new CSceneMain());
+//				Scene::SetScene(new CSceneMain());
 			
 			}
 			if (r >= 225 && r < 315)
