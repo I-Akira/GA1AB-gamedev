@@ -16,8 +16,8 @@ using namespace GameL;
 //イニシャライズ
 void CObjHero::Init()
 {
-	m_px = 70.0f;		//位置
-	m_py = 64.0f;
+	m_px = 40.0f;		//位置
+	m_py = 128.0f;
 	m_vx = 0.0f;		//移動ベクトル
 	m_vy = 0.0f;
 	m_posture=1.0f;		//右向き0.0f左向き1.0f
@@ -34,6 +34,8 @@ void CObjHero::Init()
 	m_hit_left = false;
 	m_hit_right = false;
 
+	m_f = true;//攻撃制御
+
 	m_block_type = 0;	//踏んでいるblockの種類を確認用
 
 	//当たり判定用のHitBoxを作成
@@ -43,27 +45,25 @@ void CObjHero::Init()
 //アクション
 void CObjHero::Action()
 {
-	if (Input::GetVKey('E') == true)
+	//落下によるゲームオーバーとリスタート
+	if (m_py > 1000.0f)
 	{
-		Scene::SetScene(new CSceneMap());
+		//場外に出たらリスタート
+		Scene::SetScene(new CSceneBattle);
 	}
 
 
 
-
-
-	//落下によるゲームオーバー&リスタート
-	if (m_py > 1000.0f)
+	if (Input::GetVKey('E') == true)
 	{
-		//場外に出たらリスタート。
-		Scene::SetScene(new CSceneBattle());
+		Scene::SetScene(new CSceneMap());//マップに戻る
 	}
 	//Sキー入力でジャンプ
 	if (Input::GetVKey('S') == true)
 	{
 		if (m_hit_down == true)
 		{
-			m_vy =- 17;
+			m_vy = -12;
 		}
 	}
 	//Aキー入力で速度アップ
@@ -84,13 +84,7 @@ void CObjHero::Action()
 		m_vx += m_speed_power;
 		m_posture = 1.0f;
 		m_ani_time += 1;
-	//主人公の攻撃
-		if (Input::GetVKey('D') == true)
-		{		
-//攻撃オブジェクト作成
-				CObjHeroAttack*obj_b = new CObjHeroAttack(m_px + 75.0f, m_py);//攻撃オブジェクト作成
-				Objs::InsertObj(obj_b, OBJ_HEROATTACK, 2);//作った攻撃オブジェクトをオブジェクトマネージャーに登録
-		}
+	
 	
 
 	if (m_ani_time > m_ani_max_time)
@@ -107,8 +101,23 @@ void CObjHero::Action()
 	m_vx += -(m_vx*0.098);
 
 	//自由落下運動
-	m_vy += 9.8/(16.0f);
+	m_vy += 9.0/(18.0f);
 
+	//主人公の攻撃
+	if (Input::GetVKey('D') == true)
+	{
+		if(m_f==true)
+		{	
+		//攻撃オブジェクト作成
+		CObjHeroAttack*obj_b = new CObjHeroAttack(m_px+85.0f, m_py);//攻撃オブジェクト作成
+		Objs::InsertObj(obj_b, OBJ_HEROATTACK, 100);//作った攻撃オブジェクトをオブジェクトマネージャーに登録
+		m_f = false;
+		}
+	}
+	else
+	{
+		m_f = true;
+	}
 
 	//高速移動によるBlock判定
 	bool b;
@@ -175,14 +184,9 @@ void CObjHero::Action()
 			//敵の左右に当たったら
 			float r = hit_data[i]->r;
 			if ((r < 45 && r >= 0) || r > 315)
-			/*{//左
-			/* //バトルシーン移行
-				Scene::SetScene(new CSceneMain());
-			}*/
-			if (r > 135 && r < 225)
 			{//右
 				//バトルシーン移行
-//				Scene::SetScene(new CSceneMain());
+				Scene::SetScene(new CSceneMain());
 			
 			}
 			if (r >= 225 && r < 315)
@@ -215,6 +219,8 @@ void CObjHero::Action()
 					//また、地面に当たってる判定にする
 					m_vy = 0.0f;
 					m_hit_down = true;
+					//リスタート
+					Scene::SetScene(new CSceneBattle);
 				}
 			}
 		}
