@@ -3,6 +3,7 @@
 #include "GameL\WinInputs.h"
 #include "GameL\SceneManager.h"
 #include "GameL\hitBoxManager.h"
+#include "GameL\DrawFont.h"
 
 
 #include "GameHead.h"
@@ -43,6 +44,9 @@ void CObjBatoru::Draw()
 	RECT_F src;//描画元切り取り位置
 	RECT_F dst;//描画先表示位置
 
+	Font::StrDraw(L"D：攻撃"    , 803, 100, 40, c);
+	Font::StrDraw(L"S：ジャンプ", 803, 200, 40, c);
+	Font::StrDraw(L"A：速度UP"  , 803, 300, 40, c);
 	Draw::LoadImageW(L"sougen.png", 1, TEX_SIZE_512);
 	//背景表示
 	src.m_top = 320.0f;
@@ -54,6 +58,5 @@ void CObjBatoru::Draw()
 	dst.m_right = 800.0f;
 	dst.m_bottom = 600.0f;
 	Draw::Draw(1, &src, &dst, c, 0.0f);
-
 
 }

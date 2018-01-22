@@ -72,7 +72,7 @@ void CObjHero::Action()
 				//ダッシュ時の速度
 				m_speed_power = 2.0f;
 				m_ani_max_time = 2;
-			
+
 	}
 	else
 	{
@@ -182,7 +182,7 @@ void CObjHero::Action()
 			if (r > 135 && r < 225)
 			{//右
 				//バトルシーン移行
-				Scene::SetScene(new CSceneMain());
+//				Scene::SetScene(new CSceneMain());
 			
 			}
 			if (r >= 225 && r < 315)

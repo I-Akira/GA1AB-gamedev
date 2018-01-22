@@ -21,6 +21,7 @@ void CSceneShopBugu::InitScene()
 	 Draw::LoadImage(L"tatemono2.png", 0, TEX_SIZE_512);
 	 Draw::LoadImage(L"tekisuto1.png", 1, TEX_SIZE_512);
 	 Draw::LoadImage(L"tekisuto2.png", 2, TEX_SIZE_512);
+	 Draw::LoadImage(L"kanban.png"   , 3, TEX_SIZE_512);
 
 
 }
@@ -78,12 +79,9 @@ void CSceneShopBugu::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 
-	RECT_F src;
-	RECT_F dst;
-	RECT_F src1;
-	RECT_F dst1;
-	RECT_F src2;
-	RECT_F dst2;
+	RECT_F src,src2;
+	RECT_F dst, dst1,dst2,dst3;
+
 
 //背景--------------------------------------------------------------
 	//切り取り位置
@@ -99,12 +97,9 @@ void CSceneShopBugu::Draw()
 	
 	Draw::Draw(0, &src, &dst, c, 0.0f);
 
+
 //テキスト
 	//切り取り位置-------------------------------------------武具屋
-	src.m_top    = 0.0f;
-	src.m_left   = 0.0f;
-	src.m_right  = 500.0f;
-	src.m_bottom = 500.0f;
 	//表示位置
 	dst.m_top    =   0.0f;
 	dst.m_left   =  00.0f;
@@ -112,37 +107,37 @@ void CSceneShopBugu::Draw()
 	dst.m_bottom = 120.0f;  
 	Draw::Draw(1, &src, &dst, c, 0.0f);
 	//切り取り位置------------------------------------------買う
-	src1.m_top = 0.0f;
-	src1.m_left = 0.0f;
-	src1.m_right = 500.0f;
-	src1.m_bottom = 500.0f;
 	//表示位置
 	dst1.m_top    = 410.0f;
 	dst1.m_left   = 700.0f;
 	dst1.m_right  = 1000.0f;  
 	dst1.m_bottom = 520.0f;  
-	Draw::Draw(2, &src1, &dst1, c, 0.0f);
+	Draw::Draw(2, &src, &dst1, c, 0.0f);
 	//切り取り位置------------------------------------------戻る
-	src2.m_top    = 0.0f;
-	src2.m_left   = 0.0f;
-	src2.m_right  = 500.0f;
-	src2.m_bottom = 500.0f;
 	//表示位置
 	dst2.m_top    = 560.0f;
 	dst2.m_left   = 700.0f;
 	dst2.m_right  = 1000.0f;  
 	dst2.m_bottom = 670.0f;  
-	Draw::Draw(2, &src2, &dst2, c, 0.0f);
+	Draw::Draw(2, &src, &dst2, c, 0.0f);
+
 
 //文字表示---------------------------------------------------
-	Font::StrDraw(L" ★武具屋★", 50,  45, 50, c);// 
+//	Font::StrDraw(L" ★武具屋★", 50,  45, 50, c);// 
 	Font::StrDraw(L" 買 う", 740, 450, 60, c);//
-	Font::StrDraw(L" マップに戻る", 730, 610, 35, c);
+	Font::StrDraw(L" メイン画面に戻る", 730, 610, 35, c);
 
 	//仮マウスの位置表示
 	wchar_t str[256];
 	swprintf_s(str, L"x = %f, y = %f", m_mou_x, m_mou_y);
 	Font::StrDraw(str, 500, 20, 20, c);
+
+	//看板---------------------------------------------------------休暇中
+	dst3.m_top = 100.0f;
+	dst3.m_left = 200.0f;
+	dst3.m_right = 900.0f;
+	dst3.m_bottom = 610.0f;
+	Draw::Draw(3, &src, &dst3, c, 0.0f);
 }
 
 /*----------------------------------------------------------------------------------------------------------------------------

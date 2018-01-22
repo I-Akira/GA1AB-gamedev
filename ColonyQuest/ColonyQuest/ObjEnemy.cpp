@@ -90,6 +90,7 @@ void CObjEnemy::Action()
 //ドロー
 void  CObjEnemy::Draw()
 {
+	Draw::LoadImage(L"Enemy.png", 1, TEX_SIZE_512);
 	int AniData[4] =
 	{
 		1,0,2,0,
@@ -102,10 +103,10 @@ void  CObjEnemy::Draw()
 	RECT_F dst; //描画先表示位置
 
 	//切り取り位置の設定
-	src.m_top = 64.0f;
-	src.m_left = 0.0f + AniData[m_ani_frame] * 64;
-	src.m_right = 64.0f + AniData[m_ani_frame] * 64;
-	src.m_bottom = src.m_top+64.0f;
+	src.m_top    = 0.0f;		 //64.0f;
+	src.m_left   = 0.0f;		 //0.0f + AniData[m_ani_frame] * 64;
+	src.m_right  = 72.0f;		 //64.0f + AniData[m_ani_frame] * 64;
+	src.m_bottom = 60.0f;		 //src.m_top+64.0f;
 
 	//ブロック情報を持ってくる
 	CObjBlock* block = (CObjBlock*)Objs::GetObj(OBJ_BLOCK);
@@ -116,5 +117,5 @@ void  CObjEnemy::Draw()
 	dst.m_bottom = 64.0f + m_py;
 
 	//描画
-	Draw::Draw(0, &src, &dst, c, 0.0f);
+	Draw::Draw(1, &src, &dst, c, 0.0f);
 }
