@@ -45,7 +45,7 @@ void CObjHero::Action()
 {
 	if (Input::GetVKey('E') == true)
 	{
-		Scene::SetScene(new CSceneMap());
+		Scene::SetScene(new CSceneMap());//マップに戻る
 	}
 
 
@@ -175,15 +175,9 @@ void CObjHero::Action()
 			//敵の左右に当たったら
 			float r = hit_data[i]->r;
 			if ((r < 45 && r >= 0) || r > 315)
-			/*{//左
-			/* //バトルシーン移行
-				Scene::SetScene(new CSceneMain());
-			}*/
-			if (r > 135 && r < 225)
 			{//右
-				//バトルシーン移行
-				Scene::SetScene(new CSceneBattle);
-			
+			 //バトルシーン移行
+				Scene::SetScene(new CSceneBattle);//リスタート
 			}
 			if (r >= 225 && r < 315)
 			{

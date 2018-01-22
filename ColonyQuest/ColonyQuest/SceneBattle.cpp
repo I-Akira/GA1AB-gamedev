@@ -29,7 +29,7 @@ CSceneBattle::~CSceneBattle()
 //初期化メソッド
 void CSceneBattle::InitScene()
 {
-	//外部データの読み込み
+	//ステージデータの読み込み
 	unique_ptr<wchar_t> p;
 	int size;
 	p = Save::ExternalDataOpen(L"Book1.csv", &size);
