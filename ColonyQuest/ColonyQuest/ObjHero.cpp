@@ -47,7 +47,14 @@ void CObjHero::Action()
 	{
 		Scene::SetScene(new CSceneMap());//マップに戻る
 	}
-
+	//Sキー入力でジャンプ
+	if (Input::GetVKey('S') == true)
+	{
+		if (m_hit_down == true)
+		{
+			m_vy = -17;
+		}
+	}
 	//主人公の攻撃※未完成
 
 	//Aキー入力で速度アップ
@@ -90,8 +97,8 @@ void CObjHero::Action()
 	if (Input::GetVKey('D') == true)
 	{
 		//弾丸オブジェクト作成
-		CObjHeroAttack*obj_b = new CObjHeroAttack(m_px+75.0f, m_py);//弾丸オブジェクト作成
-		Objs::InsertObj(obj_b, OBJ_HEROATTACK, 100);//作った弾丸オブジェクトをオブジェクトマネージャーに登録
+		CObjHeroAttack*obj_b = new CObjHeroAttack(m_px+75.0f, m_py);//攻撃オブジェクト作成
+		Objs::InsertObj(obj_b, OBJ_HEROATTACK, 100);//作った攻撃オブジェクトをオブジェクトマネージャーに登録
 	}
 
 
@@ -161,13 +168,8 @@ void CObjHero::Action()
 			//敵の左右に当たったら
 			float r = hit_data[i]->r;
 			if ((r < 45 && r >= 0) || r > 315)
-			/*{//左
-			/* //バトルシーン移行
-				Scene::SetScene(new CSceneMain());
-			}*/
-			if (r > 135 && r < 225)
 			{//右
-				//バトルシーン移行
+				//リスタート
 				Scene::SetScene(new CSceneBattle);
 			
 			}
