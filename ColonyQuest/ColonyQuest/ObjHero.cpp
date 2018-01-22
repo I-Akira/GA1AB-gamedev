@@ -34,6 +34,8 @@ void CObjHero::Init()
 	m_hit_left = false;
 	m_hit_right = false;
 
+	m_f = true;//攻撃制御
+
 	m_block_type = 0;	//踏んでいるblockの種類を確認用
 
 	//当たり判定用のHitBoxを作成
@@ -52,7 +54,7 @@ void CObjHero::Action()
 	{
 		if (m_hit_down == true)
 		{
-			m_vy = -17;
+			m_vy = -10;
 		}
 	}
 	//Aキー入力で速度アップ
@@ -95,12 +97,18 @@ void CObjHero::Action()
 	//主人公の攻撃
 	if (Input::GetVKey('D') == true)
 	{
+		if(m_f==true)
+		{	
 		//攻撃オブジェクト作成
-		CObjHeroAttack*obj_b = new CObjHeroAttack(m_px+75.0f, m_py);//攻撃オブジェクト作成
+		CObjHeroAttack*obj_b = new CObjHeroAttack(m_px+85.0f, m_py);//攻撃オブジェクト作成
 		Objs::InsertObj(obj_b, OBJ_HEROATTACK, 100);//作った攻撃オブジェクトをオブジェクトマネージャーに登録
+		m_f = false;
+		}
 	}
-
-
+	else
+	{
+		m_f = true;
+	}
 
 	//高速移動によるBlock判定
 	bool b;

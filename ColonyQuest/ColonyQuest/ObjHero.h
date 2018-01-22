@@ -49,7 +49,8 @@ public:
 	bool m_hit_down;
 	bool m_hit_left;
 	bool m_hit_right;
-	
+	//UŒ‚§Œä
+	bool m_f;
 
 	//“¥‚ñ‚Å‚¢‚éblock‚Ìí—Ş‚ğŠm”F—p
 	int m_block_type;
