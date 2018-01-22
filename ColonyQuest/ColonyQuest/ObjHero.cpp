@@ -55,6 +55,7 @@ void CObjHero::Action()
 		CObjHeroAttack*obj_b = new CObjHeroAttack(m_x + 40.0f, m_y);//弾丸オブジェクト作成
 		Objs::InsertObj(obj_b, OBJ_HEROATTACK, 100);//作った弾丸オブジェクトをオブジェクトマネージャーに登録
 	}
+
 	//Aキー入力で速度アップ
 	if (Input::GetVKey('A') == true)
 	{
