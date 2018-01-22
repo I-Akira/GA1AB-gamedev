@@ -55,8 +55,6 @@ void CObjHero::Action()
 			m_vy = -17;
 		}
 	}
-	//主人公の攻撃※未完成
-
 	//Aキー入力で速度アップ
 	if (Input::GetVKey('A') == true)
 	{
@@ -94,9 +92,10 @@ void CObjHero::Action()
 	//自由落下運動
 	m_vy += 9.8/(16.0f);
 
+	//主人公の攻撃
 	if (Input::GetVKey('D') == true)
 	{
-		//弾丸オブジェクト作成
+		//攻撃オブジェクト作成
 		CObjHeroAttack*obj_b = new CObjHeroAttack(m_px+75.0f, m_py);//攻撃オブジェクト作成
 		Objs::InsertObj(obj_b, OBJ_HEROATTACK, 100);//作った攻撃オブジェクトをオブジェクトマネージャーに登録
 	}
