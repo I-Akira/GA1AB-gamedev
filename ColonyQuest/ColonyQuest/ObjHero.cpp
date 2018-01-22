@@ -16,8 +16,8 @@ using namespace GameL;
 //イニシャライズ
 void CObjHero::Init()
 {
-	m_px = 70.0f;		//位置
-	m_py = 64.0f;
+	m_px = 40.0f;		//位置
+	m_py = 128.0f;
 	m_vx = 0.0f;		//移動ベクトル
 	m_vy = 0.0f;
 	m_posture=1.0f;		//右向き0.0f左向き1.0f
@@ -49,12 +49,6 @@ void CObjHero::Action()
 	}
 
 	//主人公の攻撃※未完成
-	if (Input::GetVKey('D') == true)
-	{
-		//弾丸オブジェクト作成
-		CObjHeroAttack*obj_b = new CObjHeroAttack(m_x + 40.0f, m_y);//弾丸オブジェクト作成
-		Objs::InsertObj(obj_b, OBJ_HEROATTACK, 100);//作った弾丸オブジェクトをオブジェクトマネージャーに登録
-	}
 
 	//Aキー入力で速度アップ
 	if (Input::GetVKey('A') == true)
@@ -92,6 +86,14 @@ void CObjHero::Action()
 
 	//自由落下運動
 	m_vy += 9.8/(16.0f);
+
+	if (Input::GetVKey('D') == true)
+	{
+		//弾丸オブジェクト作成
+		CObjHeroAttack*obj_b = new CObjHeroAttack(m_px+75.0f, m_py);//弾丸オブジェクト作成
+		Objs::InsertObj(obj_b, OBJ_HEROATTACK, 100);//作った弾丸オブジェクトをオブジェクトマネージャーに登録
+	}
+
 
 
 	//高速移動によるBlock判定
@@ -158,17 +160,7 @@ void CObjHero::Action()
 		for (int i = 0; i < hit->GetCount(); i++) {
 			//敵の左右に当たったら
 			float r = hit_data[i]->r;
-			if ((r < 45 && r >= 0) || r > 315)
-			/*{//左
-			/* //バトルシーン移行
-				Scene::SetScene(new CSceneMain());
-			}*/
-			if (r > 135 && r < 225)
-			{//右
-				//バトルシーン移行
-				Scene::SetScene(new CSceneMain());
-			
-			}
+
 			if (r >= 225 && r < 315)
 			{
 				//敵の移動方向を主人公の位置に加算

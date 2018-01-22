@@ -33,24 +33,26 @@ void CObjHeroAttack::Action()
 	{
 		this->SetStatus(false);
 		Hits::DeleteHitBox(this);
-		
+
 	}
+
+
+	m_atk_time += 1.0f;
+
 	//'D'キーに入力がない場合攻撃HitBoxを削除
 	if (Input::GetVKey('D') == false)
 	{
 		this->SetStatus(false);
 		Hits::DeleteHitBox(this);
 	}
-	if (m_atk_time == 50)
+	if (m_atk_time >= 50)
 	{
 		this->SetStatus(false);
 		Hits::DeleteHitBox(this);
 		m_atk_time = 0;
 	}
-	else
-	{
-		m_atk_time+=0.1f;
-	}
+
+
 }
 //ドロー	
 void CObjHeroAttack::Draw(){}

@@ -121,7 +121,7 @@
       <Filter>ソース ファイル\Battle\BattleScene</Filter>
     </ClCompile>
     <ClCompile Include="ObjHero.cpp">
-      <Filter>ソース ファイル\Battle</Filter>
+      <Filter>ソース ファイル\Battle\Hero</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -210,7 +210,7 @@
       <Filter>ソース ファイル\Battle\BattleScene</Filter>
     </ClInclude>
     <ClInclude Include="ObjHero.h">
-      <Filter>ソース ファイル\Battle</Filter>
+      <Filter>ソース ファイル\Battle\Hero</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
