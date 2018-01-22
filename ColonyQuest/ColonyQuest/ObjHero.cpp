@@ -63,7 +63,7 @@ void CObjHero::Action()
 	{
 		if (m_hit_down == true)
 		{
-			m_vy = -13;
+			m_vy = -12;
 		}
 	}
 	//Aキー入力で速度アップ
