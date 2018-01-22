@@ -45,6 +45,15 @@ void CObjHero::Init()
 //アクション
 void CObjHero::Action()
 {
+	//落下によるゲームオーバーとリスタート
+	if (m_py > 1000.0f)
+	{
+		//場外に出たらリスタート
+		Scene::SetScene(new CSceneBattle);
+	}
+
+
+
 	if (Input::GetVKey('E') == true)
 	{
 		Scene::SetScene(new CSceneMap());//マップに戻る
@@ -92,7 +101,7 @@ void CObjHero::Action()
 	m_vx += -(m_vx*0.098);
 
 	//自由落下運動
-	m_vy += 9.8/(16.0f);
+	m_vy += 9.0/(18.0f);
 
 	//主人公の攻撃
 	if (Input::GetVKey('D') == true)
