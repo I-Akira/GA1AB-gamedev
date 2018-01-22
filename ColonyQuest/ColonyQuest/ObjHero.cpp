@@ -48,6 +48,31 @@ void CObjHero::Action()
 		Scene::SetScene(new CSceneMap());
 	}
 
+	//主人公の攻撃※未完成
+	if (Input::GetVKey('D') == true)
+	{
+		//弾丸オブジェクト作成
+		CObjHeroAttack*obj_b = new CObjHeroAttack(m_x + 40.0f, m_y);//弾丸オブジェクト作成
+		Objs::InsertObj(obj_b, OBJ_HEROATTACK, 100);//作った弾丸オブジェクトをオブジェクトマネージャーに登録
+	}
+	//Aキー入力で速度アップ
+	if (Input::GetVKey('A') == true)
+	{
+		//ダッシュ時の速度
+		m_speed_power = 2.0f;
+		m_ani_max_time = 2;
+
+	}
+	else
+	{
+		//通常速度
+		m_speed_power = 0.5f;
+		m_ani_max_time = 4;
+	}
+	// 右進行
+	m_vx += m_speed_power;
+	m_posture = 1.0f;
+	m_ani_time += 1;
 
 
 
@@ -66,32 +91,7 @@ void CObjHero::Action()
 			m_vy =- 17;
 		}
 	}
-	//Aキー入力で速度アップ
-	if (Input::GetVKey('A') == true)
-	{
-				//ダッシュ時の速度
-				m_speed_power = 2.0f;
-				m_ani_max_time = 2;
-			
-	}
-		//主人公の攻撃※未完成
-		if (Input::GetVKey('D') == true)
-		{
-				//弾丸オブジェクト作成
-			CObjHeroAttack*obj_b = new CObjHeroAttack(m_x+40.0f , m_y);//弾丸オブジェクト作成
-				Objs::InsertObj(obj_b, OBJ_HEROATTACK, 100);//作った弾丸オブジェクトをオブジェクトマネージャーに登録
-		}
-
-	else
-	{
-		//通常速度
-		m_speed_power = 0.5f;
-		m_ani_max_time = 4;
-	}
-	// 右進行
-		m_vx += m_speed_power;
-		m_posture = 1.0f;
-		m_ani_time += 1;
+	
 	
 	
 
