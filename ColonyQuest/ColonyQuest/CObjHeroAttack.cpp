@@ -4,6 +4,7 @@
 #include "GameL\HitBoxManager.h"
 #include "GameHead.h"
 
+#include "ObjTime.h"
 #include "CObjheroAttack.h"
 #include "ObjHero.h"
 #include "ObjEnemy.h"
@@ -21,6 +22,7 @@ void CObjHeroAttack::Init()
 	//当たり判定hitBoxを作成
 	Hits::SetHitBox(this, m_px, m_py, 5, 64, ELEMENT_PLAYER, OBJ_HEROATTACK, 1);
 
+	m_time = 0;
 }
 //アクション
 void CObjHeroAttack::Action()
@@ -36,23 +38,18 @@ void CObjHeroAttack::Action()
 
 	}
 
-
-	m_atk_time += 1.0f;
-
 	//'D'キーに入力がない場合攻撃HitBoxを削除
 	if (Input::GetVKey('D') == false)
 	{
 		this->SetStatus(false);
 		Hits::DeleteHitBox(this);
 	}
-	if (m_atk_time >= 50)
+	if (m_time >= 50)
 	{
 		this->SetStatus(false);
 		Hits::DeleteHitBox(this);
-		m_atk_time = 0;
 	}
-
-
+	m_time++;
 }
 //ドロー	
 void CObjHeroAttack::Draw(){}

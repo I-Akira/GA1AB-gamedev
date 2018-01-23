@@ -14,5 +14,5 @@ public:
 private:
 	float m_px;//X方向の位置用変数
 	float m_py;//Y方向の位置用変数
-	float  m_atk_time;
+	int m_time;//時間
 };

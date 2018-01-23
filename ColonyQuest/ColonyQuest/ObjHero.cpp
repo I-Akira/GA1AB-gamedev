@@ -107,11 +107,11 @@ void CObjHero::Action()
 	if (Input::GetVKey('D') == true)
 	{
 		if(m_f==true)
-		{	
-		//攻撃オブジェクト作成
-		CObjHeroAttack*obj_b = new CObjHeroAttack(m_px+85.0f, m_py);//攻撃オブジェクト作成
-		Objs::InsertObj(obj_b, OBJ_HEROATTACK, 100);//作った攻撃オブジェクトをオブジェクトマネージャーに登録
-		m_f = false;
+		{
+			//攻撃オブジェクト作成
+			CObjHeroAttack*obj_b = new CObjHeroAttack(m_px+85.0f, m_py);//攻撃オブジェクト作成
+			Objs::InsertObj(obj_b, OBJ_HEROATTACK, 100);//作った攻撃オブジェクトをオブジェクトマネージャーに登録
+			m_f = false;
 		}
 	}
 	else
