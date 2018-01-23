@@ -21,36 +21,35 @@ void CObjHeroAttack::Init()
 {
 	//当たり判定hitBoxを作成
 	Hits::SetHitBox(this, m_px, m_py, 5, 64, ELEMENT_PLAYER, OBJ_HEROATTACK, 1);
-
-	m_time = 0;
+	
+	m_time = 0;	//タイムカウンター
 }
 //アクション
 void CObjHeroAttack::Action()
 {
-	//弾丸のHitBox更新用ポインター取得
-	CHitBox*hit = Hits::GetHitBox(this);
+	CHitBox*hit = Hits::GetHitBox(this);	//弾丸のHitBox更新用ポインター取得
 	hit->SetPos(m_px, m_py);				//HitBoxの位置を攻撃の位置更新
 
+	//敵キャラに触れると攻撃HitBoxを削除
 	if (hit->CheckObjNameHit(OBJ_ENEMY) != nullptr)
 	{
 		this->SetStatus(false);
 		Hits::DeleteHitBox(this);
-
 	}
-
 	//'D'キーに入力がない場合攻撃HitBoxを削除
 	if (Input::GetVKey('D') == false)
 	{
 		this->SetStatus(false);
 		Hits::DeleteHitBox(this);
 	}
+	//時間になると攻撃HitBoxを自動削除
 	if (m_time >= 50)
 	{
 		this->SetStatus(false);
 		Hits::DeleteHitBox(this);
+		m_time = 0;
 	}
 	m_time++;
 }
 //ドロー	
 void CObjHeroAttack::Draw(){}
-
