@@ -20,6 +20,7 @@ void CSceneItem::InitScene()
 	Draw::LoadImage(L"tekisuto1.png", 1, TEX_SIZE_512);
 	Draw::LoadImage(L"tekisuto2.png", 2, TEX_SIZE_512);
 	Draw::LoadImage(L"haikei3.png"  , 5, TEX_SIZE_512);
+	Draw::LoadImage(L"kanban.png"   , 6, TEX_SIZE_512);
 }
 //------------------------------------------------------------------------------------------------------------------------------------
 //初期化----------------------------------------------------------------------------------------------------------------------
@@ -56,7 +57,7 @@ void CSceneItem::Action()
 	{
 		if (m_mou_l == true)
 		{
-			Draw2();
+//			Draw2();
 		}
 	}
 
@@ -77,7 +78,7 @@ void CSceneItem::Draw()
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 
 	RECT_F src;
-	RECT_F dst,dst2,dst3;
+	RECT_F dst,dst2,dst3,dst4;
 
 	//背景-------------------------------------------------------------
 	//切り取り位置
@@ -112,6 +113,14 @@ void CSceneItem::Draw()
 	dst3.m_right  = 1000.0f;
 	dst3.m_bottom =  680.0f;
 	Draw::Draw(2, &src, &dst3, c, 0.0f);
+
+	//看板---------------------------------------------------------休暇中
+	dst4.m_top = 100.0f;
+	dst4.m_left = 200.0f;
+	dst4.m_right = 900.0f;
+	dst4.m_bottom = 610.0f;
+	Draw::Draw(6, &src, &dst4, c, 0.0f);
+
 	//文字表示------------------------------------------------------------------
 //	Font::StrDraw(L" ★アイテム屋★", 50, 45, 35, c);
 //	Font::StrDraw(L"   買う", 700, 450, 60, c);

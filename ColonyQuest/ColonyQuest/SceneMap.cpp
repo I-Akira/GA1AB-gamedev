@@ -10,6 +10,7 @@
 #include "GameL\SceneObjManager.h"
 #include "GameL\DrawFont.h"
 #include "GameL\WinInputs.h"
+#include "GameL\Audio.h"
 
 using namespace GameL;
 
@@ -23,7 +24,11 @@ void CSceneMap::InitScene()
 	Draw::LoadImage(L"tekisuto2.png", 2, TEX_SIZE_512);
 	Draw::LoadImage(L"haikei4.png"  , 3, TEX_SIZE_512);
 	Draw::LoadImage(L"haikei2.png"  , 4, TEX_SIZE_512);
+	//âπäyÅESEì«Ç›çûÇ›
+	Audio::LoadAudio(0, L"BGM Menu.wav", SOUND_TYPE::BACK_MUSIC);
+	Audio::LoadAudio(1, L"SE SELECT.wav", SOUND_TYPE::EFFECT);
 
+	Audio::Start(0);
 }
 //----------------------------------------------------------------------------------------------------------------------------------------
 void CSceneMap::Scene()//èâä˙âª-------------------------------------------------------------------------------------------------------------
@@ -57,6 +62,7 @@ void CSceneMap::Action()
 	{
 		if (m_mou_l == true)
 		{
+			Audio::Start(1);
 			Scene::SetScene(new CSceneBattle());
 		}
 	}
@@ -65,6 +71,7 @@ void CSceneMap::Action()
 	{
 		if (m_mou_l == true)
 		{
+			Audio::Start(1);
 			Scene::SetScene(new CSceneShopBugu());//
 		}
 	}
@@ -73,6 +80,7 @@ void CSceneMap::Action()
 	{
 		if (m_mou_l == true)
 		{
+			Audio::Start(1);
 			Scene::SetScene(new CSceneItem());
 		}
 	}

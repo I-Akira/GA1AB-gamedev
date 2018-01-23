@@ -7,6 +7,7 @@
 #include "GameL\DrawTexture.h"
 #include "GameL\DrawFont.h"
 #include "GameL\UserData.h"
+#include "GameL\Audio.h"
 //使用するネームスペース
 using namespace GameL;
 
@@ -51,8 +52,10 @@ void CSceneBattle::InitScene()
 	Font::SetStrTex(L"0123456789分秒");
 	//グラフィック読み込み
 	Draw::LoadImageW(L"image.png",0, TEX_SIZE_512);
-	
 	Draw::LoadImageW(L"sougen.png",1, TEX_SIZE_512);
+	//音楽読み込み・再生
+	Audio::LoadAudio(0, L"BGM Action", SOUND_TYPE::BACK_MUSIC);
+//	Audio::Start(0);
 
 	CObjBatoru*objv = new CObjBatoru();
 	Objs::InsertObj(objv, OBJ_BATORU, 5);

@@ -59,7 +59,7 @@ void CSceneShopBugu::Action()
 	{
 		if (m_mou_l == true )
 		{
-			Scene::SetScene(new CSceneShopBugu2() );
+//			Scene::SetScene(new CSceneShopBugu2() );
 		}
 	}
 	//ƒ}ƒbƒv‚É–ß‚é
