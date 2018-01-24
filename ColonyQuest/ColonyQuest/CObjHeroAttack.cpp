@@ -27,6 +27,10 @@ void CObjHeroAttack::Init()
 //アクション
 void CObjHeroAttack::Action()
 {
+	//主人公の位置を取得&攻撃を自機に合わせる
+	CObjHero*hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
+	m_py += hero->GetY() - m_py;
+	
 	CHitBox*hit = Hits::GetHitBox(this);	//弾丸のHitBox更新用ポインター取得
 	hit->SetPos(m_px, m_py);				//HitBoxの位置を攻撃の位置更新
 

@@ -186,7 +186,7 @@ void CObjBlock::BlockHit(
 				float scroll = scroll_on ? m_scroll : 0;
 
 				//主人公とブロックの当たり判定
-				if ((*x + (-scroll) + 64.0f>bx) && (*x + (-scroll)<bx + 64.0f) && (*y + 64.0f>by) && (*y<by + 64.0f))
+				if ((*x + (-scroll) + 42.0f>bx) && (*x + (-scroll)<bx + 64.0f) && (*y + 64.0f>by) && (*y<by + 64.0f))
 				{
 					//上下左右判定
 
@@ -230,7 +230,7 @@ void CObjBlock::BlockHit(
 						{
 							//左
 							*left=true;//主人公から見て、右の部分が衝突している
-							*x =bx - 64.0f + (scroll);//ブロックの位置-主人公の幅
+							*x =bx - 42.0f + (scroll);//ブロックの位置-主人公の幅
 							*vx= -(*vx)*0.1f;
 						}
 						if (r > 225 && r < 315)

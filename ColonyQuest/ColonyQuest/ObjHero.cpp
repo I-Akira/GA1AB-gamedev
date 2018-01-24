@@ -39,7 +39,7 @@ void CObjHero::Init()
 	m_block_type = 0;	//踏んでいるblockの種類を確認用
 
 	//当たり判定用のHitBoxを作成
-	Hits::SetHitBox(this, m_px, m_py, 64, 64, ELEMENT_PLAYER, OBJ_HERO, 1);
+	Hits::SetHitBox(this, m_px, m_py, 40, 60, ELEMENT_PLAYER, OBJ_HERO, 1);
 }
 
 //アクション
@@ -80,10 +80,11 @@ void CObjHero::Action()
 		m_speed_power = 0.5f;
 		m_ani_max_time = 4;
 	}
-	// 右進行
+// 右進行
 		m_vx += m_speed_power;
 		m_posture = 1.0f;
 		m_ani_time += 1;
+	
 	
 	
 
@@ -109,7 +110,7 @@ void CObjHero::Action()
 		if(m_f==true)
 		{
 			//攻撃オブジェクト作成
-			CObjHeroAttack*obj_b = new CObjHeroAttack(m_px+85.0f, m_py);//攻撃オブジェクト作成
+			CObjHeroAttack*obj_b = new CObjHeroAttack(m_px+62.0f, m_py);//攻撃オブジェクト作成
 			Objs::InsertObj(obj_b, OBJ_HEROATTACK, 100);//作った攻撃オブジェクトをオブジェクトマネージャーに登録
 			m_f = false;
 		}
@@ -257,14 +258,14 @@ void CObjHero::Draw()
 	RECT_F dst;//描画先表示位置
 
 	//切り取り位置の設定
-	src.m_top	 = 0.0f;
+	src.m_top	 = 7.0f;
 	src.m_left   = 0.0f + AniData[m_ani_frame]*64;
-	src.m_right  =64.0f + AniData[m_ani_frame]*64;
-	src.m_bottom =64.0f;
+	src.m_right  =50.0f + AniData[m_ani_frame]*64;
+	src.m_bottom =62.0f;
 
 	//表示位置の設定
 	dst.m_top	 = 0.0f+m_py;
-	dst.m_left	 = (	    64.0f * m_posture) + m_px;
+	dst.m_left	 = (	    42.0f * m_posture) + m_px;
 	dst.m_right  = ( 64  -  64.0f * m_posture) + m_px;
 	dst.m_bottom =64.0f+m_py;
 
