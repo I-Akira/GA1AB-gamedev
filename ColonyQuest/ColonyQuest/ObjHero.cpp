@@ -77,7 +77,7 @@ void CObjHero::Action()
 	else
 	{
 		//通常速度
-		m_speed_power = 0.5f;
+		m_speed_power = 0.6f;
 		m_ani_max_time = 4;
 	}
 // 右進行

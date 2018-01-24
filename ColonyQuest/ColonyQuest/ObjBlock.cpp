@@ -230,7 +230,7 @@ void CObjBlock::BlockHit(
 						{
 							//左
 							*left=true;//主人公から見て、右の部分が衝突している
-							*x =bx - 42.0f + (scroll);//ブロックの位置-主人公の幅
+							*x =bx - 42.5f + (scroll);//ブロックの位置-主人公の幅
 							*vx= -(*vx)*0.1f;
 						}
 						if (r > 225 && r < 315)
