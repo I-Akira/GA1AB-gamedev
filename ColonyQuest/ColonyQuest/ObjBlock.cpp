@@ -60,6 +60,14 @@ void CObjBlock::Action()
 			//敵出現場所の値を0にする
 			m_map[i][ex] = 0;
 		}
+		if (m_map[i][ex] == 5)
+		{
+			//5があれば、ジャンプする敵を出現
+			CObjJumpEnemy*objs = new CObjJumpEnemy(ex*64.0f, i*64.0f);
+			Objs::InsertObj(objs, OBJ_JUMPENEMY, 10);
+			//敵出現場所の値を0にする
+			m_map[i][ex] = 0;
+		}
 	}
 }
 //ドロー

@@ -131,6 +131,7 @@
     <ClCompile Include="ObjBlock.cpp" />
     <ClCompile Include="ObjEnemy.cpp" />
     <ClCompile Include="ObjHero.cpp" />
+    <ClCompile Include="ObjJunpEnemy.cpp" />
     <ClCompile Include="ObjTime.cpp" />
     <ClCompile Include="ObjTitle.cpp" />
     <ClCompile Include="SceneBattle.cpp" />
@@ -161,6 +162,7 @@
     <ClInclude Include="ObjBlock.h" />
     <ClInclude Include="ObjEnemy.h" />
     <ClInclude Include="ObjHero.h" />
+    <ClInclude Include="ObjJunpEnemy.h" />
     <ClInclude Include="ObjTime.h" />
     <ClInclude Include="ObjTitle.h" />
     <ClInclude Include="SceneBattle.h" />

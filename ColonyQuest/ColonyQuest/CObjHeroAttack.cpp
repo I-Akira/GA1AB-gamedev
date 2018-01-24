@@ -35,8 +35,13 @@ void CObjHeroAttack::Action()
 	CHitBox*hit = Hits::GetHitBox(this);	//’eŠÛ‚ÌHitBoxXV—pƒ|ƒCƒ“ƒ^[Žæ“¾
 	hit->SetPos(m_px, m_py);				//HitBox‚ÌˆÊ’u‚ðUŒ‚‚ÌˆÊ’uXV
 
-	//“GƒLƒƒƒ‰‚ÉG‚ê‚é‚ÆUŒ‚HitBox‚ðíœ
+	//“GƒLƒƒƒ‰‚ÉG‚ê‚é‚ÆUŒ‚HitBox‚ðíœ¦—v‰ü—Ç
 	if (hit->CheckObjNameHit(OBJ_ENEMY) != nullptr)
+	{
+		this->SetStatus(false);
+		Hits::DeleteHitBox(this);
+	}
+	if (hit->CheckObjNameHit(OBJ_JUMPENEMY) != nullptr)
 	{
 		this->SetStatus(false);
 		Hits::DeleteHitBox(this);

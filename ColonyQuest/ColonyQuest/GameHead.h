@@ -16,6 +16,7 @@ enum OBJ_NAME
 	OBJ_SHOP_ITEM,
 	OBJ_SHOP_SOUBI,
 	OBJ_SHOP_SOUBI2,
+	OBJ_JUMPENEMY,
 
 };
 //------------------------------------------------
@@ -66,6 +67,7 @@ struct UserData
 #include "ObjEnemy.h"
 #include "ObjTime.h"
 #include "CObjheroattack.h"
+#include "ObjJunpEnemy.h"
 
 
 
