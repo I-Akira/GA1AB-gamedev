@@ -283,4 +283,5 @@ void CObjHero::Draw()
 	dst.m_right = dst.m_left+ 10.0f;
 	dst.m_bottom= dst.m_top + 10.0f;
 	Draw::Draw(0, &src, &dst, cc, 0.0f);
+	//データコミット用
 }
