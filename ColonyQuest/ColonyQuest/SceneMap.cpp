@@ -72,7 +72,7 @@ void CSceneMap::Action()
 		if (m_mou_l == true)
 		{
 			Audio::Start(1);
-			Scene::SetScene(new CSceneShopBugu());//
+//			Scene::SetScene(new CSceneShopBugu());//
 		}
 	}
 	//道具屋に移動
@@ -81,7 +81,7 @@ void CSceneMap::Action()
 		if (m_mou_l == true)
 		{
 			Audio::Start(1);
-			Scene::SetScene(new CSceneItem());
+//			Scene::SetScene(new CSceneItem());
 		}
 	}
 
@@ -129,12 +129,12 @@ void CSceneMap::Draw()
 	dst3.m_left   = 280.0f;
 	dst3.m_right  = 770.0f;
 	dst3.m_bottom = 480.0f;
-	Draw::Draw(1, &src, &dst3, c, 0.0f);//武具やへ
+//	Draw::Draw(1, &src, &dst3, c, 0.0f);//武具やへ
 	dst3.m_top    = 500.0f;
 	dst3.m_left   = 280.0f;
 	dst3.m_right  = 770.0f;
 	dst3.m_bottom = 610.0f;
-	Draw::Draw(1, &src, &dst3, c, 0.0f);//道具やへ
+//	Draw::Draw(1, &src, &dst3, c, 0.0f);//道具やへ
     //文字表示---------------------------------------
 	Font::StrDraw(L" ★メイン★", 50, 45, 35, c);	
 //	Font::StrDraw(L"未完（ 画像ない ）左上クリック or 右上クリック",90,125,35,c);
