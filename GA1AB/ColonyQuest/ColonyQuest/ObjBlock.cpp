@@ -86,8 +86,8 @@ void CObjBlock::Draw()
 	src.m_bottom = 512.0f;
 	dst.m_top = 0.0f;
 	dst.m_left = 0.0f;
-	dst.m_right = 800.0f;
-	dst.m_bottom = 600.0f;
+	dst.m_right = 1024.0f;
+	dst.m_bottom = 640.0f;
 	Draw::Draw(0, &src, &dst, c, 0.0f);
 	//マップチップによるblock
 	for (int i = 0; i < 10; i++)

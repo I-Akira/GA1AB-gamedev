@@ -44,9 +44,10 @@ void CObjBatoru::Draw()
 	RECT_F src;//描画元切り取り位置
 	RECT_F dst;//描画先表示位置
 
-	Font::StrDraw(L"D：攻撃"    , 803, 100, 40, c);
-	Font::StrDraw(L"S：ジャンプ", 803, 200, 40, c);
-	Font::StrDraw(L"A：速度UP"  , 803, 300, 40, c);
+	Font::StrDraw(L"D：攻撃"    , 50, 680, 30, c);
+	Font::StrDraw(L"S：ジャンプ", 240, 680, 30, c);
+	Font::StrDraw(L"A：速度UP"  , 490, 680, 30, c);
+	Font::StrDraw(L"E：選択画面に戻る", 700, 680, 30, c);
 	Draw::LoadImageW(L"sougen.png", 1, TEX_SIZE_512);
 	//背景表示
 	src.m_top = 320.0f;

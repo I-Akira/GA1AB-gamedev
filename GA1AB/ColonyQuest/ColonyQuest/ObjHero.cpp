@@ -188,8 +188,8 @@ void CObjHero::Action()
 			if ((r < 45 && r >= 0) || r > 315)
 			{//右
 			 //ゲームオーバー
-				//Scene::SetScene(new CSceneGameOver);
-				Scene::SetScene(new CSceneBattle);
+				Scene::SetScene(new CSceneGameOver);
+			//	Scene::SetScene(new CSceneBattle);
 			}
 			if (r >= 225 && r < 315)
 			{
@@ -223,7 +223,7 @@ void CObjHero::Action()
 					m_hit_down = true;
 					//ゲームオーバー
 					Scene::SetScene(new CSceneGameOver);
-					Scene::SetScene(new CSceneBattle);
+				//	Scene::SetScene(new CSceneBattle);
 				}
 			}
 		}

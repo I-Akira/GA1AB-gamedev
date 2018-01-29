@@ -72,7 +72,7 @@ void CSceneGameOver::Action()
 		if (m_mou_l == true)
 		{
 			//Audio::Start(1);
-		//	Scene::SetScene(new CSceneTitle());//
+			Scene::SetScene(new CSceneTitle());//
 		}
 	}
 	//道具屋に移動
@@ -118,7 +118,7 @@ void CSceneGameOver::Draw()
 	dst2.m_left = 0.0f;
 	dst2.m_right = 380.0f;
 	dst2.m_bottom = 120.0f;
-	Draw::Draw(1, &src, &dst2, c, 0.0f);//MAP
+	//	Draw::Draw(1, &src, &dst2, c, 0.0f);//MAP
 
 	dst3.m_top = 240.0f;
 	dst3.m_left = 280.0f;
@@ -129,16 +129,17 @@ void CSceneGameOver::Draw()
 	dst3.m_left = 280.0f;
 	dst3.m_right = 770.0f;
 	dst3.m_bottom = 480.0f;
-	//	Draw::Draw(1, &src, &dst3, c, 0.0f);//武具やへ
+	Draw::Draw(1, &src, &dst3, c, 0.0f);//タイトルへ
 	dst3.m_top = 500.0f;
 	dst3.m_left = 280.0f;
 	dst3.m_right = 770.0f;
 	dst3.m_bottom = 610.0f;
 	//	Draw::Draw(1, &src, &dst3, c, 0.0f);//道具やへ
 	//文字表示---------------------------------------
-	Font::StrDraw(L" ゲームオーバー", 50, 45, 35, c);
+	Font::StrDraw(L" ゲームオーバー", 365, 120, 40, c);
 	//	Font::StrDraw(L"未完（ 画像ない ）左上クリック or 右上クリック",90,125,35,c);
-	Font::StrDraw(L"ステージ選択画面へ", 310, 280, 55, c);
+	Font::StrDraw(L"ステージ選択画面へ", 320, 280, 44, c);
+	Font::StrDraw(L"タイトルへ", 380, 390, 55, c);
 	//仮マウスの位置表示----------------------------------------
 	wchar_t str[256];
 	swprintf_s(str, L"x = %f, y = %f", m_mou_x, m_mou_y);
