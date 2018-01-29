@@ -53,10 +53,10 @@ void CObjHero::Action()
 	}
 
 
-
+	//マップに戻る
 	if (Input::GetVKey('E') == true)
 	{
-		Scene::SetScene(new CSceneMap);//マップに戻る
+		Scene::SetScene(new CSceneMap);
 	}
 	//Sキー入力でジャンプ
 	if (Input::GetVKey('S') == true)
@@ -70,7 +70,7 @@ void CObjHero::Action()
 	if (Input::GetVKey('A') == true)
 	{
 				//ダッシュ時の速度
-				m_speed_power = 2.0f;
+				m_speed_power = 1.3f;
 				m_ani_max_time = 2;
 
 	}
@@ -175,62 +175,12 @@ void CObjHero::Action()
 
 	//自身のHitBoxを持ってくる
 	CHitBox*hit = Hits::GetHitBox(this);
-	//敵と当たっているか確認※要改良
-	if (hit->CheckObjNameHit(OBJ_ENEMY) != nullptr)
+	//敵と当たっているか確認
+	if (hit->CheckElementHit(ELEMENT_ENEMY) == true)
 	{
 		//主人公が敵とどの角度で当たっているかを確認
 		HIT_DATA** hit_data;
-		hit_data = hit->SearchObjNameHit(OBJ_ENEMY);
-		for (int i = 0; i < hit->GetCount(); i++) {
-			//敵の左右に当たったら
-			float r = hit_data[i]->r;
-			if ((r < 45 && r >= 0) || r > 315)
-			{//右
-				//バトルシーン移行
-				Scene::SetScene(new CSceneBattle);
-			
-			}
-			if (r >= 225 && r < 315)
-			{
-				//敵の移動方向を主人公の位置に加算
-				m_px += ((CObjEnemy*)hit_data[i]->o)->GetVx();
-				//ブロック情報を持ってくる
-				CObjBlock*b = (CObjBlock*)Objs::GetObj(OBJ_BLOCK);
-				//後方スクロールライン
-				if (m_px < 80)
-				{
-					m_px = 80;					//主人公はラインを超えないようにする
-					b->SetScroll(b->GetScroll() + 5.0);		//主人公が本来動くべき分の値をm_scrollに加える
-				}
-
-				//前方スクロールライン
-				if (m_px > 300)
-				{
-					m_px = 300;
-					b->SetScroll(b->GetScroll() - 5.0);
-				}
-				//頭に乗せる処理
-				if (m_vy < -1.0f)
-				{
-					//ジャンプしてる場合は下記の影響を出ないようにする
-				}
-				else
-				{
-					//主人公が敵の頭に乗ってるので、Yvecは0にして落下させない
-					//また、地面に当たってる判定にする
-					m_vy = 0.0f;
-					m_hit_down = true;
-					//リスタート
-					Scene::SetScene(new CSceneBattle);
-				}
-			}
-		}
-	}
-	if (hit->CheckObjNameHit(OBJ_JUMPENEMY) != nullptr)
-	{
-		//主人公が敵とどの角度で当たっているかを確認
-		HIT_DATA** hit_data;
-		hit_data = hit->SearchObjNameHit(OBJ_JUMPENEMY);
+		hit_data = hit->SearchElementHit(ELEMENT_ENEMY);
 		for (int i = 0; i < hit->GetCount(); i++) {
 			//敵の左右に当たったら
 			float r = hit_data[i]->r;
