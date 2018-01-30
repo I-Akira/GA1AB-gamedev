@@ -17,6 +17,9 @@ enum OBJ_NAME
 	OBJ_SHOP_SOUBI,
 	OBJ_SHOP_SOUBI2,
 	OBJ_JUMPENEMY,
+	OBJ_TIME,
+	OBJ_SCENECLEAR,
+	OBJ_SCENEGAMEOVER
 
 };
 //------------------------------------------------
@@ -82,6 +85,7 @@ struct UserData
 #include "ShopSoubi.h"
 #include "ShopSoubi2.h"
 #include "SceneGameOver.h"
+#include "SceneClear.h"
 
 //-----------------------------------------------
 

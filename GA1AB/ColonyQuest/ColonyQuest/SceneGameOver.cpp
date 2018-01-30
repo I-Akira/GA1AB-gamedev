@@ -17,7 +17,7 @@ using namespace GameL;
 void CSceneGameOver::InitScene()
 {
 	CSceneGameOver* map = new CSceneGameOver();
-	Objs::InsertObj(map, OBJ_SCENE_MAP, 1);
+	Objs::InsertObj(map, OBJ_SCENEGAMEOVER, 1);
 
 	//グラフィック読み込み
 	Draw::LoadImage(L"tekisuto1.png", 1, TEX_SIZE_512);

@@ -6,6 +6,9 @@
 
 #include "GameHead.h"
 #include "ObjTime.h"
+#include "GameL\WinInputs.h"
+#include "GameL\SceneManager.h"
+#include "GameL\DrawFont.h"
 
 //使用するネームスペース
 using namespace GameL;
@@ -30,6 +33,7 @@ void CObjTime::Action()
 	else if (hero->GetBT() == 3)
 	{
 		m_flag_time = false;
+		Scene::SetScene(new CSceneClear);//ここをクリア画面にする
 	
 	}
 	//フラグがオンの時、時間を進める
@@ -37,7 +41,7 @@ void CObjTime::Action()
 	{
 		m_time++;
 	}
-
+	
 }
 //ドロー
 void CObjTime::Draw()
