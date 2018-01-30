@@ -68,6 +68,11 @@ void CSceneBattle::InitScene()
 	CObjBlock*objb = new CObjBlock(map);
 	Objs::InsertObj(objb, OBJ_BLOCK, 9);
 
+	//Timeオブジェクト作成
+	CObjTime*objt = new CObjTime();
+	Objs::InsertObj(objt, OBJ_TIME, 11);
+
+
 
 }
 //実行中メソッド

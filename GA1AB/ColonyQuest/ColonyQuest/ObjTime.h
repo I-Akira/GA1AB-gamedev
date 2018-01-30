@@ -13,6 +13,8 @@ public:
 	void Init();	//イニシャライズ
 	void Action();	//アクション
 	void Draw();	//ドロー
+
+	void SetTimeFlag(bool b) { m_flag_time = b; }
 private:
 	int m_time;		//時間
 	bool m_flag_time;//時間計測スタートフラグ
