@@ -20,10 +20,11 @@ void CSceneGameOver::InitScene()
 	Objs::InsertObj(map, OBJ_SCENEGAMEOVER, 1);
 
 	//グラフィック読み込み
-	Draw::LoadImage(L"tekisuto1.png", 1, TEX_SIZE_512);
+	Draw::LoadImage(L"Htext.png", 1, TEX_SIZE_512);
 	Draw::LoadImage(L"tekisuto2.png", 2, TEX_SIZE_512);
-	Draw::LoadImage(L"haikei4.png", 3, TEX_SIZE_512);
+	Draw::LoadImage(L"BGameOver.png", 3, TEX_SIZE_512);
 	Draw::LoadImage(L"haikei2.png", 4, TEX_SIZE_512);
+	Draw::LoadImage(L"GameOver.png", 5, TEX_SIZE_512);
 	//音楽・SE読み込み
 	Audio::LoadAudio(0, L"BGM Menu.wav", SOUND_TYPE::BACK_MUSIC);
 	Audio::LoadAudio(1, L"SE SELECT.wav", SOUND_TYPE::EFFECT);
@@ -63,25 +64,25 @@ void CSceneGameOver::Action()
 		if (m_mou_l == true)
 		{
 		//	Audio::Start(1);
-			Scene::SetScene(new CSceneMap());
+			Scene::SetScene(new CSceneBattle());
 		}
 	}
-	//武器屋に移動
+	//mapへ
 	if (m_mou_x <= 770 && m_mou_x >= 280 && m_mou_y >= 390 && m_mou_y <= 480)
 	{
 		if (m_mou_l == true)
 		{
 			//Audio::Start(1);
-			Scene::SetScene(new CSceneTitle());//
+			Scene::SetScene(new CSceneMap());//
 		}
 	}
-	//道具屋に移動
+	//タイトルへ
 	if (m_mou_x <= 770 && m_mou_x >= 280 && m_mou_y >= 530 && m_mou_y <= 610)
 	{
 		if (m_mou_l == true)
 		{
 			//Audio::Start(1);
-			//			Scene::SetScene(new CSceneItem());
+					Scene::SetScene(new CSceneTitle());
 		}
 	}
 
@@ -115,10 +116,10 @@ void CSceneGameOver::Draw()
 	//テキスト----------------------------------------------------
 	//表示位置
 	dst2.m_top = 0.0f;
-	dst2.m_left = 0.0f;
-	dst2.m_right = 380.0f;
-	dst2.m_bottom = 120.0f;
-	//	Draw::Draw(1, &src, &dst2, c, 0.0f);//MAP
+	dst2.m_left = 280.0f;
+	dst2.m_right = 740.0f;
+	dst2.m_bottom = 220.0f;
+		Draw::Draw(5, &src, &dst2, c, 0.0f);//
 
 	dst3.m_top = 240.0f;
 	dst3.m_left = 280.0f;
@@ -129,17 +130,18 @@ void CSceneGameOver::Draw()
 	dst3.m_left = 280.0f;
 	dst3.m_right = 770.0f;
 	dst3.m_bottom = 480.0f;
-	Draw::Draw(1, &src, &dst3, c, 0.0f);//タイトルへ
+	Draw::Draw(1, &src, &dst3, c, 0.0f);//MAP
 	dst3.m_top = 500.0f;
 	dst3.m_left = 280.0f;
 	dst3.m_right = 770.0f;
 	dst3.m_bottom = 610.0f;
-	//	Draw::Draw(1, &src, &dst3, c, 0.0f);//道具やへ
+		Draw::Draw(1, &src, &dst3, c, 0.0f);//タイトルへ
 	//文字表示---------------------------------------
-	Font::StrDraw(L" ゲームオーバー", 365, 120, 40, c);
+	//Font::StrDraw(L" ゲームオーバー", 365, 120, 40, c);
 	//	Font::StrDraw(L"未完（ 画像ない ）左上クリック or 右上クリック",90,125,35,c);
-	Font::StrDraw(L"ステージ選択画面へ", 320, 280, 44, c);
-	Font::StrDraw(L"タイトルへ", 380, 390, 55, c);
+	Font::StrDraw(L"リスタート", 380, 280, 55, c);
+	Font::StrDraw(L"ステージ選択画面へ", 325, 410, 44, c);
+	Font::StrDraw(L"タイトルへ", 380,530, 55, c);
 	//仮マウスの位置表示----------------------------------------
 	wchar_t str[256];
 	swprintf_s(str, L"x = %f, y = %f", m_mou_x, m_mou_y);

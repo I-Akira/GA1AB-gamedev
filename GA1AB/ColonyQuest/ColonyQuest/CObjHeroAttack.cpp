@@ -19,6 +19,7 @@ CObjHeroAttack::CObjHeroAttack(float x, float y)
 //イニシャライズ
 void CObjHeroAttack::Init()
 {
+	Draw::LoadImage(L"zan.png", 9, TEX_SIZE_512);
 	//当たり判定hitBoxを作成
 	Hits::SetHitBox(this, m_px, m_py, 5, 64, ELEMENT_PLAYER, OBJ_HEROATTACK, 1);
 	
@@ -57,4 +58,25 @@ void CObjHeroAttack::Action()
 	m_time++;
 }
 //ドロー	
-void CObjHeroAttack::Draw(){}
+void CObjHeroAttack::Draw()
+{
+	//描画カラー情報
+	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
+
+	RECT_F src;//描画元切り取り位置
+	RECT_F dst;//描画先表示位置
+
+			   //切り取り位置の設定
+	src.m_top = 0.0f;
+	src.m_left = 0.0f;
+	src.m_right = 90.0f;
+	src.m_bottom = 480.0f;
+
+	//表示位置の設定
+	dst.m_top = 0.0f+m_py;
+	dst.m_left = -17.0f+m_px;
+	dst.m_right = 17.0f+m_px;
+	dst.m_bottom =64.0f+m_py;
+	Draw::Draw(9, &src, &dst, c, 0.0f);
+
+}
