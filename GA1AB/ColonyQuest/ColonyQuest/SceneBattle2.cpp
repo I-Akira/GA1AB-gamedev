@@ -33,7 +33,7 @@ void CSceneBattle::InitScene()
 	//ステージデータの読み込み
 	unique_ptr<wchar_t> p;
 	int size;
-	p = Save::ExternalDataOpen(L"Book2.csv", &size);
+	p = Save::ExternalDataOpen(L"Book1.csv", &size);
 
 	int map[10][100];
 	int count = 1;
