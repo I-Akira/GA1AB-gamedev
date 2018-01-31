@@ -3,6 +3,7 @@
 #include "GameL\WinInputs.h"
 #include "GameL\SceneManager.h"
 #include "GameL\HitBoxManager.h"
+#include "GameL\Audio.h"
 
 #include "GameHead.h"
 #include "ObjEnemy.h"
@@ -19,6 +20,7 @@ CObjEnemy::CObjEnemy(float x, float y)
 //イニシャライズ
 void CObjEnemy::Init()
 {
+	Audio::LoadAudio(12, L"SE Delete.wav", SOUND_TYPE::EFFECT);
 	m_vx = 0.0f;		//移動ベクトル
 	m_vy = 0.0f;
 	m_posture = 1.0f;	//右向き0.0f　左向き1.0f
@@ -82,6 +84,7 @@ void CObjEnemy::Action()
 
 	if (hit->CheckObjNameHit(OBJ_HEROATTACK) != nullptr)
 	{
+		Audio::Start(12);
 		this->SetStatus(false);
 		Hits::DeleteHitBox(this);
 	}

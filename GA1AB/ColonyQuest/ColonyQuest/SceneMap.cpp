@@ -57,7 +57,7 @@ void CSceneMap::Action()
 	m_mou_r = Input::GetMouButtonR();
 	m_mou_l = Input::GetMouButtonL();
 
-	//アクションに移動
+	//ステージ１に移動
 	if (m_mou_x <= 770 && m_mou_x >= 280 && m_mou_y >= 260 && m_mou_y <= 350)
 	{
 		if (m_mou_l == true)
@@ -66,13 +66,14 @@ void CSceneMap::Action()
 			Scene::SetScene(new CSceneBattle());
 		}
 	}
-	//武器屋に移動
+/*未完成
+	//ステージ２に移動
 	if (m_mou_x <= 770 && m_mou_x >= 280  && m_mou_y >= 390 && m_mou_y <= 480 )
 	{
 		if (m_mou_l == true)
 		{
 			Audio::Start(1);
-//			Scene::SetScene(new CSceneShopBugu());//
+//			Scene::SetScene(new CSceneBattle2());
 		}
 	}
 	//道具屋に移動
@@ -81,10 +82,10 @@ void CSceneMap::Action()
 		if (m_mou_l == true)
 		{
 			Audio::Start(1);
-//			Scene::SetScene(new CSceneItem());
+			Scene::SetScene(new CSceneItem());
 		}
 	}
-
+*/
 	
 
 
