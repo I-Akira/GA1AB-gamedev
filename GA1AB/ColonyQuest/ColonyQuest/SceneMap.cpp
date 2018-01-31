@@ -66,14 +66,14 @@ void CSceneMap::Action()
 			Scene::SetScene(new CSceneBattle());
 		}
 	}
-/*未完成
+
 	//ステージ２に移動
 	if (m_mou_x <= 770 && m_mou_x >= 280  && m_mou_y >= 390 && m_mou_y <= 480 )
 	{
 		if (m_mou_l == true)
 		{
 			Audio::Start(1);
-//			Scene::SetScene(new CSceneBattle2());
+			Scene::SetScene(new CSceneBattle2());
 		}
 	}
 	//道具屋に移動
@@ -85,7 +85,7 @@ void CSceneMap::Action()
 			Scene::SetScene(new CSceneItem());
 		}
 	}
-*/
+
 	
 
 
@@ -130,7 +130,7 @@ void CSceneMap::Draw()
 	dst3.m_left   = 280.0f;
 	dst3.m_right  = 770.0f;
 	dst3.m_bottom = 480.0f;
-//	Draw::Draw(1, &src, &dst3, c, 0.0f);//武具やへ
+	Draw::Draw(1, &src, &dst3, c, 0.0f);//武具やへ
 	dst3.m_top    = 500.0f;
 	dst3.m_left   = 280.0f;
 	dst3.m_right  = 770.0f;
@@ -139,7 +139,8 @@ void CSceneMap::Draw()
     //文字表示---------------------------------------
 	Font::StrDraw(L" ★メイン★", 50, 45, 35, c);	
 //	Font::StrDraw(L"未完（ 画像ない ）左上クリック or 右上クリック",90,125,35,c);
-	Font::StrDraw(L"アクション画面へ", 310, 280, 55, c);
+	Font::StrDraw(L"ステージ１", 380, 280, 55, c);
+	Font::StrDraw(L"ステージ２", 380, 410, 55, c);
 
 	//仮マウスの位置表示----------------------------------------
 	wchar_t str[256];

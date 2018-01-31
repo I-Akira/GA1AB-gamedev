@@ -41,9 +41,7 @@ void CSceneBattle2::InitScene()
 	//グラフィック読み込み
 	Draw::LoadImageW(L"image.png", 0, TEX_SIZE_512);
 	Draw::LoadImageW(L"sougen.png", 1, TEX_SIZE_512);
-	//音楽読み込み・再生
-	//	Audio::LoadAudio(0, L"BGM Action", SOUND_TYPE::BACK_MUSIC);
-	//	Audio::Start(0);
+
 
 	CObjBatoru*objv = new CObjBatoru();
 	Objs::InsertObj(objv, OBJ_BATORU, 5);
