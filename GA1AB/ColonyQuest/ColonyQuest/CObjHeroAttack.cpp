@@ -56,7 +56,7 @@ void CObjHeroAttack::Action()
 		};
 
 		//アニメーションのコマ間隔制御
-		if (m_ani_time > 3)
+		if (m_ani_time > 2)
 		{
 			m_ani++;
 			m_ani_time = 0;
