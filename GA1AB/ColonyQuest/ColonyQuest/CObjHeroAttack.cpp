@@ -4,6 +4,7 @@
 #include "GameL\HitBoxManager.h"
 #include "GameHead.h"
 
+
 #include "ObjTime.h"
 #include "CObjheroAttack.h"
 #include "ObjHero.h"
@@ -19,6 +20,7 @@ CObjHeroAttack::CObjHeroAttack(float x, float y)
 //イニシャライズ
 void CObjHeroAttack::Init()
 {
+
 	Draw::LoadImage(L"zan.png", 9, TEX_SIZE_512);
 	//当たり判定hitBoxを作成
 	Hits::SetHitBox(this, m_px, m_py, 5, 64, ELEMENT_PLAYER, OBJ_HEROATTACK, 1);

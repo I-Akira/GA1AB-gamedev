@@ -25,10 +25,10 @@ void CSceneClear::InitScene()
 	Draw::LoadImage(L"haikei4.png", 3, TEX_SIZE_512);
 	Draw::LoadImage(L"haikei2.png", 4, TEX_SIZE_512);
 	//音楽・SE読み込み
-	Audio::LoadAudio(0, L"BGM Menu.wav", SOUND_TYPE::BACK_MUSIC);
+	Audio::LoadAudio(0, L"SE GameClear.wav", SOUND_TYPE::EFFECT);
 	Audio::LoadAudio(1, L"SE SELECT.wav", SOUND_TYPE::EFFECT);
 
-	//Audio::Start(0);
+	Audio::Start(0);
 }
 //----------------------------------------------------------------------------------------------------------------------------------------
 void CSceneClear::Scene()//初期化-------------------------------------------------------------------------------------------------------------
@@ -57,21 +57,21 @@ void CSceneClear::Action()
 	m_mou_r = Input::GetMouButtonR();
 	m_mou_l = Input::GetMouButtonL();
 
-	//アクションに移動
+	//選択画面に移動
 	if (m_mou_x <= 770 && m_mou_x >= 280 && m_mou_y >= 260 && m_mou_y <= 350)
 	{
 		if (m_mou_l == true)
 		{
-			//	Audio::Start(1);
+			Audio::Start(1);
 			Scene::SetScene(new CSceneMap());
 		}
 	}
-	//武器屋に移動
+	//タイトルに移動
 	if (m_mou_x <= 770 && m_mou_x >= 280 && m_mou_y >= 390 && m_mou_y <= 480)
 	{
 		if (m_mou_l == true)
 		{
-			//Audio::Start(1);
+			Audio::Start(1);
 			Scene::SetScene(new CSceneTitle());//
 		}
 	}
@@ -80,7 +80,7 @@ void CSceneClear::Action()
 	{
 		if (m_mou_l == true)
 		{
-			//Audio::Start(1);
+			Audio::Start(1);
 			//			Scene::SetScene(new CSceneItem());
 		}
 	}

@@ -5,6 +5,7 @@
 #include "GameL\WinInputs.h"
 #include "GameL\SceneManager.h"
 #include "GameL\hitBoxManager.h"
+#include "GameL\Audio.h"
 
 #include "GameHead.h"
 #include "ObjHero.h"
@@ -36,6 +37,7 @@ void CObjHero::Init()
 
 	m_f = true;//攻撃制御
 
+	Audio::LoadAudio(11, L"SE Atac.wav", SOUND_TYPE::EFFECT);
 
 	m_block_type = 0;	//踏んでいるblockの種類を確認用
 
@@ -58,7 +60,7 @@ void CObjHero::Action()
 	//マップに戻る
 	if (Input::GetVKey('E') == true)
 	{
-		Scene::SetScene(new CSceneMap);
+		Scene::SetScene(new CSceneClear());
 	}
 	//Sキー入力でジャンプ
 	if (Input::GetVKey('S') == true)
@@ -109,8 +111,10 @@ void CObjHero::Action()
 	//主人公の攻撃
 	if (Input::GetVKey('D') == true)
 	{
+		
 		if(m_f==true)
 		{
+			Audio::Start(11);
 			//攻撃オブジェクト作成
 			CObjHeroAttack*obj_b = new CObjHeroAttack(m_px+62.0f, m_py);//攻撃オブジェクト作成
 			Objs::InsertObj(obj_b, OBJ_HEROATTACK, 100);//作った攻撃オブジェクトをオブジェクトマネージャーに登録
