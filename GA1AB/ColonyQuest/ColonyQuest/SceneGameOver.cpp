@@ -26,10 +26,10 @@ void CSceneGameOver::InitScene()
 	Draw::LoadImage(L"haikei2.png", 4, TEX_SIZE_512);
 	Draw::LoadImage(L"GameOver.png", 5, TEX_SIZE_512);
 	//âπäyÅESEì«Ç›çûÇ›
-	Audio::LoadAudio(0, L"BGM Menu.wav", SOUND_TYPE::BACK_MUSIC);
+	Audio::LoadAudio(0, L"SE GameOver.wav", SOUND_TYPE::EFFECT);
 	Audio::LoadAudio(1, L"SE SELECT.wav", SOUND_TYPE::EFFECT);
 
-	//Audio::Start(0);
+	Audio::Start(0);
 }
 //----------------------------------------------------------------------------------------------------------------------------------------
 void CSceneGameOver::Scene()//èâä˙âª-------------------------------------------------------------------------------------------------------------
@@ -63,7 +63,7 @@ void CSceneGameOver::Action()
 	{
 		if (m_mou_l == true)
 		{
-		//	Audio::Start(1);
+			Audio::Start(1);
 			Scene::SetScene(new CSceneBattle());
 		}
 	}
@@ -72,7 +72,7 @@ void CSceneGameOver::Action()
 	{
 		if (m_mou_l == true)
 		{
-			//Audio::Start(1);
+			Audio::Start(1);
 			Scene::SetScene(new CSceneMap());//
 		}
 	}
@@ -81,8 +81,8 @@ void CSceneGameOver::Action()
 	{
 		if (m_mou_l == true)
 		{
-			//Audio::Start(1);
-					Scene::SetScene(new CSceneTitle());
+			Audio::Start(1);
+			Scene::SetScene(new CSceneTitle());
 		}
 	}
 
