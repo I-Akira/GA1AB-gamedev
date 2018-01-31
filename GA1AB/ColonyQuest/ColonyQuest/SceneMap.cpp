@@ -62,7 +62,7 @@ void CSceneMap::Action()
 	{
 		if (m_mou_l == true)
 		{
-		//	Audio::Start(1);
+			Audio::Start(1);
 			Scene::SetScene(new CSceneBattle());
 		}
 	}

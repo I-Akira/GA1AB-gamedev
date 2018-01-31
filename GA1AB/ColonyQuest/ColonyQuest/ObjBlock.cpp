@@ -17,6 +17,7 @@ CObjBlock::CObjBlock(int map[10][100])
 //マップデータをコピー
 	memcpy(m_map, map, sizeof(int)*(10 * 100));
 	Audio::LoadAudio(0, L"BGM Action.wav", SOUND_TYPE::BACK_MUSIC);
+//	float Volume  =Audio::VolumeMaster(-0.7);
 	Audio::Start(0);
 }
 //イニシャライズ
