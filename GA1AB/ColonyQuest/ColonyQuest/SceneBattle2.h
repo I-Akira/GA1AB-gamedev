@@ -9,8 +9,8 @@ using namespace GameL;
 class CSceneBattle2 :public CScene
 {
 public:
-	CSceneBattle2();
-	~CSceneBattle2();
+	CSceneBattle2() {};
+	~CSceneBattle2() {};
 	void InitScene();//初期化メソッド
 	void Scene();	 //実行中メソッド
 public:

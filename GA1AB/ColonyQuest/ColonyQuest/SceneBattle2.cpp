@@ -12,20 +12,8 @@
 using namespace GameL;
 
 //使用ヘッダー
-#include "SceneBattle.h"
+#include "SceneBattle2.h"
 #include "Gamehead.h"
-
-//コンストラクタ
-CSceneBattle2::CSceneBattle2()
-{
-
-}
-
-//デストラクタ
-CSceneBattle2::~CSceneBattle2()
-{
-
-}
 
 //初期化メソッド
 void CSceneBattle2::InitScene()
@@ -76,7 +64,7 @@ void CSceneBattle2::InitScene()
 
 }
 //実行中メソッド
-void CSceneBattle::Scene()
+void CSceneBattle2::Scene()
 {
 
 }
