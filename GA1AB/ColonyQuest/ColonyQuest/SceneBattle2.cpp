@@ -16,19 +16,19 @@ using namespace GameL;
 #include "Gamehead.h"
 
 //コンストラクタ
-CSceneBattle::CSceneBattle()
+CSceneBattle2::CSceneBattle2()
 {
 
 }
 
 //デストラクタ
-CSceneBattle::~CSceneBattle()
+CSceneBattle2::~CSceneBattle2()
 {
 
 }
 
 //初期化メソッド
-void CSceneBattle::InitScene()
+void CSceneBattle2::InitScene()
 {
 	//ステージデータの読み込み
 	unique_ptr<wchar_t> p;
