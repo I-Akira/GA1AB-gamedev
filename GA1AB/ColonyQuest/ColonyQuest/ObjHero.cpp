@@ -46,6 +46,7 @@ void CObjHero::Init()
 //アクション
 void CObjHero::Action()
 {
+
 	//落下によるゲームオーバーとリスタート
 	if (m_py > 1000.0f)
 	{
