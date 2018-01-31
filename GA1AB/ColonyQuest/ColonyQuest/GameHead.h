@@ -86,6 +86,7 @@ struct UserData
 #include "ShopSoubi2.h"
 #include "SceneGameOver.h"
 #include "SceneClear.h"
+#include "SceneBattle2.h"
 
 //-----------------------------------------------
 
