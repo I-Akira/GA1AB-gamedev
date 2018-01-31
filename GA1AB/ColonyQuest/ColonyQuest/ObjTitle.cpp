@@ -5,6 +5,7 @@
 #include "GameL\DrawFont.h"
 #include "GameL\UserData.h"
 #include "GameHead.h"
+#include "GameL\Audio.h"
 
 #include "ObjTitle.h"
 
@@ -15,6 +16,7 @@ using namespace GameL;
 //イニシャライズ
 void CObjTitle::Init()
 {
+	Audio::LoadAudio(0, L"SE SELECT.wav", SOUND_TYPE::EFFECT);
 	m_mou_x = 0.0f;
 	m_mou_y = 0.0f;
 	m_mou_r = false;
@@ -46,6 +48,7 @@ void CObjTitle::Action()
 	{
 		if (m_mou_r == true || m_mou_l == true)
 		{
+			Audio::Start(0);
 			Scene::SetScene(new CSceneMap());
 		}
 		else

@@ -4,6 +4,7 @@
 #include "GameL\SceneManager.h"
 #include "GameL\SceneObjManager.h"
 #include "GameL\DrawFont.h"
+#include "GameL\Audio.h"
 
 #include "GameHead.h"
 #include "ObjBlock.h"
@@ -15,6 +16,8 @@ CObjBlock::CObjBlock(int map[10][100])
 {
 //マップデータをコピー
 	memcpy(m_map, map, sizeof(int)*(10 * 100));
+	Audio::LoadAudio(0, L"BGM Action.wav", SOUND_TYPE::BACK_MUSIC);
+	Audio::Start(0);
 }
 //イニシャライズ
 void CObjBlock::Init()
@@ -24,6 +27,7 @@ void CObjBlock::Init()
 //アクション
 void CObjBlock::Action()
 {
+
 	//主人公の位置を取得
 	CObjHero*hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
 	float hx = hero->GetX();

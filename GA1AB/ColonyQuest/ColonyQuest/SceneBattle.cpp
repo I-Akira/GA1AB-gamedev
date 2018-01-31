@@ -54,7 +54,7 @@ void CSceneBattle::InitScene()
 	Draw::LoadImageW(L"image.png",0, TEX_SIZE_512);
 	Draw::LoadImageW(L"sougen.png",1, TEX_SIZE_512);
 	//âπäyì«Ç›çûÇ›ÅEçƒê∂
-	Audio::LoadAudio(0, L"BGM Action", SOUND_TYPE::BACK_MUSIC);
+//	Audio::LoadAudio(0, L"BGM Action", SOUND_TYPE::BACK_MUSIC);
 //	Audio::Start(0);
 
 	CObjBatoru*objv = new CObjBatoru();
