@@ -47,7 +47,7 @@ void CObjHero::Init()
 void CObjHero::Action()
 {
 	//落下によるゲームオーバーとリスタート
-	if (m_py > 1000.0f)
+	if (m_py > 565.0f)//試し用
 	{
 		//場外に出たらリスタート
 		Scene::SetScene(new CSceneGameOver);
@@ -110,6 +110,7 @@ void CObjHero::Action()
 	{
 		if(m_f==true)
 		{
+			m_del == true;
 			//攻撃オブジェクト作成
 			CObjHeroAttack*obj_b = new CObjHeroAttack(m_px+62.0f, m_py);//攻撃オブジェクト作成
 			Objs::InsertObj(obj_b, OBJ_HEROATTACK, 100);//作った攻撃オブジェクトをオブジェクトマネージャーに登録
@@ -247,7 +248,7 @@ void CObjHero::Draw()
 	*/
 	int AniData[4] =
 	{
-		1,0,2,0,
+		1,0,1,0,
 	};
 	//描画カラー情報
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
