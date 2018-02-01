@@ -22,8 +22,9 @@ void CSceneClear::InitScene()
 	//グラフィック読み込み
 	Draw::LoadImage(L"tekisuto1.png", 1, TEX_SIZE_512);
 	Draw::LoadImage(L"tekisuto2.png", 2, TEX_SIZE_512);
-	Draw::LoadImage(L"haikei4.png", 3, TEX_SIZE_512);
+	Draw::LoadImage(L"gameclearH.png", 3, TEX_SIZE_512);
 	Draw::LoadImage(L"haikei2.png", 4, TEX_SIZE_512);
+	Draw::LoadImage(L"gameclear.png", 5, TEX_SIZE_512);
 	//音楽・SE読み込み
 	Audio::LoadAudio(0, L"SE GameClear.wav", SOUND_TYPE::EFFECT);
 	Audio::LoadAudio(1, L"SE SELECT.wav", SOUND_TYPE::EFFECT);
@@ -109,16 +110,16 @@ void CSceneClear::Draw()
 	dst.m_top = 0.0f;
 	dst.m_left = 0.0f;
 	dst.m_right = 1030.0f;
-	dst.m_bottom = 600.0f;
+	dst.m_bottom = 1000.0f;
 	Draw::Draw(3, &src, &dst, c, 0.0f);
 
 	//テキスト----------------------------------------------------
 	//表示位置
 	dst2.m_top = 0.0f;
-	dst2.m_left = 0.0f;
-	dst2.m_right = 380.0f;
-	dst2.m_bottom = 120.0f;
-	//	Draw::Draw(1, &src, &dst2, c, 0.0f);//MAP
+	dst2.m_left = 200.0f;
+	dst2.m_right = 835.0f;
+	dst2.m_bottom = 300.0f;
+	Draw::Draw(5, &src, &dst2, c, 0.0f);//MAP
 
 	dst3.m_top = 240.0f;
 	dst3.m_left = 280.0f;
@@ -136,8 +137,7 @@ void CSceneClear::Draw()
 	dst3.m_bottom = 610.0f;
 	//	Draw::Draw(1, &src, &dst3, c, 0.0f);//道具やへ
 	//文字表示---------------------------------------
-	Font::StrDraw(L" おめでとう！", 365, 90, 40, c);
-	Font::StrDraw(L" ゲームクリア", 365, 130, 40, c);
+	Font::StrDraw(L" おめでとう！", 390, 90, 40, c);
 	//	Font::StrDraw(L"未完（ 画像ない ）左上クリック or 右上クリック",90,125,35,c);
 	Font::StrDraw(L"ステージ選択画面へ", 320, 280, 44, c);
 	Font::StrDraw(L"タイトルへ", 380, 390, 55, c);
