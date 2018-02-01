@@ -90,8 +90,8 @@ void CObjTitle::Draw()
 	Draw::Draw(0, &src, &dst, c, 0.0f);
 
 	//タイトル
-	Font::StrDraw(L"止まるんじゃねぇぞ･･･", TITLE_POS_X-20, TITLE_POS_Y, TITLE_FONT_SIZE, b);
-	Font::StrDraw(L"～Don't Stop!～", TITLE_POS_X+10, TITLE_POS_Y+TITLE_FONT_SIZE, TITLE_FONT_SIZE, b);
+	Font::StrDraw(L"爆走ランナー", TITLE_POS_X+40, TITLE_POS_Y, TITLE_FONT_SIZE, b);
+	Font::StrDraw(L"～Bakusou Runner～", TITLE_POS_X-20, TITLE_POS_Y+TITLE_FONT_SIZE, TITLE_FONT_SIZE, b);
 	
 
 	//クリックする場所
