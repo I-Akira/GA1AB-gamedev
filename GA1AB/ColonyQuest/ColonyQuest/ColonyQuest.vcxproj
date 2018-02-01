@@ -113,6 +113,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Battle3.cpp" />
     <ClCompile Include="CObjHeroAttack.cpp" />
     <ClCompile Include="GameL\Audio.cpp" />
     <ClCompile Include="GameL\DirectXDevice.cpp" />
@@ -147,6 +148,7 @@
     <ClCompile Include="Story.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Battle3.h" />
     <ClInclude Include="CObjheroattack.h" />
     <ClInclude Include="GameHead.h" />
     <ClInclude Include="GameL\Audio.h" />
@@ -179,6 +181,7 @@
     <ClInclude Include="SceneTitle.h" />
     <ClInclude Include="ShopSoubi.h" />
     <ClInclude Include="ShopSoubi2.h" />
+    <ClInclude Include="Story.h" />
     <ClInclude Include="Struct.h" />
   </ItemGroup>
   <ItemGroup>

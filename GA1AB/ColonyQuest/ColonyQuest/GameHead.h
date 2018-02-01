@@ -19,7 +19,8 @@ enum OBJ_NAME
 	OBJ_JUMPENEMY,
 	OBJ_TIME,
 	OBJ_SCENECLEAR,
-	OBJ_SCENEGAMEOVER
+	OBJ_SCENEGAMEOVER,
+	CSCENESTORY,
 
 };
 //------------------------------------------------
@@ -87,6 +88,8 @@ struct UserData
 #include "SceneGameOver.h"
 #include "SceneClear.h"
 #include "SceneBattle2.h"
+#include "Story.h"
+#include "Battle3.h"
 
 //-----------------------------------------------
 

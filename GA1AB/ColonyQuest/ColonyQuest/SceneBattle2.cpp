@@ -21,7 +21,7 @@ void CSceneBattle2::InitScene()
 	//ステージデータの読み込み
 	unique_ptr<wchar_t> p;
 	int size;
-	p = Save::ExternalDataOpen(L"Book1.csv", &size);
+	p = Save::ExternalDataOpen(L"Book2.csv", &size);
 
 	int map[10][100];
 	int count = 1;
@@ -37,7 +37,7 @@ void CSceneBattle2::InitScene()
 		}
 	}
 	//Font作成
-	Font::SetStrTex(L"0123456789分秒");
+	//Font::SetStrTex(L"0123456789分秒");
 	//グラフィック読み込み
 	Draw::LoadImageW(L"image.png", 0, TEX_SIZE_512);
 	Draw::LoadImageW(L"sougen.png", 1, TEX_SIZE_512);

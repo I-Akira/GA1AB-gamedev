@@ -42,12 +42,15 @@
     <Filter Include="ソース ファイル\Battle\BattleScene\Battle中級">
       <UniqueIdentifier>{d0cd7b1d-d331-40be-b535-287bbf9693e2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\ヘッダー ファイル">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
     <Filter Include="ソース ファイル\Story">
       <UniqueIdentifier>{939d5a09-9de0-4d16-860a-521a1e2ce3f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Battle\BattleScene\Battle チュートリアル">
+      <UniqueIdentifier>{eb8b41f4-7f13-430b-9be1-69b4fe98295b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -132,12 +135,6 @@
     <ClCompile Include="ObjJunpEnemy.cpp">
       <Filter>ソース ファイル\Battle\BattleScene</Filter>
     </ClCompile>
-    <ClCompile Include="SceneGameOver.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneClear.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="SceneBattle.cpp">
       <Filter>ソース ファイル\Battle\BattleScene\Battle初級</Filter>
     </ClCompile>
@@ -146,6 +143,15 @@
     </ClCompile>
     <ClCompile Include="Story.cpp">
       <Filter>ソース ファイル\Story</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneClear.cpp">
+      <Filter>ソース ファイル\Battle\BattleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneGameOver.cpp">
+      <Filter>ソース ファイル\Battle\BattleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Battle3.cpp">
+      <Filter>ソース ファイル\Battle\BattleScene\Battle チュートリアル</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -183,13 +189,13 @@
       <Filter>リソース ファイル\GameL</Filter>
     </ClInclude>
     <ClInclude Include="GameHead.h">
-      <Filter>ソース ファイル\ヘッダー ファイル</Filter>
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="main.h">
-      <Filter>ソース ファイル\ヘッダー ファイル</Filter>
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Struct.h">
-      <Filter>ソース ファイル\ヘッダー ファイル</Filter>
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Item.h">
       <Filter>ソース ファイル\MatStore\Item</Filter>
@@ -236,17 +242,23 @@
     <ClInclude Include="ObjJunpEnemy.h">
       <Filter>ソース ファイル\Battle\BattleScene</Filter>
     </ClInclude>
-    <ClInclude Include="SceneGameOver.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneClear.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="SceneBattle.h">
       <Filter>ソース ファイル\Battle\BattleScene\Battle初級</Filter>
     </ClInclude>
     <ClInclude Include="SceneBattle2.h">
       <Filter>ソース ファイル\Battle\BattleScene\Battle中級</Filter>
+    </ClInclude>
+    <ClInclude Include="Story.h">
+      <Filter>ソース ファイル\Story</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneClear.h">
+      <Filter>ソース ファイル\Battle\BattleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneGameOver.h">
+      <Filter>ソース ファイル\Battle\BattleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Battle3.h">
+      <Filter>ソース ファイル\Battle\BattleScene\Battle チュートリアル</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

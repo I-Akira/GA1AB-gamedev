@@ -110,7 +110,7 @@ void CObjBlock::Draw()
 			if (m_map[i][j] == 2)
 			{
 				//スタートブロック
-				BlockDraw(320.0f + 65.0f, 0.0f, &dst, c);
+				BlockDraw(320.0f, 0.0f, &dst, c);
 			}
 			else if (m_map[i][j] == 3)
 			{

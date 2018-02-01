@@ -49,7 +49,7 @@ void CObjTitle::Action()
 		if (m_mou_r == true || m_mou_l == true)
 		{
 			Audio::Start(0);
-			Scene::SetScene(new CSceneMap());
+			Scene::SetScene(new CSceneStory());
 		}
 		else
 		{
