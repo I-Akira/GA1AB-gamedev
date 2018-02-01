@@ -86,7 +86,7 @@ void CObjBlock::Draw()
 	RECT_F dst;//描画先表示位置
 
 	//背景表示
-	src.m_top = 320.0f;
+	src.m_top = 336.0f;
 	src.m_left = 0.0f;
 	src.m_right = 512.0f;
 	src.m_bottom = 512.0f;
@@ -121,12 +121,12 @@ void CObjBlock::Draw()
 			{
 				;//敵配置用の番号のため何もしない
 			}
-			/*
-			else if (m_map[i][j] == 5)
+			
+			else if (m_map[i][j] == 6)
 			{
-				Obstacle(320.0f + 0.0f, 64.0f, &dst, c);
+				BlockDraw(320.0f, 200.0f, &dst, c);
 			}
-			*/
+			
 			else
 			{
 				BlockDraw(320.0f, 0.0f, &dst, c);

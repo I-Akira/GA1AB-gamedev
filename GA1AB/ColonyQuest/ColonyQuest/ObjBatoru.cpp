@@ -50,7 +50,7 @@ void CObjBatoru::Draw()
 	Font::StrDraw(L"EÅFëIëâÊñ Ç…ñﬂÇÈ", 700, 680, 30, c);
 	Draw::LoadImageW(L"sougen.png", 1, TEX_SIZE_512);
 	//îwåiï\é¶
-	src.m_top = 320.0f;
+	src.m_top = 380.0f;
 	src.m_left = 0.0f;
 	src.m_right = 512.0f;
 	src.m_bottom = 512.0f;
