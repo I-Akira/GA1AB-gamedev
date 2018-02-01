@@ -46,6 +46,9 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
+    <Filter Include="ソース ファイル\Story">
+      <UniqueIdentifier>{939d5a09-9de0-4d16-860a-521a1e2ce3f0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameL\Audio.cpp">
@@ -142,7 +145,7 @@
       <Filter>ソース ファイル\Battle\BattleScene\Battle中級</Filter>
     </ClCompile>
     <ClCompile Include="Story.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\Story</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
