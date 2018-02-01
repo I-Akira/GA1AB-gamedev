@@ -52,7 +52,7 @@ void CObjBlock::Action()
 
 	//敵出現ライン
 	//主人公の位置+500を敵出現ラインにする
-	float Line = hx + (-m_scroll) + 500;
+	float Line = hx + (-m_scroll) + 750;
 
 	//敵出現ラインを要素番号化
 	int ex = ((int)Line) / 64;
