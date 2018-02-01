@@ -144,6 +144,7 @@
     <ClCompile Include="SceneTitle.cpp" />
     <ClCompile Include="ShopSoubi.cpp" />
     <ClCompile Include="ShopSoubi2.cpp" />
+    <ClCompile Include="Story.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CObjheroattack.h" />

@@ -129,17 +129,20 @@
     <ClCompile Include="ObjJunpEnemy.cpp">
       <Filter>ソース ファイル\Battle\BattleScene</Filter>
     </ClCompile>
+    <ClCompile Include="SceneGameOver.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneClear.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
     <ClCompile Include="SceneBattle.cpp">
       <Filter>ソース ファイル\Battle\BattleScene\Battle初級</Filter>
     </ClCompile>
     <ClCompile Include="SceneBattle2.cpp">
       <Filter>ソース ファイル\Battle\BattleScene\Battle中級</Filter>
     </ClCompile>
-    <ClCompile Include="SceneClear.cpp">
-      <Filter>ソース ファイル\Battle\BattleScene</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneGameOver.cpp">
-      <Filter>ソース ファイル\Battle\BattleScene</Filter>
+    <ClCompile Include="Story.cpp">
+      <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -230,17 +233,17 @@
     <ClInclude Include="ObjJunpEnemy.h">
       <Filter>ソース ファイル\Battle\BattleScene</Filter>
     </ClInclude>
+    <ClInclude Include="SceneGameOver.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneClear.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
     <ClInclude Include="SceneBattle.h">
       <Filter>ソース ファイル\Battle\BattleScene\Battle初級</Filter>
     </ClInclude>
     <ClInclude Include="SceneBattle2.h">
       <Filter>ソース ファイル\Battle\BattleScene\Battle中級</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneClear.h">
-      <Filter>ソース ファイル\Battle\BattleScene</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneGameOver.h">
-      <Filter>ソース ファイル\Battle\BattleScene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
