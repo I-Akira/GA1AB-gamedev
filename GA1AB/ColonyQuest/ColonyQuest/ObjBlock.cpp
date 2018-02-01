@@ -122,7 +122,7 @@ void CObjBlock::Draw()
 				;//敵配置用の番号のため何もしない
 			}
 			
-			else if (m_map[i][j] == 6)
+			else if (m_map[i][j] == 6)//透明ブロック追加
 			{
 				BlockDraw(320.0f, 200.0f, &dst, c);
 			}
