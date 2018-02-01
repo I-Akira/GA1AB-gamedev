@@ -71,6 +71,25 @@ void CObjHero::Action()
 
 		}
 	}
+	/*if (m_f == true)
+		{
+	if ((m_vy != 0) == true)
+	{
+		
+			if (Input::GetVKey('S') == true)
+			{
+				if (m_hit_down != true)
+				{
+					m_vy = -12;
+				}
+			}
+		
+	}
+	}	
+	else
+		{
+			m_f = true;
+		}試作二段ジャンプ*/
 	//Aキー入力で速度アップ
 	if (Input::GetVKey('A') == true)
 	{
