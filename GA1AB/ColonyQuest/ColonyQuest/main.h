@@ -13,7 +13,7 @@
 #define BACK_COLOR      {0.0f, 0.0f, 0.0f, 1.0f}
 
 //ウィンドウゲームタイトル名
-#define GAME_NAME L"コロクエ～コロニークエスト～"
+#define GAME_NAME L"Don't Stop!"
 
 
 

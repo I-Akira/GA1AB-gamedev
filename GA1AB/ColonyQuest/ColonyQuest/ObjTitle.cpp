@@ -90,9 +90,9 @@ void CObjTitle::Draw()
 	Draw::Draw(0, &src, &dst, c, 0.0f);
 
 	//タイトル
-	Font::StrDraw(L"コロクエ！", TITLE_POS_X+80, TITLE_POS_Y, TITLE_FONT_SIZE, b);
-	Font::StrDraw(L"～Colony Quest～", TITLE_POS_X+10, TITLE_POS_Y+TITLE_FONT_SIZE, TITLE_FONT_SIZE, b);
-	Font::StrDraw(L"α版", TITLE_POS_X + 500, TITLE_POS_Y + TITLE_FONT_SIZE*2, CLICK_START_FONT_SIZE, b);
+	Font::StrDraw(L"止まるんじゃねぇぞ･･･", TITLE_POS_X-20, TITLE_POS_Y, TITLE_FONT_SIZE, b);
+	Font::StrDraw(L"～Don't Stop!～", TITLE_POS_X+10, TITLE_POS_Y+TITLE_FONT_SIZE, TITLE_FONT_SIZE, b);
+	
 
 	//クリックする場所
 	//ゲームに移行するクリック場所
@@ -100,7 +100,7 @@ void CObjTitle::Draw()
 
 
 
-	//仮マウス位置表示
+	/*//仮マウス位置表示
 	wchar_t str[256];
 	swprintf_s(str, L"x=%f,y=%f", m_mou_x, m_mou_y);
 	Font::StrDraw(str, 20, 20, 12, c);
@@ -112,7 +112,7 @@ void CObjTitle::Draw()
 	if (m_mou_l == true)
 		Font::StrDraw(L"L=押してる", 20, 40, 12, c);
 	else
-		Font::StrDraw(L"L=押してない", 20, 40, 12, c);
+		Font::StrDraw(L"L=押してない", 20, 40, 12, c);*/
 
 	/*if(m_deb_mn==true)
 		Font::StrDraw(L"デバッグ：メイン画面移行スイッチ", 20, 620, 32, b);
