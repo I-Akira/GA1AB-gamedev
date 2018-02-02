@@ -61,7 +61,7 @@ void CObjHero::Action()
 	//マップに戻る
 	if (Input::GetVKey('E') == true)
 	{
-		Scene::SetScene(new CSceneClear());
+		Scene::SetScene(new CSceneMap());
 	}
 	//Sキー入力でジャンプ
 	if (Input::GetVKey('S') == true)
