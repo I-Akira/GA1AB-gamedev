@@ -90,7 +90,7 @@ void CObjTitle::Draw()
 	Draw::Draw(0, &src, &dst, c, 0.0f);
 
 	//タイトル
-	Font::StrDraw(L"少女のお使い", TITLE_POS_X+40, TITLE_POS_Y, TITLE_FONT_SIZE, b);
+	Font::StrDraw(L"少女のお使い", TITLE_POS_X+44, TITLE_POS_Y, TITLE_FONT_SIZE, b);
 //	Font::StrDraw(L"～Bakusou Runner～", TITLE_POS_X-20, TITLE_POS_Y+TITLE_FONT_SIZE, TITLE_FONT_SIZE, b);
 	
 
