@@ -55,6 +55,14 @@ void CObjJumpEnemy::Action()
 		}
 	}
 
+	//‰æ–ÊŠO‚Éo‚½‚ç”jŠü
+	if (m_px < -10.0f)//‚µ—p
+	{
+		this->SetStatus(false);
+		Hits::DeleteHitBox(this);
+	}
+
+
 	//—‰º
 	if (m_py > 1000.0f)
 	{

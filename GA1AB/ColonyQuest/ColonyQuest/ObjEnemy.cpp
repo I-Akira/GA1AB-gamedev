@@ -50,6 +50,13 @@ void CObjEnemy::Action()
 	{
 	 ;
 	}
+
+	//画面外に出たら破棄
+	if (m_px < -10.0f)//試し用
+	{
+		this->SetStatus(false);
+		Hits::DeleteHitBox(this);
+	}
 	
 	//通常速度
 	m_speed_power = 0.5f;
