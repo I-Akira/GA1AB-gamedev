@@ -96,7 +96,7 @@ void CObjTitle::Draw()
 	src2.m_right = 500.0f;
 	src2.m_bottom = 500.0f;
 
-	dst3.m_top = 460.0f;
+	dst3.m_top = 480.0f;
 	dst3.m_left = 410.0f;
 	dst3.m_right = 600.0f;
 	dst3.m_bottom = 550.0f;
