@@ -108,7 +108,7 @@ void CObjTitle::Draw()
 
 	//クリックする場所
 	//ゲームに移行するクリック場所
-	Font::StrDraw(L"スタート", CLICK_START_POS_X+20, CLICK_START_POS_Y, CLICK_START_FONT_SIZE, b);
+	Font::StrDraw(L"スタート", CLICK_START_POS_X+20, CLICK_START_POS_Y, CLICK_START_FONT_SIZE, c);
 
 
 
