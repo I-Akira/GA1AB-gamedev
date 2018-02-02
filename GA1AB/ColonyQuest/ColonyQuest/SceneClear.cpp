@@ -118,8 +118,8 @@ void CSceneClear::Draw()
 	dst2.m_top = 0.0f;
 	dst2.m_left = 200.0f;
 	dst2.m_right = 835.0f;
-	dst2.m_bottom = 300.0f;
-	Draw::Draw(5, &src, &dst2, c, 0.0f);//MAP
+	dst2.m_bottom = 400.0f;
+	Draw::Draw(5, &src, &dst2, c, 0.0f);//GAMECLEAR
 
 	dst3.m_top = 240.0f;
 	dst3.m_left = 280.0f;
@@ -131,13 +131,10 @@ void CSceneClear::Draw()
 	dst3.m_right = 770.0f;
 	dst3.m_bottom = 480.0f;
 	Draw::Draw(1, &src, &dst3, c, 0.0f);//タイトルへ
-	dst3.m_top = 500.0f;
-	dst3.m_left = 280.0f;
-	dst3.m_right = 770.0f;
-	dst3.m_bottom = 610.0f;
-	//	Draw::Draw(1, &src, &dst3, c, 0.0f);//道具やへ
+
 	//文字表示---------------------------------------
-	Font::StrDraw(L" おめでとう！", 390, 90, 40, c);
+	Font::StrDraw(L" 少女は薬草の元にたどり着きました！", 160, 70, 40, c);
+	Font::StrDraw(L" お母さんの待つおうちに帰りましょう！", 140, 120, 40, c);
 	//	Font::StrDraw(L"未完（ 画像ない ）左上クリック or 右上クリック",90,125,35,c);
 	Font::StrDraw(L"ステージ選択画面へ", 320, 280, 44, c);
 	Font::StrDraw(L"タイトルへ", 380, 410, 55, c);

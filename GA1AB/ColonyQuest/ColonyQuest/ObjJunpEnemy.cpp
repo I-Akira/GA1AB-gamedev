@@ -118,16 +118,16 @@ void  CObjJumpEnemy::Draw()
 	};
 
 	//描画カラー情報
-	float c[4] = { 1.0f,0.0f,0.0f,1.0f };
+	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 
 	RECT_F src; //描画元切り取り位置
 	RECT_F dst; //描画先表示位置
 
 				//切り取り位置の設定
-	src.m_top = 0.0f;		 //64.0f;
+	src.m_top = 64.0f;		 //64.0f;
 	src.m_left = 72.0f;		 //0.0f + AniData[m_ani_frame] * 64;
 	src.m_right = 0.0f;		 //64.0f + AniData[m_ani_frame] * 64;
-	src.m_bottom = 60.0f;		 //src.m_top+64.0f;
+	src.m_bottom = 128.0f;		 //src.m_top+64.0f;
 
 								 //ブロック情報を持ってくる
 	CObjBlock* block = (CObjBlock*)Objs::GetObj(OBJ_BLOCK);

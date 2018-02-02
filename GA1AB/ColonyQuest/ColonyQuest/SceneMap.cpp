@@ -86,7 +86,11 @@ void CSceneMap::Action()
 		}
 	}
 
-	
+	//デバッグ・ゲームクリア確認用
+	/*if (Input::GetVKey('C') == true)
+	{
+		Scene::SetScene(new CSceneClear);//ここをクリア画面にする
+	}*/
 
 
 }
