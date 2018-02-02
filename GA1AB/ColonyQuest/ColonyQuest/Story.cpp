@@ -24,7 +24,6 @@ void CSceneStory::InitScene()
 	Draw::LoadImage(L"tekisuto1.png", 1, TEX_SIZE_512);
 	Draw::LoadImage(L"tekisuto2.png", 2, TEX_SIZE_512);
 	Draw::LoadImage(L"haikei4.png", 3, TEX_SIZE_512);
-	Draw::LoadImage(L"haikei2.png", 4, TEX_SIZE_512);
 	//âπäyÅESEì«Ç›çûÇ›
 	Audio::LoadAudio(0, L"BGM Menu.wav", SOUND_TYPE::BACK_MUSIC);
 	Audio::LoadAudio(1, L"SE SELECT.wav", SOUND_TYPE::EFFECT);
