@@ -58,8 +58,8 @@ void CSceneStory::Action()
 	m_mou_r = Input::GetMouButtonR();
 	m_mou_l = Input::GetMouButtonL();
 
-	//ステージ3に移動
-	if (m_mou_x <= 770 && m_mou_x >= 280 && m_mou_y >= 530 && m_mou_y <= 610)
+	//マップへ
+	if (m_mou_x <= 970 && m_mou_x >= 480 && m_mou_y >= 630 && m_mou_y <= 710)
 	{
 		if (m_mou_l == true)
 		{
@@ -97,10 +97,10 @@ void CSceneStory::Draw()
 
 	//テキスト----------------------------------------------------
 	//表示位置
-	dst3.m_top = 500.0f;
-	dst3.m_left = 270.0f;
-	dst3.m_right = 760.0f;
-	dst3.m_bottom = 610.0f;
+	dst3.m_top = 630.0f;
+	dst3.m_left = 470.0f;
+	dst3.m_right = 960.0f;
+	dst3.m_bottom = 710.0f;
 	Draw::Draw(1, &src, &dst3, c, 0.0f);//道具やへ
 										//文字表示---------------------------------------
 	Font::StrDraw(L"とある村に一人の少女とその母親がいました。", 150, 80, 35, c);
@@ -112,7 +112,7 @@ void CSceneStory::Draw()
 	Font::StrDraw(L"一振りのナイフとともに走り出しました。",190, 320, 35, c);
 	Font::StrDraw(L"すべては、大好きなお母さんのために・・・", 160, 360, 35, c);
 
-	Font::StrDraw(L"薬草を取りに行く！", 330, 550, 45, c);
+	Font::StrDraw(L"薬草を取りに行く！", 530, 650, 45, c);
 	//仮マウスの位置表示----------------------------------------
 	wchar_t str[256];
 	swprintf_s(str, L"x = %f, y = %f", m_mou_x, m_mou_y);
