@@ -64,18 +64,18 @@ void CSceneGameOver::Action()
 		if (m_mou_l == true)
 		{
 			Audio::Start(1);
-			Scene::SetScene(new CSceneBattle());
+			Scene::SetScene(new CSceneMap());
 		}
 	}
 	//mapへ
-	if (m_mou_x <= 770 && m_mou_x >= 280 && m_mou_y >= 390 && m_mou_y <= 480)
+	/*if (m_mou_x <= 770 && m_mou_x >= 280 && m_mou_y >= 390 && m_mou_y <= 480)
 	{
 		if (m_mou_l == true)
 		{
 			Audio::Start(1);
 			Scene::SetScene(new CSceneMap());//
 		}
-	}
+	}*/
 	//タイトルへ
 	if (m_mou_x <= 770 && m_mou_x >= 280 && m_mou_y >= 530 && m_mou_y <= 610)
 	{
@@ -130,7 +130,7 @@ void CSceneGameOver::Draw()
 	dst3.m_left = 280.0f;
 	dst3.m_right = 770.0f;
 	dst3.m_bottom = 480.0f;
-	Draw::Draw(1, &src, &dst3, c, 0.0f);//MAP
+	//Draw::Draw(1, &src, &dst3, c, 0.0f);//MAP
 	dst3.m_top = 500.0f;
 	dst3.m_left = 280.0f;
 	dst3.m_right = 770.0f;
@@ -139,8 +139,8 @@ void CSceneGameOver::Draw()
 	//文字表示---------------------------------------
 	//Font::StrDraw(L" ゲームオーバー", 365, 120, 40, c);
 	//	Font::StrDraw(L"未完（ 画像ない ）左上クリック or 右上クリック",90,125,35,c);
-	Font::StrDraw(L"リスタート", 380, 280, 55, c);
-	Font::StrDraw(L"ステージ選択画面へ", 325, 410, 44, c);
+	Font::StrDraw(L"ステージ選択画面へ", 325, 280, 44, c);
+	//Font::StrDraw(L"無題", 325, 410, 44, c);
 	Font::StrDraw(L"タイトルへ", 380,530, 55, c);
 	//仮マウスの位置表示----------------------------------------
 	wchar_t str[256];
