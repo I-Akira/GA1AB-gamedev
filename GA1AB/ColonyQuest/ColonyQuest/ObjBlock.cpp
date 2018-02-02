@@ -115,7 +115,7 @@ void CObjBlock::Draw()
 			else if (m_map[i][j] == 3)
 			{
 				//ゴールブロック
-				BlockDraw(320.0f + 65.0f, 64.0f, &dst, c);
+				BlockDraw(320.0f + 65.0f, 125.0f, &dst, c);
 			}
 			else if (m_map[i][j] == 4)
 			{
@@ -246,6 +246,9 @@ void CObjBlock::BlockHit(
 							*left=true;//主人公から見て、右の部分が衝突している
 							*x =bx - 42.5f + (scroll);//ブロックの位置-主人公の幅
 							*vx= -(*vx)*0.1f;
+						    //種類を渡すのスタートとゴールのみ変更する
+							if (m_map[i][j] >= 2)
+								*bt=m_map[i][j];//ブロックの要素（type）を主人公に渡す
 						}
 						if (r > 225 && r < 315)
 						{

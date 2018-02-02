@@ -36,6 +36,7 @@ void CObjHero::Init()
 	m_hit_right = false;
 
 	m_f = true;//攻撃制御
+	m_vf = true;
 
 	Audio::LoadAudio(11, L"SE Atac.wav", SOUND_TYPE::EFFECT);
 
@@ -67,29 +68,10 @@ void CObjHero::Action()
 	{
 		if (m_hit_down == true)
 		{
-			m_vy = -12;
-
+			m_vy = -14;
 		}
 	}
-	/*if (m_f == true)
-		{
-	if ((m_vy != 0) == true)
-	{
-		
-			if (Input::GetVKey('S') == true)
-			{
-				if (m_hit_down != true)
-				{
-					m_vy = -12;
-				}
-			}
-		
-	}
-	}	
-	else
-		{
-			m_f = true;
-		}試作二段ジャンプ*/
+
 	//Aキー入力で速度アップ
 	if (Input::GetVKey('A') == true)
 	{

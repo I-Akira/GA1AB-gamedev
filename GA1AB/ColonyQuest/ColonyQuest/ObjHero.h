@@ -51,6 +51,7 @@ public:
 	bool m_hit_right;
 	//UŒ‚§Œä
 	bool m_f;
+	bool m_vf;
 	bool m_del;
 
 	//“¥‚ñ‚Å‚¢‚éblock‚Ìí—Ş‚ğŠm”F—p
