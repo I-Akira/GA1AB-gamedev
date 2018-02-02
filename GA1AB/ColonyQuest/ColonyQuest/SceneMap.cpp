@@ -141,7 +141,7 @@ void CSceneMap::Draw()
 //	Font::StrDraw(L"未完（ 画像ない ）左上クリック or 右上クリック",90,125,35,c);
 	Font::StrDraw(L"ステージ１", 395, 280, 55, c);
 	Font::StrDraw(L"ステージ２", 395, 410, 55, c);
-	Font::StrDraw(L"ステージ２", 395, 540, 55, c);
+	Font::StrDraw(L"ステージ３", 395, 540, 55, c);
 	//仮マウスの位置表示----------------------------------------
 	wchar_t str[256];
 	swprintf_s(str, L"x = %f, y = %f", m_mou_x, m_mou_y);

@@ -117,8 +117,8 @@ void  CObjJumpEnemy::Draw()
 
 				//切り取り位置の設定
 	src.m_top = 0.0f;		 //64.0f;
-	src.m_left = 0.0f;		 //0.0f + AniData[m_ani_frame] * 64;
-	src.m_right = 72.0f;		 //64.0f + AniData[m_ani_frame] * 64;
+	src.m_left = 72.0f;		 //0.0f + AniData[m_ani_frame] * 64;
+	src.m_right = 0.0f;		 //64.0f + AniData[m_ani_frame] * 64;
 	src.m_bottom = 60.0f;		 //src.m_top+64.0f;
 
 								 //ブロック情報を持ってくる
