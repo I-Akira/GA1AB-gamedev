@@ -127,7 +127,6 @@
     <ClCompile Include="GameL\SetWindow.cpp" />
     <ClCompile Include="GameL\UserData.cpp" />
     <ClCompile Include="GameL\WinInputs.cpp" />
-    <ClCompile Include="Item.cpp" />
     <ClCompile Include="ObjBatoru.cpp" />
     <ClCompile Include="ObjBlock.cpp" />
     <ClCompile Include="ObjEnemy.cpp" />
@@ -139,12 +138,8 @@
     <ClCompile Include="SceneBattle2.cpp" />
     <ClCompile Include="SceneClear.cpp" />
     <ClCompile Include="SceneGameOver.cpp" />
-    <ClCompile Include="SceneItem.cpp" />
-    <ClCompile Include="SceneItem2.cpp" />
     <ClCompile Include="SceneMap.cpp" />
     <ClCompile Include="SceneTitle.cpp" />
-    <ClCompile Include="ShopSoubi.cpp" />
-    <ClCompile Include="ShopSoubi2.cpp" />
     <ClCompile Include="Story.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -162,7 +157,6 @@
     <ClInclude Include="GameL\SetWindow.h" />
     <ClInclude Include="GameL\UserData.h" />
     <ClInclude Include="GameL\WinInputs.h" />
-    <ClInclude Include="Item.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="ObjBatoru.h" />
     <ClInclude Include="ObjBlock.h" />
@@ -175,12 +169,8 @@
     <ClInclude Include="SceneBattle2.h" />
     <ClInclude Include="SceneClear.h" />
     <ClInclude Include="SceneGameOver.h" />
-    <ClInclude Include="SceneItem.h" />
-    <ClInclude Include="SceneItem2.h" />
     <ClInclude Include="SceneMap.h" />
     <ClInclude Include="SceneTitle.h" />
-    <ClInclude Include="ShopSoubi.h" />
-    <ClInclude Include="ShopSoubi2.h" />
     <ClInclude Include="Story.h" />
     <ClInclude Include="Struct.h" />
   </ItemGroup>

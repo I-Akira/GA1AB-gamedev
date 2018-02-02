@@ -13,9 +13,6 @@ enum OBJ_NAME
 	OBJ_BLOCK,
 	OBJ_BATORU,
 	OBJ_SCENE_MAP,
-	OBJ_SHOP_ITEM,
-	OBJ_SHOP_SOUBI,
-	OBJ_SHOP_SOUBI2,
 	OBJ_JUMPENEMY,
 	OBJ_TIME,
 	OBJ_SCENECLEAR,
@@ -80,11 +77,7 @@ struct UserData
 //ゲームシーンクラスヘッダ------------------------
 #include "SceneTitle.h"
 #include "SceneBattle.h"
-#include "SceneItem.h"
-#include "SceneItem2.h"
 #include "SceneMap.h"
-#include "ShopSoubi.h"
-#include "ShopSoubi2.h"
 #include "SceneGameOver.h"
 #include "SceneClear.h"
 #include "SceneBattle2.h"
