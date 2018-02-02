@@ -16,6 +16,7 @@ using namespace GameL;
 //イニシャライズ
 void CObjTitle::Init()
 {
+	Draw::LoadImage(L"tekisuto1.png", 1, TEX_SIZE_512);
 	Audio::LoadAudio(0, L"SE SELECT.wav", SOUND_TYPE::EFFECT);
 	m_mou_x = 0.0f;
 	m_mou_y = 0.0f;
@@ -73,8 +74,8 @@ void CObjTitle::Draw()
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 	float b[4] = { 0.1f,0.1f,0.1f,1.0f };
 
-	RECT_F src;
-	RECT_F dst;
+	RECT_F src,src2;
+	RECT_F dst, dst3;
 	
 	//背景設定
 	src.m_top = 0.0f;
@@ -89,9 +90,20 @@ void CObjTitle::Draw()
 
 	Draw::Draw(0, &src, &dst, c, 0.0f);
 
+	//切り取り位置
+	src2.m_top = 0.0f;
+	src2.m_left = 0.0f;
+	src2.m_right = 500.0f;
+	src2.m_bottom = 500.0f;
+
+	dst3.m_top = 460.0f;
+	dst3.m_left = 410.0f;
+	dst3.m_right = 600.0f;
+	dst3.m_bottom = 550.0f;
+	Draw::Draw(1, &src2, &dst3, c, 0.0f);//タイトルへ
 	//タイトル
-	Font::StrDraw(L"少女のお使い", TITLE_POS_X+44, TITLE_POS_Y, TITLE_FONT_SIZE, b);
-//	Font::StrDraw(L"～Bakusou Runner～", TITLE_POS_X-20, TITLE_POS_Y+TITLE_FONT_SIZE, TITLE_FONT_SIZE, b);
+	Font::StrDraw(L"爆走少女", TITLE_POS_X+92, TITLE_POS_Y, TITLE_FONT_SIZE, b);
+	Font::StrDraw(L"～Bakusou Little girl～", TITLE_POS_X-45, TITLE_POS_Y+TITLE_FONT_SIZE, TITLE_FONT_SIZE, b);
 	
 
 	//クリックする場所
