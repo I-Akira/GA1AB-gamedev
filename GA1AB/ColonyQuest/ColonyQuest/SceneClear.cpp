@@ -41,42 +41,43 @@ void CSceneClear::Scene()//初期化-----------------------------------------------
 //-------------------------------------------------------------------------------------------------------------------------------------------
 void CSceneClear::Init()
 {
-	m_mou_x = 0.0f;
-	m_mou_y = 0.0f;
-	m_mou_r = false;
-	m_mou_l = false;
+	m_kb_sw = false;
 }
 //----------------------------------------------------------------------------------------------------------------------------------------------
 //アクション-----------------------------------------------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------------------------------------------------------
 void CSceneClear::Action()
 {
-	//マウスの座標
-	m_mou_x = (float)Input::GetPosX();
-	m_mou_y = (float)Input::GetPosY();
-	//マウスのボタンの状態
-	m_mou_r = Input::GetMouButtonR();
-	m_mou_l = Input::GetMouButtonL();
+
 
 	//選択画面に移動
-	if (m_mou_x <= 570 && m_mou_x >= 80 && m_mou_y >= 440 && m_mou_y <= 550)
+	if (Input::GetVKey(VK_RETURN)==true)
 	{
-		if (m_mou_l == true)
+		if (m_kb_sw==true)
 		{
 			Audio::Start(1);
 			Scene::SetScene(new CSceneMap());
+			m_kb_sw = false;
+		}
+		else
+		{
+			m_kb_sw = true;
 		}
 	}
 	//タイトルに移動
-	if (m_mou_x <= 570 && m_mou_x >= 80 && m_mou_y >= 570 && m_mou_y <= 680)
+	if (Input::GetVKey('T') == true)
 	{
-		if (m_mou_l == true)
+		if (m_kb_sw == true)
 		{
 			Audio::Start(1);
-			Scene::SetScene(new CSceneTitle());//
+			Scene::SetScene(new CSceneTitle());
+			m_kb_sw = false;
+		}
+		else
+		{
+			m_kb_sw = true;
 		}
 	}
-
 
 
 
@@ -127,10 +128,8 @@ void CSceneClear::Draw()
 	Font::StrDraw(L" 少女は薬草の元にたどり着きました！", 160, 70, 40, c);
 	Font::StrDraw(L" お母さんの待つおうちに帰りましょう！", 140, 120, 40, c);
 	//	Font::StrDraw(L"未完（ 画像ない ）左上クリック or 右上クリック",90,125,35,c);
-	Font::StrDraw(L"ステージ選択画面へ", 120, 480, 44, c);
-	Font::StrDraw(L"タイトルへ", 180, 610, 55, c);
+	Font::StrDraw(L"Enter:ステージ選択画面へ", 120, 480, 44, c);
+	Font::StrDraw(L"T:タイトルへ", 180, 610, 55, c);
 	//仮マウスの位置表示----------------------------------------
-	wchar_t str[256];
-	swprintf_s(str, L"x = %f, y = %f", m_mou_x, m_mou_y);
 	//	Font::StrDraw(str, 500, 20, 20, c);
 }

@@ -17,8 +17,5 @@ public:
 	void Init();
 	void Draw();
 private:
-	float m_mou_x;//マウスの位置
-	float m_mou_y;//
-	bool m_mou_r; //ボタンの状態
-	bool m_mou_l; //
+	bool m_kb_sw; //スイッチの確認
 };
