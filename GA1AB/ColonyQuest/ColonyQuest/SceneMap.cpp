@@ -59,7 +59,7 @@ void CSceneMap::Action()
 	m_mou_l = Input::GetMouButtonL();
 
 
-	if (Input::GetVKey('C') == true)
+	if (Input::GetVKey('Z') == true)
 	{
 		Audio::Start(1);
 		Scene::SetScene(new CSceneBattle());
@@ -71,7 +71,7 @@ void CSceneMap::Action()
 		Scene::SetScene(new CSceneBattle2());
 	}
 	//ステージ3に移動
-	if (Input::GetVKey('Z') == true)
+	if (Input::GetVKey('C') == true)
 	{
 		Audio::Start(1);
 		Scene::SetScene(new CSceneBattle3());
@@ -134,11 +134,11 @@ void CSceneMap::Draw()
 	Draw::Draw(1, &src, &dst3, c, 0.0f);//道具やへ
     //文字表示---------------------------------------
 	Font::StrDraw(L" ★メイン★", 80, 45, 35, c);	
-	Font::StrDraw(L"C :ステージ１", 365, 280, 55, c);
+	Font::StrDraw(L"Z :ステージ１", 365, 280, 55, c);
 	Font::StrDraw(L"X :ステージ２", 365, 410, 55, c);
-	Font::StrDraw(L"Z :ステージ３", 365, 540, 55, c);
+	Font::StrDraw(L"C :ステージ３", 365, 540, 55, c);
 	Font::StrDraw(L"キーをを入力して選択", 50, 620, 45, c);
-	Font::StrDraw(L"（C　X　Z）"                , 200, 680, 45, c);
+	Font::StrDraw(L"（Z　X　C）"                , 200, 680, 45, c);
 	//仮マウスの位置表示----------------------------------------
 	wchar_t str[256];
 	swprintf_s(str, L"x = %f, y = %f", m_mou_x, m_mou_y);
