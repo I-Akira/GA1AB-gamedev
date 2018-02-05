@@ -57,33 +57,27 @@ void CSceneMap::Action()
 	m_mou_l = Input::GetMouButtonL();
 
 	//ステージ１に移動
-	if (m_mou_x <= 770 && m_mou_x >= 280 && m_mou_y >= 260 && m_mou_y <= 350)
-	{
-		if (m_mou_l == true)
+		if (Input::GetVKey('1') == true)
 		{
 			Audio::Start(1);
 			Scene::SetScene(new CSceneBattle());
 		}
-	}
+	
 
 	//ステージ２に移動
-	if (m_mou_x <= 770 && m_mou_x >= 280  && m_mou_y >= 390 && m_mou_y <= 480 )
-	{
-		if (m_mou_l == true)
+		if (Input::GetVKey('2') == true)
 		{
 			Audio::Start(1);
 			Scene::SetScene(new CSceneBattle2());
 		}
-	}
+	
 	//ステージ3に移動
-	if (m_mou_x <= 770 && m_mou_x >= 280 && m_mou_y >= 530 && m_mou_y <= 610)
-	{
-		if (m_mou_l == true)
+		if (Input::GetVKey('3') == true)
 		{
 			Audio::Start(1);
 			Scene::SetScene(new CSceneBattle3());
 		}
-	}
+	
 
 	//デバッグ・ゲームクリア確認用
 	/*if (Input::GetVKey('C') == true)
