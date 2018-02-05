@@ -82,8 +82,8 @@ void CObjTitle::Draw()
 	src2.m_bottom = 500.0f;
 
 	dst3.m_top = 480.0f;
-	dst3.m_left = 410.0f;
-	dst3.m_right = 600.0f;
+	dst3.m_left = 380.0f;
+	dst3.m_right = 640.0f;
 	dst3.m_bottom = 550.0f;
 	Draw::Draw(1, &src2, &dst3, c, 0.0f);//タイトルへ
 	//タイトル
@@ -93,7 +93,7 @@ void CObjTitle::Draw()
 
 	//クリックする場所
 	//ゲームに移行するクリック場所
-	Font::StrDraw(L"スタート", CLICK_START_POS_X+20, CLICK_START_POS_Y, CLICK_START_FONT_SIZE, c);
+	Font::StrDraw(L"Enter:スタート", CLICK_START_POS_X-20, CLICK_START_POS_Y, CLICK_START_FONT_SIZE, c);
 
 
 
