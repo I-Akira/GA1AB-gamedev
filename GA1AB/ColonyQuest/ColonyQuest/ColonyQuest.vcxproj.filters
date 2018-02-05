@@ -24,24 +24,33 @@
     <Filter Include="ソース ファイル\Battle\Hero">
       <UniqueIdentifier>{bad4b3ce-a328-4eb8-8653-d4b4125035cc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\Battle\BattleScene">
-      <UniqueIdentifier>{903de3d9-a511-444a-bf3f-b65a4d93f7f1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\Battle\BattleScene\Battle初級">
-      <UniqueIdentifier>{37ca3e63-3b54-4b0b-9354-9f4b122053fe}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\Battle\BattleScene\Battle中級">
-      <UniqueIdentifier>{d0cd7b1d-d331-40be-b535-287bbf9693e2}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\Story">
       <UniqueIdentifier>{939d5a09-9de0-4d16-860a-521a1e2ce3f0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\Battle\BattleScene\Battle チュートリアル">
-      <UniqueIdentifier>{eb8b41f4-7f13-430b-9be1-69b4fe98295b}</UniqueIdentifier>
     </Filter>
     <Filter Include="ヘッダー ファイル">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="ソース ファイル\Battle\Battle チュートリアル">
+      <UniqueIdentifier>{eb8b41f4-7f13-430b-9be1-69b4fe98295b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Battle\Battle初級">
+      <UniqueIdentifier>{37ca3e63-3b54-4b0b-9354-9f4b122053fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Battle\Battle中級">
+      <UniqueIdentifier>{d0cd7b1d-d331-40be-b535-287bbf9693e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Battle\ゲームクリアとゲームオーバー">
+      <UniqueIdentifier>{96648118-4b73-4958-a503-770fdd821b58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Battle\ブロック周り">
+      <UniqueIdentifier>{551baa64-0859-4dd6-a5d5-98d2be2f671b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Battle\タイマー">
+      <UniqueIdentifier>{96d6636b-5fb6-41eb-bdce-ab13dd7ffb9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Battle\敵">
+      <UniqueIdentifier>{903de3d9-a511-444a-bf3f-b65a4d93f7f1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -93,41 +102,41 @@
     <ClCompile Include="CObjHeroAttack.cpp">
       <Filter>ソース ファイル\Battle\Hero</Filter>
     </ClCompile>
-    <ClCompile Include="ObjBatoru.cpp">
-      <Filter>ソース ファイル\Battle\BattleScene</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjBlock.cpp">
-      <Filter>ソース ファイル\Battle\BattleScene</Filter>
-    </ClCompile>
     <ClCompile Include="ObjEnemy.cpp">
-      <Filter>ソース ファイル\Battle\BattleScene</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjTime.cpp">
-      <Filter>ソース ファイル\Battle\BattleScene</Filter>
+      <Filter>ソース ファイル\Battle\敵</Filter>
     </ClCompile>
     <ClCompile Include="ObjHero.cpp">
       <Filter>ソース ファイル\Battle\Hero</Filter>
     </ClCompile>
     <ClCompile Include="ObjJunpEnemy.cpp">
-      <Filter>ソース ファイル\Battle\BattleScene</Filter>
+      <Filter>ソース ファイル\Battle\敵</Filter>
     </ClCompile>
     <ClCompile Include="SceneBattle.cpp">
-      <Filter>ソース ファイル\Battle\BattleScene\Battle初級</Filter>
+      <Filter>ソース ファイル\Battle\Battle初級</Filter>
     </ClCompile>
     <ClCompile Include="SceneBattle2.cpp">
-      <Filter>ソース ファイル\Battle\BattleScene\Battle中級</Filter>
+      <Filter>ソース ファイル\Battle\Battle中級</Filter>
     </ClCompile>
     <ClCompile Include="Story.cpp">
       <Filter>ソース ファイル\Story</Filter>
     </ClCompile>
+    <ClCompile Include="Battle3.cpp">
+      <Filter>ソース ファイル\Battle\Battle チュートリアル</Filter>
+    </ClCompile>
     <ClCompile Include="SceneClear.cpp">
-      <Filter>ソース ファイル\Battle\BattleScene</Filter>
+      <Filter>ソース ファイル\Battle\ゲームクリアとゲームオーバー</Filter>
     </ClCompile>
     <ClCompile Include="SceneGameOver.cpp">
-      <Filter>ソース ファイル\Battle\BattleScene</Filter>
+      <Filter>ソース ファイル\Battle\ゲームクリアとゲームオーバー</Filter>
     </ClCompile>
-    <ClCompile Include="Battle3.cpp">
-      <Filter>ソース ファイル\Battle\BattleScene\Battle チュートリアル</Filter>
+    <ClCompile Include="ObjBatoru.cpp">
+      <Filter>ソース ファイル\Battle\ブロック周り</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjBlock.cpp">
+      <Filter>ソース ファイル\Battle\ブロック周り</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjTime.cpp">
+      <Filter>ソース ファイル\Battle\タイマー</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -185,41 +194,41 @@
     <ClInclude Include="CObjheroattack.h">
       <Filter>ソース ファイル\Battle\Hero</Filter>
     </ClInclude>
-    <ClInclude Include="ObjBatoru.h">
-      <Filter>ソース ファイル\Battle\BattleScene</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjBlock.h">
-      <Filter>ソース ファイル\Battle\BattleScene</Filter>
-    </ClInclude>
     <ClInclude Include="ObjEnemy.h">
-      <Filter>ソース ファイル\Battle\BattleScene</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjTime.h">
-      <Filter>ソース ファイル\Battle\BattleScene</Filter>
+      <Filter>ソース ファイル\Battle\敵</Filter>
     </ClInclude>
     <ClInclude Include="ObjHero.h">
       <Filter>ソース ファイル\Battle\Hero</Filter>
     </ClInclude>
     <ClInclude Include="ObjJunpEnemy.h">
-      <Filter>ソース ファイル\Battle\BattleScene</Filter>
+      <Filter>ソース ファイル\Battle\敵</Filter>
     </ClInclude>
     <ClInclude Include="SceneBattle.h">
-      <Filter>ソース ファイル\Battle\BattleScene\Battle初級</Filter>
+      <Filter>ソース ファイル\Battle\Battle初級</Filter>
     </ClInclude>
     <ClInclude Include="SceneBattle2.h">
-      <Filter>ソース ファイル\Battle\BattleScene\Battle中級</Filter>
+      <Filter>ソース ファイル\Battle\Battle中級</Filter>
     </ClInclude>
     <ClInclude Include="Story.h">
       <Filter>ソース ファイル\Story</Filter>
     </ClInclude>
+    <ClInclude Include="Battle3.h">
+      <Filter>ソース ファイル\Battle\Battle チュートリアル</Filter>
+    </ClInclude>
     <ClInclude Include="SceneClear.h">
-      <Filter>ソース ファイル\Battle\BattleScene</Filter>
+      <Filter>ソース ファイル\Battle\ゲームクリアとゲームオーバー</Filter>
     </ClInclude>
     <ClInclude Include="SceneGameOver.h">
-      <Filter>ソース ファイル\Battle\BattleScene</Filter>
+      <Filter>ソース ファイル\Battle\ゲームクリアとゲームオーバー</Filter>
     </ClInclude>
-    <ClInclude Include="Battle3.h">
-      <Filter>ソース ファイル\Battle\BattleScene\Battle チュートリアル</Filter>
+    <ClInclude Include="ObjBatoru.h">
+      <Filter>ソース ファイル\Battle\ブロック周り</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjBlock.h">
+      <Filter>ソース ファイル\Battle\ブロック周り</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjTime.h">
+      <Filter>ソース ファイル\Battle\タイマー</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
