@@ -46,8 +46,8 @@ void CObjJumpEnemy::Init()
 //アクション
 void CObjJumpEnemy::Action()
 {
-	//Sキー入力でジャンプ
-	if (Input::GetVKey('S') == true)
+	//Cキー入力でジャンプ
+	if (Input::GetVKey('X') == true)
 	{
 		if (m_hit_down == true)
 		{

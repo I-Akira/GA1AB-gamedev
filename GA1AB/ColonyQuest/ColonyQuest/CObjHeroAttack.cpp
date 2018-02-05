@@ -82,12 +82,12 @@ void CObjHeroAttack::Action()
 		this->SetStatus(false);
 		Hits::DeleteHitBox(this);
 	}
-	if (Input::GetVKey('D') == true)
+	if (Input::GetVKey('C') == true)
 	{
 		m_del =true;
 	}
 	//'D'ƒL[‚É“ü—Í‚ª‚È‚¢ê‡UŒ‚HitBox‚ğíœ
-	if (Input::GetVKey('D') == false)
+	if (Input::GetVKey('C') == false)
 	{
 		m_del = false;
 		this->SetStatus(false);

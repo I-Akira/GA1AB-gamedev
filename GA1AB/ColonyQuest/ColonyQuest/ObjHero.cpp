@@ -65,7 +65,7 @@ void CObjHero::Action()
 		Scene::SetScene(new CSceneMap());
 	}
 	//Sキー入力でジャンプ
-	if (Input::GetVKey('S') == true)
+	if (Input::GetVKey('X') == true)
 	{
 		if (m_hit_down == true)
 		{
@@ -74,7 +74,7 @@ void CObjHero::Action()
 	}
 
 	//Aキー入力で速度アップ
-	if (Input::GetVKey('A') == true)
+	if (Input::GetVKey('Z') == true)
 	{
 				//ダッシュ時の速度
 				m_speed_power = 1.3f;
@@ -92,7 +92,27 @@ void CObjHero::Action()
 		m_posture = 1.0f;
 		m_ani_time += 1;
 	
-	
+		//主人公の攻撃
+		if (Input::GetVKey('C') == true)
+		{
+
+			if (m_f == true)
+			{
+				m_del == true;
+				Audio::Start(11);
+				//攻撃オブジェクト作成
+				CObjHeroAttack*obj_b = new CObjHeroAttack(m_px + 62.0f, m_py);//攻撃オブジェクト作成
+				Objs::InsertObj(obj_b, OBJ_HEROATTACK, 100);//作った攻撃オブジェクトをオブジェクトマネージャーに登録
+				m_f = false;
+			}
+
+		}
+		else if (m_time >= 25)
+		{
+			m_f = true;
+			m_time = 0;
+		}
+		m_time++;
 	
 
 	if (m_ani_time > m_ani_max_time)
@@ -111,26 +131,7 @@ void CObjHero::Action()
 	//自由落下運動
 	m_vy += 9.0/(18.0f);
 
-	//主人公の攻撃
-	if (Input::GetVKey('D') == true)
-	{
-		
-		if(m_f==true)
-		{
-			m_del == true;
-			Audio::Start(11);
-			//攻撃オブジェクト作成
-			CObjHeroAttack*obj_b = new CObjHeroAttack(m_px+62.0f, m_py);//攻撃オブジェクト作成
-			Objs::InsertObj(obj_b, OBJ_HEROATTACK, 100);//作った攻撃オブジェクトをオブジェクトマネージャーに登録
-			m_f = false;
-		}
-	}
-	else if(m_time>=25)
-	{
-		m_f = true;
-		m_time = 0;
-	}
-	m_time++;
+
 
 	//高速移動によるBlock判定
 	bool b;
