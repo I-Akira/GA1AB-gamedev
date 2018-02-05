@@ -83,6 +83,10 @@ void CSceneMap::Action()
 	{
 		Scene::SetScene(new CSceneClear);//‚±‚±‚ðƒNƒŠƒA‰æ–Ê‚É‚·‚é
 	}
+	if (Input::GetVKey('B') == true)
+	{
+		Scene::SetScene(new CSceneGameOver());
+	}
 
 
 }
