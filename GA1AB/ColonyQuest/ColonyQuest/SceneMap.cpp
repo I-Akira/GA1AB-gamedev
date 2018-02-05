@@ -136,9 +136,9 @@ void CSceneMap::Draw()
     //文字表示---------------------------------------
 	Font::StrDraw(L" ★メイン★", 80, 45, 35, c);	
 //	Font::StrDraw(L"未完（ 画像ない ）左上クリック or 右上クリック",90,125,35,c);
-	Font::StrDraw(L"数字キー1でステージ１", 345, 280, 35, c);
-	Font::StrDraw(L"数字キー2でステージ２", 345, 410, 35, c);
-	Font::StrDraw(L"数字キー3でステージ３", 345, 540, 35, c);
+	Font::StrDraw(L"push:1でステージ１", 375, 280, 35, c);
+	Font::StrDraw(L"push:2でステージ２", 375, 410, 35, c);
+	Font::StrDraw(L"push:3でステージ３", 375, 540, 35, c);
 	//仮マウスの位置表示----------------------------------------
 	wchar_t str[256];
 	swprintf_s(str, L"x = %f, y = %f", m_mou_x, m_mou_y);

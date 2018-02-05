@@ -128,8 +128,8 @@ void CSceneClear::Draw()
 	Font::StrDraw(L" 少女は薬草の元にたどり着きました！", 160, 70, 40, c);
 	Font::StrDraw(L" お母さんの待つおうちに帰りましょう！", 140, 120, 40, c);
 	//	Font::StrDraw(L"未完（ 画像ない ）左上クリック or 右上クリック",90,125,35,c);
-	Font::StrDraw(L"Enter:ステージ選択画面へ", 120, 480, 44, c);
-	Font::StrDraw(L"T:タイトルへ", 180, 610, 55, c);
+	Font::StrDraw(L"Enter:ステージ選択画面へ", 120, 480, 35, c);
+	Font::StrDraw(L"T:タイトルへ", 180, 610, 45, c);
 	//仮マウスの位置表示----------------------------------------
 	//	Font::StrDraw(str, 500, 20, 20, c);
 }
