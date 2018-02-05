@@ -37,6 +37,7 @@ void CObjHero::Init()
 
 	m_f = true;//攻撃制御
 	m_vf = true;
+	m_time = 0;
 
 	Audio::LoadAudio(11, L"SE Atac.wav", SOUND_TYPE::EFFECT);
 
@@ -124,10 +125,12 @@ void CObjHero::Action()
 			m_f = false;
 		}
 	}
-	else
+	else if(m_time>=25)
 	{
 		m_f = true;
+		m_time = 0;
 	}
+	m_time++;
 
 	//高速移動によるBlock判定
 	bool b;
@@ -158,7 +161,7 @@ void CObjHero::Action()
 
 		//主人公の幅分のオフセット
 		if (vx > 0)
-			px += -64;
+			px += -32;
 		else
 			px += +2;
 
@@ -294,5 +297,4 @@ void CObjHero::Draw()
 	dst.m_right = dst.m_left+ 10.0f;
 	dst.m_bottom= dst.m_top + 10.0f;
 	Draw::Draw(0, &src, &dst, cc, 0.0f);
-	//データコミット用
 }

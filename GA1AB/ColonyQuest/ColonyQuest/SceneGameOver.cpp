@@ -41,43 +41,40 @@ void CSceneGameOver::Scene()//初期化--------------------------------------------
 //-------------------------------------------------------------------------------------------------------------------------------------------
 void CSceneGameOver::Init()
 {
-	m_mou_x = 0.0f;
-	m_mou_y = 0.0f;
-	m_mou_r = false;
-	m_mou_l = false;
+
 }
 //----------------------------------------------------------------------------------------------------------------------------------------------
 //アクション-----------------------------------------------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------------------------------------------------------
 void CSceneGameOver::Action()
 {
-	//マウスの座標
-	m_mou_x = (float)Input::GetPosX();
-	m_mou_y = (float)Input::GetPosY();
-	//マウスのボタンの状態
-	m_mou_r = Input::GetMouButtonR();
-	m_mou_l = Input::GetMouButtonL();
-
-	//メインに移動
-	if (Input::GetVKey('C')==true)
+	//選択画面に移動
+	if (Input::GetVKey(VK_RETURN) == true)
 	{
-		Audio::Start(1);
-		Scene::SetScene(new CSceneMap());
-	}
-	//mapへ
-	/*if (m_mou_x <= 770 && m_mou_x >= 280 && m_mou_y >= 390 && m_mou_y <= 480)
-	{
-		if (m_mou_l == true)
+		if (m_kb_sw == true)
 		{
 			Audio::Start(1);
-			Scene::SetScene(new CSceneMap());//
+			Scene::SetScene(new CSceneMap());
+			m_kb_sw = false;
 		}
-	}*/
-	//タイトルへ
-	if (Input::GetVKey('X')==true)
+		else
+		{
+			m_kb_sw = true;
+		}
+	}
+	//タイトルに移動
+	if (Input::GetVKey('T') == true)
 	{
-		Audio::Start(1);
-		Scene::SetScene(new CSceneTitle());
+		if (m_kb_sw == true)
+		{
+			Audio::Start(1);
+			Scene::SetScene(new CSceneTitle());
+			m_kb_sw = false;
+		}
+		else
+		{
+			m_kb_sw = true;
+		}
 	}
 
 
@@ -116,29 +113,25 @@ void CSceneGameOver::Draw()
 		Draw::Draw(5, &src, &dst2, c, 0.0f);//
 
 	dst3.m_top = 240.0f;
-	dst3.m_left = 280.0f;
-	dst3.m_right = 770.0f;
+	dst3.m_left = 240.0f;
+	dst3.m_right = 800.0f;
 	dst3.m_bottom = 350.0f;
 	Draw::Draw(1, &src, &dst3, c, 0.0f);//アクション画面へ
 	dst3.m_top = 370.0f;
-	dst3.m_left = 280.0f;
-	dst3.m_right = 770.0f;
+	dst3.m_left = 240.0f;
+	dst3.m_right = 780.0f;
 	dst3.m_bottom = 480.0f;
 	//Draw::Draw(1, &src, &dst3, c, 0.0f);//MAP
 	dst3.m_top = 500.0f;
-	dst3.m_left = 280.0f;
-	dst3.m_right = 770.0f;
+	dst3.m_left = 240.0f;
+	dst3.m_right = 800.0f;
 	dst3.m_bottom = 610.0f;
 		Draw::Draw(1, &src, &dst3, c, 0.0f);//タイトルへ
 	//文字表示---------------------------------------
 	//Font::StrDraw(L" ゲームオーバー", 365, 120, 40, c);
 	//	Font::StrDraw(L"未完（ 画像ない ）左上クリック or 右上クリック",90,125,35,c);
-	Font::StrDraw(L"C：ステージ選択画面へ", 325, 280, 44, c);
+	Font::StrDraw(L"Enter:ステージ選択画面へ", 260, 280, 44, c);
 	//Font::StrDraw(L"無題", 325, 410, 44, c);
-	Font::StrDraw(L"X：タイトルへ", 330,530, 55, c);
-	//仮マウスの位置表示----------------------------------------
-	wchar_t str[256];
-	swprintf_s(str, L"x = %f, y = %f", m_mou_x, m_mou_y);
-	//	Font::StrDraw(str, 500, 20, 20, c);
+	Font::StrDraw(L"T:タイトルへ", 340,530, 55, c);
 }
 

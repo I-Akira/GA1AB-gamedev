@@ -38,6 +38,7 @@ void CObjTitle::Action()
 	{
 		if (m_key_flag == true)
 		{
+			Audio::Start(0);
 			if (Input::GetVKey(VK_RETURN) == true)
 			{
 				Scene::SetScene(new CSceneStory());
@@ -94,24 +95,4 @@ void CObjTitle::Draw()
 	//クリックする場所
 	//ゲームに移行するクリック場所
 	Font::StrDraw(L"Enter:スタート", CLICK_START_POS_X-20, CLICK_START_POS_Y, CLICK_START_FONT_SIZE, c);
-
-
-
-	/*//仮マウス位置表示
-	wchar_t str[256];
-	swprintf_s(str, L"x=%f,y=%f", m_mou_x, m_mou_y);
-	Font::StrDraw(str, 20, 20, 12, c);
-	//仮マウスボタン状態
-	if (m_mou_r == true)
-		Font::StrDraw(L"R=押してる", 20, 30, 12, c);
-	else
-		Font::StrDraw(L"R=押してない", 20, 30, 12, c);
-	if (m_mou_l == true)
-		Font::StrDraw(L"L=押してる", 20, 40, 12, c);
-	else
-		Font::StrDraw(L"L=押してない", 20, 40, 12, c);*/
-
-	/*if(m_deb_mn==true)
-		Font::StrDraw(L"デバッグ：メイン画面移行スイッチ", 20, 620, 32, b);
-		*/ //デバッグ用：メイン画面移行できるか確認
 }
