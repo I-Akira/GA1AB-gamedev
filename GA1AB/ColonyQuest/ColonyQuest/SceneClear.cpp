@@ -113,15 +113,15 @@ void CSceneClear::Draw()
 	dst2.m_bottom = 400.0f;
 	Draw::Draw(5, &src, &dst2, c, 0.0f);//GAMECLEAR
 
-	dst3.m_top = 440.0f;
-	dst3.m_left = 80.0f;
-	dst3.m_right = 570.0f;
-	dst3.m_bottom = 550.0f;
+	dst3.m_top = 240.0f;
+	dst3.m_left = 240.0f;
+	dst3.m_right = 800.0f;
+	dst3.m_bottom = 350.0f;
 	Draw::Draw(1, &src, &dst3, c, 0.0f);//アクション画面へ
-	dst3.m_top = 570.0f;
-	dst3.m_left = 80.0f;
-	dst3.m_right = 570.0f;
-	dst3.m_bottom = 680.0f;
+	dst3.m_top = 500.0f;
+	dst3.m_left = 240.0f;
+	dst3.m_right = 800.0f;
+	dst3.m_bottom = 610.0f;
 	Draw::Draw(1, &src, &dst3, c, 0.0f);//タイトルへ
 
 	//文字表示---------------------------------------

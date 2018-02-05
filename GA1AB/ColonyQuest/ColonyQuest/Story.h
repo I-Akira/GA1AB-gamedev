@@ -21,5 +21,5 @@ private:
 	float m_mou_y;//
 	bool m_mou_r; //ボタンの状態
 	bool m_mou_l; //
-	bool m_key_flag;	//キーフラグ
+	bool m_key_flag;//キーの状態
 };
