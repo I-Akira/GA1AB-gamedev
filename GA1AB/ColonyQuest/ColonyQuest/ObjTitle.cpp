@@ -18,11 +18,7 @@ void CObjTitle::Init()
 {
 	Draw::LoadImage(L"tekisuto1.png", 1, TEX_SIZE_512);
 	Audio::LoadAudio(0, L"SE SELECT.wav", SOUND_TYPE::EFFECT);
-	m_mou_x = 0.0f;
-	m_mou_y = 0.0f;
-	m_mou_r = false;
-	m_mou_l = false;
-	m_deb_mn = false;
+	m_key_flag = false;
 
 	//ゲームを実行して1回のみ
 	static bool init_point = false;
@@ -36,34 +32,23 @@ void CObjTitle::Init()
 void CObjTitle::Action()
 {
 
-	//マウス位置取得
-	m_mou_x = (float)Input::GetPosX();
-	m_mou_y = (float)Input::GetPosY();
-	//マウスボタン状態
-	m_mou_r = Input::GetMouButtonR();
-	m_mou_l = Input::GetMouButtonL();
 
-	//マウス位置とクリックする場所で当たり判定
-	if (m_mou_x > MOU_MAIN_HIT_X && m_mou_x <MOU_MAIN_HIT_W &&
-		m_mou_y>MOU_MAIN_HIT_Y && m_mou_y < MOU_MAIN_HIT_H)
+
+	if (Input::GetVKey(VK_RETURN)==true)
 	{
-		if (m_mou_r == true || m_mou_l == true)
+		if (m_key_flag == true)
 		{
-			Audio::Start(0);
-			Scene::SetScene(new CSceneStory());
+			if (Input::GetVKey(VK_RETURN) == true)
+			{
+				Scene::SetScene(new CSceneStory());
+				m_key_flag = false;
+			}
 		}
 		else
 		{
-			m_deb_mn = false;
+			m_key_flag = true;
 		}
 	}
-	else
-	{
-		m_deb_mn = false;
-	}
-
-
-
 
 
 }

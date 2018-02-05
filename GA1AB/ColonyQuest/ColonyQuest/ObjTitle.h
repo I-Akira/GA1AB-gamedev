@@ -32,9 +32,5 @@ public:
 	void Action();
 	void Draw();
 private:
-	float m_mou_x;	//マウス位置X
-	float m_mou_y;	//マウス位置Y
-	bool  m_mou_r;	//マウス右ボタン
-	bool  m_mou_l;	//マウス左ボタン
-	bool m_deb_mn;
+	bool m_key_flag;	//キーフラグ
 };
