@@ -37,6 +37,7 @@ void CObjHero::Init()
 
 	m_f = true;//UŒ‚§Œä
 	m_vf = true;
+	m_time = 0;
 
 	Audio::LoadAudio(11, L"SE Atac.wav", SOUND_TYPE::EFFECT);
 
@@ -124,10 +125,12 @@ void CObjHero::Action()
 			m_f = false;
 		}
 	}
-	else
+	else if(m_time>=25)
 	{
 		m_f = true;
+		m_time = 0;
 	}
+	m_time++;
 
 	//‚‘¬ˆÚ“®‚É‚æ‚éBlock”»’è
 	bool b;

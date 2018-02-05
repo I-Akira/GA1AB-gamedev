@@ -58,12 +58,19 @@ void CSceneStory::Action()
 	m_mou_l = Input::GetMouButtonL();
 
 	//ƒ}ƒbƒv‚Ö
-	if (m_mou_x <= 970 && m_mou_x >= 480 && m_mou_y >= 630 && m_mou_y <= 710)
+	if (Input::GetVKey(VK_RETURN) == true)
 	{
-		if (m_mou_l == true)
+		if (m_key_flag == true)
 		{
-			Audio::Start(1);
-			Scene::SetScene(new CSceneMap());
+			if (Input::GetVKey(VK_RETURN) == true)
+			{
+				Scene::SetScene(new CSceneMap());
+				m_key_flag = false;
+			}
+		}
+		else
+		{
+			m_key_flag = true;
 		}
 	}
 
