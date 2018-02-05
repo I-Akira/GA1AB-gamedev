@@ -158,7 +158,7 @@ void CObjHero::Action()
 
 		//主人公の幅分のオフセット
 		if (vx > 0)
-			px += -64;
+			px += -32;
 		else
 			px += +2;
 
@@ -294,5 +294,4 @@ void CObjHero::Draw()
 	dst.m_right = dst.m_left+ 10.0f;
 	dst.m_bottom= dst.m_top + 10.0f;
 	Draw::Draw(0, &src, &dst, cc, 0.0f);
-	//データコミット用
 }
