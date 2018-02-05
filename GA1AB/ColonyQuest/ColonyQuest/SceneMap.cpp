@@ -13,6 +13,7 @@
 #include "GameL\Audio.h"
 
 using namespace GameL;
+int num = 0;
 
 void CSceneMap::InitScene()
 {
@@ -43,6 +44,7 @@ void CSceneMap::Init()
 	m_mou_y = 0.0f;
 	m_mou_r = false;
 	m_mou_l = false;
+	m_key_flag = false;//Zキーの状態
 }
 //----------------------------------------------------------------------------------------------------------------------------------------------
 //アクション-----------------------------------------------------------------------------------------------------------------------------------
@@ -56,34 +58,31 @@ void CSceneMap::Action()
 	m_mou_r = Input::GetMouButtonR();
 	m_mou_l = Input::GetMouButtonL();
 
-	//ステージ１に移動
-		if (Input::GetVKey('1') == true)
-		{
-			Audio::Start(1);
-			Scene::SetScene(new CSceneBattle());
-		}
-	
 
+	if (Input::GetVKey('C') == true)
+	{
+		Audio::Start(1);
+		Scene::SetScene(new CSceneBattle());
+	}
 	//ステージ２に移動
-		if (Input::GetVKey('2') == true)
-		{
-			Audio::Start(1);
-			Scene::SetScene(new CSceneBattle2());
-		}
-	
+	if (Input::GetVKey('X') == true)
+	{
+		Audio::Start(1);
+		Scene::SetScene(new CSceneBattle2());
+	}
 	//ステージ3に移動
-		if (Input::GetVKey('3') == true)
-		{
-			Audio::Start(1);
-			Scene::SetScene(new CSceneBattle3());
-		}
+	if (Input::GetVKey('Z') == true)
+	{
+		Audio::Start(1);
+		Scene::SetScene(new CSceneBattle3());
+	}
 	
 
 	//デバッグ・ゲームクリア確認用
-	/*if (Input::GetVKey('C') == true)
+	if (Input::GetVKey('V') == true)
 	{
 		Scene::SetScene(new CSceneClear);//ここをクリア画面にする
-	}*/
+	}
 
 
 }
@@ -135,10 +134,11 @@ void CSceneMap::Draw()
 	Draw::Draw(1, &src, &dst3, c, 0.0f);//道具やへ
     //文字表示---------------------------------------
 	Font::StrDraw(L" ★メイン★", 80, 45, 35, c);	
-//	Font::StrDraw(L"未完（ 画像ない ）左上クリック or 右上クリック",90,125,35,c);
-	Font::StrDraw(L"ステージ１", 395, 280, 55, c);
-	Font::StrDraw(L"ステージ２", 395, 410, 55, c);
-	Font::StrDraw(L"ステージ３", 395, 540, 55, c);
+	Font::StrDraw(L"C :ステージ１", 365, 280, 55, c);
+	Font::StrDraw(L"X :ステージ２", 365, 410, 55, c);
+	Font::StrDraw(L"Z :ステージ３", 365, 540, 55, c);
+	Font::StrDraw(L"キーをを入力して選択", 50, 620, 45, c);
+	Font::StrDraw(L"（C　X　Z）"                , 200, 680, 45, c);
 	//仮マウスの位置表示----------------------------------------
 	wchar_t str[256];
 	swprintf_s(str, L"x = %f, y = %f", m_mou_x, m_mou_y);
@@ -172,5 +172,54 @@ else
 {
 swprintf_s(str, L"R = 押してない");
 Font::StrDraw(str, 510, 100, 40, c);
+}
+---------------------------------------------------------------------------------------------
+
+//ステージ１に移動
+if (Input::GetVKey('Z') == true)
+{
+if (m_key_flag == true)
+{
+num += 1;
+m_key_flag = false;
+if (num > 3)
+{
+num = 1;
+}
+}
+else
+{
+m_key_flag = true;
+}
+}
+//ステージ１に移動
+if (num == 1)
+{
+if (Input::GetVKey(VK_RETURN) == true)
+{
+Audio::Start(1);
+num = 0;
+Scene::SetScene(new CSceneBattle());
+}
+}
+//ステージ２に移動
+if (num == 2)
+{
+if (Input::GetVKey(VK_RETURN) == true)
+{
+Audio::Start(1);
+num = 0;
+Scene::SetScene(new CSceneBattle2());
+}
+}
+//ステージ3に移動
+if (num == 3)
+{
+if (Input::GetVKey(VK_RETURN) == true)
+{
+Audio::Start(1);
+num = 0;
+Scene::SetScene(new CSceneBattle3());
+}
 }
 */
