@@ -59,7 +59,7 @@ void CSceneClear::Action()
 	m_mou_l = Input::GetMouButtonL();
 
 	//選択画面に移動
-	if (m_mou_x <= 770 && m_mou_x >= 280 && m_mou_y >= 260 && m_mou_y <= 350)
+	if (m_mou_x <= 570 && m_mou_x >= 80 && m_mou_y >= 440 && m_mou_y <= 550)
 	{
 		if (m_mou_l == true)
 		{
@@ -68,21 +68,12 @@ void CSceneClear::Action()
 		}
 	}
 	//タイトルに移動
-	if (m_mou_x <= 770 && m_mou_x >= 280 && m_mou_y >= 390 && m_mou_y <= 480)
+	if (m_mou_x <= 570 && m_mou_x >= 80 && m_mou_y >= 570 && m_mou_y <= 680)
 	{
 		if (m_mou_l == true)
 		{
 			Audio::Start(1);
 			Scene::SetScene(new CSceneTitle());//
-		}
-	}
-	//道具屋に移動
-	if (m_mou_x <= 770 && m_mou_x >= 280 && m_mou_y >= 530 && m_mou_y <= 610)
-	{
-		if (m_mou_l == true)
-		{
-			Audio::Start(1);
-			//			Scene::SetScene(new CSceneItem());
 		}
 	}
 
@@ -121,23 +112,23 @@ void CSceneClear::Draw()
 	dst2.m_bottom = 400.0f;
 	Draw::Draw(5, &src, &dst2, c, 0.0f);//GAMECLEAR
 
-	dst3.m_top = 240.0f;
-	dst3.m_left = 280.0f;
-	dst3.m_right = 770.0f;
-	dst3.m_bottom = 350.0f;
+	dst3.m_top = 440.0f;
+	dst3.m_left = 80.0f;
+	dst3.m_right = 570.0f;
+	dst3.m_bottom = 550.0f;
 	Draw::Draw(1, &src, &dst3, c, 0.0f);//アクション画面へ
-	dst3.m_top = 370.0f;
-	dst3.m_left = 280.0f;
-	dst3.m_right = 770.0f;
-	dst3.m_bottom = 480.0f;
+	dst3.m_top = 570.0f;
+	dst3.m_left = 80.0f;
+	dst3.m_right = 570.0f;
+	dst3.m_bottom = 680.0f;
 	Draw::Draw(1, &src, &dst3, c, 0.0f);//タイトルへ
 
 	//文字表示---------------------------------------
 	Font::StrDraw(L" 少女は薬草の元にたどり着きました！", 160, 70, 40, c);
 	Font::StrDraw(L" お母さんの待つおうちに帰りましょう！", 140, 120, 40, c);
 	//	Font::StrDraw(L"未完（ 画像ない ）左上クリック or 右上クリック",90,125,35,c);
-	Font::StrDraw(L"ステージ選択画面へ", 320, 280, 44, c);
-	Font::StrDraw(L"タイトルへ", 380, 410, 55, c);
+	Font::StrDraw(L"ステージ選択画面へ", 120, 480, 44, c);
+	Font::StrDraw(L"タイトルへ", 180, 610, 55, c);
 	//仮マウスの位置表示----------------------------------------
 	wchar_t str[256];
 	swprintf_s(str, L"x = %f, y = %f", m_mou_x, m_mou_y);

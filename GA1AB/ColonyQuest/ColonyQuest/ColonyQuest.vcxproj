@@ -181,6 +181,9 @@
   <ItemGroup>
     <FxCompile Include="GameL\Draw2DTex.hlsl" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="修正点.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

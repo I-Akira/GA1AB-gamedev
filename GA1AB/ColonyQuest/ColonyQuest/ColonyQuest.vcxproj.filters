@@ -227,4 +227,9 @@
       <Filter>リソース ファイル\GameL</Filter>
     </FxCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="修正点.txt">
+      <Filter>ソース ファイル</Filter>
+    </None>
+  </ItemGroup>
 </Project>
